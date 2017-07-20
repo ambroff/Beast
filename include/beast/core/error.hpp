@@ -14,6 +14,7 @@
 #include <boost/system/error_code.hpp>
 #include <boost/system/system_error.hpp>
 
+namespace boost {
 namespace beast {
 
 /// The type of error code used by the library
@@ -50,6 +51,8 @@ enum errc{};
 #else
 namespace errc = boost::system::errc;
 #endif
+
 } // beast
+} // boost
 
 #endif

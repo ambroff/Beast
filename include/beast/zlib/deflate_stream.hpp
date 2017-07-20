@@ -20,6 +20,7 @@
 #include <cstring>
 #include <memory>
 
+namespace boost {
 namespace beast {
 namespace zlib {
 
@@ -398,5 +399,6 @@ deflate_upper_bound(std::size_t bytes)
 
 } // zlib
 } // beast
+} // boost
 
 #endif

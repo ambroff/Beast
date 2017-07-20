@@ -14,6 +14,7 @@
 #include <beast/core/string.hpp>
 #include <iosfwd>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -159,6 +160,7 @@ operator<<(std::ostream&, status);
 
 } // http
 } // beast
+} // boost
 
 #include <beast/http/impl/status.ipp>
 

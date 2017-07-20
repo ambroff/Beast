@@ -17,6 +17,7 @@
 #include <array>
 #include <cstddef>
 
+namespace boost {
 namespace beast {
 namespace http {
 namespace detail {
@@ -256,5 +257,6 @@ struct buffers_or_fields<T, false>
 } // detail
 } // http
 } // beast
+} // boost
 
 #endif

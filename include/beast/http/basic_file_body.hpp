@@ -22,6 +22,7 @@
 #include <cstdint>
 #include <utility>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -526,5 +527,6 @@ operator<<(std::ostream& os, message<
 
 } // http
 } // beast
+} // boost
 
 #endif

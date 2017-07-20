@@ -41,6 +41,7 @@
     (zlib format), rfc1951 (deflate format) and rfc1952 (gzip format).
 */
 
+namespace boost {
 namespace beast {
 namespace zlib {
 
@@ -214,5 +215,6 @@ public:
 
 } // zlib
 } // beast
+} // boost
 
 #endif

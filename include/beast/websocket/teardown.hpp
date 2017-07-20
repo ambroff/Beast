@@ -15,6 +15,7 @@
 #include <boost/asio/ip/tcp.hpp>
 #include <type_traits>
 
+namespace boost {
 namespace beast {
 namespace websocket {
 
@@ -182,6 +183,7 @@ async_teardown(teardown_tag,
 
 } // websocket
 } // beast
+} // boost
 
 #include <beast/websocket/impl/teardown.ipp>
 

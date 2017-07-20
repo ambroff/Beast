@@ -13,6 +13,7 @@
 #include <beast/http/fields.hpp>
 #include <beast/http/rfc7230.hpp>
 
+namespace boost {
 namespace beast {
 namespace websocket {
 
@@ -36,5 +37,6 @@ is_upgrade(http::header<true,
 
 } // websocket
 } // beast
+} // boost
 
 #endif

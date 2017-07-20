@@ -28,6 +28,7 @@
 #include <algorithm>
 #include <cstring>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -577,6 +578,7 @@ async_write_some(
 
 } // http
 } // beast
+} // boost
 
 #endif
 

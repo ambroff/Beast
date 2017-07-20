@@ -19,6 +19,7 @@
 #include <cstdint>
 #include <utility>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -162,5 +163,6 @@ struct basic_dynamic_body
 
 } // http
 } // beast
+} // boost
 
 #endif

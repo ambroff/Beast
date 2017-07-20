@@ -44,6 +44,7 @@
 #include <string>
 #include <utility>
 
+namespace boost {
 namespace beast {
 namespace detail {
 
@@ -245,5 +246,6 @@ base64_decode(std::string const& data)
 
 } // detail
 } // beast
+} // boost
 
 #endif

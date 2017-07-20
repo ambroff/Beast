@@ -17,6 +17,7 @@
 #include <array>
 #include <cstdint>
 
+namespace boost {
 namespace beast {
 namespace websocket {
 
@@ -207,6 +208,7 @@ struct close_reason
 
 } // websocket
 } // beast
+} // boost
 
 #include <beast/websocket/impl/rfc6455.ipp>
 

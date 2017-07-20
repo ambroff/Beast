@@ -17,6 +17,7 @@
 #include <random>
 #include <type_traits>
 
+namespace boost {
 namespace beast {
 namespace websocket {
 namespace detail {
@@ -263,5 +264,6 @@ mask_inplace(
 } // detail
 } // websocket
 } // beast
+} // boost
 
 #endif

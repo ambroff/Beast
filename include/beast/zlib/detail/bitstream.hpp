@@ -41,6 +41,7 @@
 #include <cstdint>
 #include <iterator>
 
+namespace boost {
 namespace beast {
 namespace zlib {
 namespace detail {
@@ -201,5 +202,6 @@ rewind(BidirIt& it)
 } // detail
 } // zlib
 } // beast
+} // boost
 
 #endif

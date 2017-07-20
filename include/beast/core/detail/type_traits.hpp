@@ -44,6 +44,7 @@ class consuming_buffers;
 
 //------------------------------------------------------------------------------
 
+namespace boost {
 namespace beast {
 namespace detail {
 
@@ -263,5 +264,6 @@ using WriteHandler = StreamHandler;
 
 } // detail
 } // beast
+} // boost
 
 #endif

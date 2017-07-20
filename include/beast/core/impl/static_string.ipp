@@ -14,6 +14,7 @@
 #include <beast/core/detail/type_traits.hpp>
 #include <boost/throw_exception.hpp>
 
+namespace boost {
 namespace beast {
 
 //
@@ -612,5 +613,6 @@ to_static_string(Integer x)
 }
 
 } // beast
+} // boost
 
 #endif

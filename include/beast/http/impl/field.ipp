@@ -17,6 +17,7 @@
 #include <vector>
 #include <boost/assert.hpp>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -555,5 +556,6 @@ string_to_field(string_view s)
 
 } // http
 } // beast
+} // boost
 
 #endif

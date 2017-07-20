@@ -16,6 +16,7 @@
 #include <cstdio>
 #include <cstdint>
 
+namespace boost {
 namespace beast {
 
 /** An implementation of File which uses cstdio.
@@ -150,6 +151,7 @@ public:
 };
 
 } // beast
+} // boost
 
 #include <beast/core/impl/file_stdio.ipp>
 

@@ -50,6 +50,7 @@ struct is_error_code_enum<beast::zlib::error>
 } // system
 } // boost
 
+namespace boost {
 namespace beast {
 namespace zlib {
 namespace detail {
@@ -135,5 +136,6 @@ make_error_code(error ev)
 
 } // zlib
 } // beast
+} // boost
 
 #endif

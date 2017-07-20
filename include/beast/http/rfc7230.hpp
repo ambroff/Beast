@@ -14,6 +14,7 @@
 #include <beast/http/detail/rfc7230.hpp>
 #include <beast/http/detail/basic_parsed_list.hpp>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -321,6 +322,7 @@ validate_list(detail::basic_parsed_list<
 
 } // http
 } // beast
+} // boost
 
 #include <beast/http/impl/rfc7230.ipp>
 

@@ -43,6 +43,7 @@
 #include <cstring>
 #include <memory>
 
+namespace boost {
 namespace beast {
 namespace zlib {
 namespace detail {
@@ -161,5 +162,6 @@ write(std::uint8_t const* in, std::size_t n)
 } // detail
 } // zlib
 } // beast
+} // boost
 
 #endif

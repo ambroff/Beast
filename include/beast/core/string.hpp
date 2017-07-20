@@ -28,6 +28,7 @@
 
 #include <algorithm>
 
+namespace boost {
 namespace beast {
 
 #if BOOST_BEAST_NO_BOOST_STRING_VIEW

@@ -50,6 +50,7 @@
 #include <cstring>
 #include <stdexcept>
 
+namespace boost {
 namespace beast {
 namespace zlib {
 namespace detail {
@@ -1304,5 +1305,6 @@ inflate_fast(ranges& r, error_code& ec)
 } // detail
 } // zlib
 } // beast
+} // boost
 
 #endif

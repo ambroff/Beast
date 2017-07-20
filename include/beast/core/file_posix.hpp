@@ -32,6 +32,7 @@
 #include <beast/core/file_base.hpp>
 #include <cstdint>
 
+namespace boost {
 namespace beast {
 
 /** An implementation of File for POSIX systems.
@@ -165,6 +166,7 @@ public:
 };
 
 } // beast
+} // boost
 
 #include <beast/core/impl/file_posix.ipp>
 

@@ -16,6 +16,7 @@
 #include <beast/http/basic_parser.hpp>
 #include <beast/http/message.hpp>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -758,6 +759,7 @@ async_read(
 
 } // http
 } // beast
+} // boost
 
 #include <beast/http/impl/read.ipp>
 

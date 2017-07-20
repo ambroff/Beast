@@ -21,6 +21,7 @@
 #include <algorithm>
 #include <utility>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -933,5 +934,6 @@ do_field(field f,
 
 } // http
 } // beast
+} // boost
 
 #endif

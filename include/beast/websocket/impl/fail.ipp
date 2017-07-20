@@ -25,6 +25,7 @@
 #include <type_traits>
 #include <utility>
 
+namespace boost {
 namespace beast {
 namespace websocket {
 
@@ -231,5 +232,6 @@ operator()(error_code ec, std::size_t)
 
 } // websocket
 } // beast
+} // boost
 
 #endif

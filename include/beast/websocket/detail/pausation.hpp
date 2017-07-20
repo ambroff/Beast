@@ -17,6 +17,7 @@
 #include <new>
 #include <utility>
 
+namespace boost {
 namespace beast {
 namespace websocket {
 namespace detail {
@@ -220,5 +221,6 @@ pausation::save(F&& f)
 } // detail
 } // websocket
 } // beast
+} // boost
 
 #endif

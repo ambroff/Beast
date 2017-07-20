@@ -21,17 +21,12 @@
 #include <tuple>
 #include <utility>
 
+namespace boost {
 namespace beast {
 
 template<class... Bn>
 class buffer_cat_view<Bn...>::const_iterator
 {
-#if 0
-    static_assert(
-        detail::is_all_const_buffer_sequence<Bn...>::value,
-            "BufferSequence requirements not met");
-#endif
-
     std::size_t n_;
     std::tuple<Bn...> const* bn_;
     std::array<char, detail::max_sizeof<
@@ -495,5 +490,6 @@ buffer_cat_view<Bn...>::end() const ->
 }
 
 } // beast
+} // boost
 
 #endif

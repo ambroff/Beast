@@ -29,6 +29,7 @@
 #include <algorithm>
 #include <memory>
 
+namespace boost {
 namespace beast {
 namespace websocket {
 
@@ -924,5 +925,6 @@ async_write(
 
 } // websocket
 } // beast
+} // boost
 
 #endif

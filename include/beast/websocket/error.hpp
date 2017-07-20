@@ -13,6 +13,7 @@
 #include <beast/config.hpp>
 #include <beast/core/error.hpp>
 
+namespace boost {
 namespace beast {
 namespace websocket {
 
@@ -34,6 +35,7 @@ enum class error
 
 } // websocket
 } // beast
+} // boost
 
 #include <beast/websocket/impl/error.ipp>
 

@@ -14,6 +14,7 @@
 #include <boost/asio/buffer.hpp>
 #include <boost/throw_exception.hpp>
 
+namespace boost {
 namespace beast {
 
 /** A @b DynamicBuffer which does not retain its input sequence.
@@ -119,6 +120,8 @@ public:
     {
     }
 };
+
 } // beast
+} // boost
 
 #endif

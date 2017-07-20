@@ -14,6 +14,7 @@
 #include <beast/core/string.hpp>
 #include <iosfwd>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -401,6 +402,7 @@ operator<<(std::ostream& os, field f)
 
 } // http
 } // beast
+} // boost
 
 #include <beast/http/impl/field.ipp>
 

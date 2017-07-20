@@ -18,6 +18,7 @@
 #include <boost/asio/handler_invoke_hook.hpp>
 #include <memory>
 
+namespace boost {
 namespace beast {
 namespace websocket {
 
@@ -169,5 +170,6 @@ async_teardown(teardown_tag,
 
 } // websocket
 } // beast
+} // boost
 
 #endif

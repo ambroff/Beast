@@ -23,6 +23,7 @@
 #include <string>
 #include <utility>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -180,5 +181,6 @@ public:
 
 } // http
 } // beast
+} // boost
 
 #endif

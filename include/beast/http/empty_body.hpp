@@ -15,6 +15,7 @@
 #include <beast/http/message.hpp>
 #include <boost/optional.hpp>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -126,5 +127,6 @@ struct empty_body
 
 } // http
 } // beast
+} // boost
 
 #endif

@@ -17,6 +17,7 @@
 #include <type_traits>
 #include <utility>
 
+namespace boost {
 namespace beast {
 
 /** A smart pointer container with associated completion handler.
@@ -205,6 +206,7 @@ public:
 };
 
 } // beast
+} // boost
 
 #include <beast/core/impl/handler_ptr.ipp>
 

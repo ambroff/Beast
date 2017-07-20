@@ -15,6 +15,7 @@
 #include <iterator>
 #include <type_traits>
 
+namespace boost {
 namespace beast {
 namespace detail {
 
@@ -129,5 +130,6 @@ raw_to_string(CharT* last, std::size_t size, Integer i)
 
 } // detail
 } // beast
+} // boost
 
 #endif

@@ -13,6 +13,7 @@
 #include <boost/throw_exception.hpp>
 #include <stdexcept>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -49,5 +50,6 @@ parser(parser<isRequest, OtherBody, Allocator>&& other,
 
 } // http
 } // beast
+} // boost
 
 #endif

@@ -24,6 +24,7 @@
         Vincent Falco (beast adaptation)
 */
 
+namespace boost {
 namespace beast {
 namespace detail {
 
@@ -307,5 +308,6 @@ finish(sha1_context& ctx, void* digest) noexcept
 
 } // detail
 } // beast
+} // boost
 
 #endif

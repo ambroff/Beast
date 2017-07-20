@@ -17,6 +17,7 @@
 #include <boost/assert.hpp>
 #include <ostream>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -435,5 +436,6 @@ consume(std::size_t n)
 
 } // http
 } // beast
+} // boost
 
 #endif

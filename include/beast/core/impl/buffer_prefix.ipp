@@ -17,6 +17,7 @@
 #include <type_traits>
 #include <utility>
 
+namespace boost {
 namespace beast {
 
 namespace detail {
@@ -248,5 +249,6 @@ buffer_prefix_view<BufferSequence>::end() const ->
 }
 
 } // beast
+} // boost
 
 #endif

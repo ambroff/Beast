@@ -25,6 +25,7 @@
 #include <tuple>
 #include <utility>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -837,6 +838,7 @@ swap(
 
 } // http
 } // beast
+} // boost
 
 #include <beast/http/impl/message.ipp>
 

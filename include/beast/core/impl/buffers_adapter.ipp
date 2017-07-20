@@ -19,6 +19,7 @@
 #include <stdexcept>
 #include <type_traits>
 
+namespace boost {
 namespace beast {
 
 template<class MutableBufferSequence>
@@ -503,5 +504,6 @@ buffers_adapter<MutableBufferSequence>::consume(std::size_t n)
 }
 
 } // beast
+} // boost
 
 #endif

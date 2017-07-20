@@ -15,6 +15,7 @@
 #include <iterator>
 #include <type_traits>
 
+namespace boost {
 namespace beast {
 namespace detail {
 
@@ -73,5 +74,6 @@ varint_write(FwdIt& first, std::size_t value)
 
 } // detail
 } // beast
+} // boost
 
 #endif

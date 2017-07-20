@@ -13,6 +13,7 @@
 #include <beast/websocket/rfc6455.hpp>
 #include <beast/core/detail/type_traits.hpp>
 
+namespace boost {
 namespace beast {
 namespace websocket {
 namespace detail {
@@ -30,5 +31,6 @@ using is_ResponseDecorator =
 } // detail
 } // websocket
 } // beast
+} // boost
 
 #endif

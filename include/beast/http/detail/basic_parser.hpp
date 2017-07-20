@@ -21,6 +21,7 @@
 #include <cstddef>
 #include <utility>
 
+namespace boost {
 namespace beast {
 namespace http {
 namespace detail {
@@ -890,5 +891,6 @@ protected:
 } // detail
 } // http
 } // beast
+} // boost
 
 #endif

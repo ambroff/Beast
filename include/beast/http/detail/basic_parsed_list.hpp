@@ -15,6 +15,7 @@
 #include <cstddef>
 #include <iterator>
 
+namespace boost {
 namespace beast {
 namespace http {
 namespace detail {
@@ -191,6 +192,7 @@ cend() const ->
 } // detail
 } // http
 } // beast
+} // boost
 
 #endif
 

@@ -14,6 +14,7 @@
 #include <boost/throw_exception.hpp>
 #include <stdexcept>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -331,5 +332,6 @@ string_to_verb(string_view s)
 
 } // http
 } // beast
+} // boost
 
 #endif

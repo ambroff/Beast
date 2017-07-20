@@ -18,6 +18,7 @@
 #include <unistd.h>
 #include <limits.h>
 
+namespace boost {
 namespace beast {
 
 namespace detail {
@@ -329,5 +330,6 @@ write(void const* buffer, std::size_t n, error_code& ec)
 }
 
 } // beast
+} // boost
 
 #endif

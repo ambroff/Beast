@@ -52,6 +52,7 @@
 #include <stdexcept>
 #include <type_traits>
 
+namespace boost {
 namespace beast {
 namespace zlib {
 namespace detail {
@@ -3000,5 +3001,6 @@ f_huff(z_params& zs, Flush flush) ->
 } // detail
 } // zlib
 } // beast
+} // boost
 
 #endif

@@ -16,6 +16,7 @@
 #include <algorithm>
 #include <cstdint>
 
+namespace boost {
 namespace beast {
 namespace websocket {
 namespace detail {
@@ -301,5 +302,6 @@ check_utf8(char const* p, std::size_t n)
 } // detail
 } // websocket
 } // beast
+} // boost
 
 #endif

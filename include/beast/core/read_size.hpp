@@ -14,6 +14,7 @@
 #include <beast/core/type_traits.hpp>
 #include <boost/throw_exception.hpp>
 
+namespace boost {
 namespace beast {
 
 /** Returns a natural read size.
@@ -56,6 +57,7 @@ read_size_or_throw(DynamicBuffer& buffer,
     std::size_t max_size);
 
 } // beast
+} // boost
 
 #include <beast/core/impl/read_size.ipp>
 

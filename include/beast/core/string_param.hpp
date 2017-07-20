@@ -122,6 +122,7 @@ public:
 };
 
 } // beast
+} // boost
 
 #include <beast/core/impl/string_param.ipp>
 

@@ -29,6 +29,7 @@
 #include <cstdio>
 #include <cstdint>
 
+namespace boost {
 namespace beast {
 
 /** An implementation of File for Win32.
@@ -167,6 +168,7 @@ public:
 };
 
 } // beast
+} // boost
 
 #include <beast/core/impl/file_win32.ipp>
 

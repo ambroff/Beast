@@ -11,6 +11,7 @@
 #define BOOST_BEAST_IMPL_READ_SIZE_IPP
 
 namespace beast {
+namespace boost {
 
 namespace detail {
 
@@ -73,5 +74,6 @@ read_size_or_throw(
 }
 
 } // beast
+} // boost
 
 #endif

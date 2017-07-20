@@ -20,6 +20,7 @@
 #include <boost/throw_exception.hpp>
 #include <memory>
 
+namespace boost {
 namespace beast {
 namespace websocket {
 
@@ -245,5 +246,6 @@ async_close(close_reason const& cr, CloseHandler&& handler)
 
 } // websocket
 } // beast
+} // boost
 
 #endif

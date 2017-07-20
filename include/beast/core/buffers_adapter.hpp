@@ -15,6 +15,7 @@
 #include <boost/asio/buffer.hpp>
 #include <type_traits>
 
+namespace boost {
 namespace beast {
 
 /** Adapts a @b MutableBufferSequence into a @b DynamicBuffer.
@@ -154,6 +155,7 @@ public:
 };
 
 } // beast
+} // boost
 
 #include <beast/core/impl/buffers_adapter.ipp>
 

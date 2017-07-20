@@ -26,6 +26,7 @@
 #include <type_traits>
 #include <utility>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -729,6 +730,7 @@ using fields = basic_fields<std::allocator<char>>;
 
 } // http
 } // beast
+} // boost
 
 #include <beast/http/impl/fields.ipp>
 

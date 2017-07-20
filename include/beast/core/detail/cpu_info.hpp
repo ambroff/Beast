@@ -28,6 +28,7 @@
 #include <cpuid.h>  // __get_cpuid
 #endif
 
+namespace boost {
 namespace beast {
 namespace detail {
 
@@ -91,6 +92,7 @@ get_cpu_info()
 
 } // detail
 } // beast
+} // boost
 
 #endif
 

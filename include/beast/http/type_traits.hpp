@@ -20,6 +20,7 @@
 #include <type_traits>
 #include <utility>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -179,5 +180,6 @@ using is_fields = typename detail::is_fields_helper<T>::type;
 
 } // http
 } // beast
+} // boost
 
 #endif

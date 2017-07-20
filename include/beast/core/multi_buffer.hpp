@@ -18,6 +18,7 @@
 #include <memory>
 #include <type_traits>
 
+namespace boost {
 namespace beast {
 
 /** A @b DynamicBuffer that uses multiple buffers internally.
@@ -315,6 +316,7 @@ private:
 using multi_buffer = basic_multi_buffer<std::allocator<char>>;
 
 } // beast
+} // boost
 
 #include <beast/core/impl/multi_buffer.ipp>
 

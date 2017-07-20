@@ -13,6 +13,7 @@
 #include <beast/config.hpp>
 #include <beast/core/string.hpp>
 
+namespace boost {
 namespace beast {
 
 /** File open modes
@@ -83,5 +84,6 @@ enum class file_mode
 };
 
 } // beast
+} // boost
 
 #endif

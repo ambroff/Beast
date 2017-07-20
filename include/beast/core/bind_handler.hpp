@@ -16,6 +16,7 @@
 #include <type_traits>
 #include <utility>
 
+namespace boost {
 namespace beast {
 
 /** Bind parameters to a completion handler, creating a new handler.
@@ -73,5 +74,6 @@ bind_handler(Handler&& handler, Args&&... args)
 }
 
 } // beast
+} // boost
 
 #endif

@@ -15,6 +15,7 @@
 #include <beast/http/detail/rfc7230.hpp>
 #include <algorithm>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -701,5 +702,6 @@ end() const ->
 
 } // http
 } // beast
+} // boost
 
 #endif

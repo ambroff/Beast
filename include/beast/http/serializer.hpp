@@ -28,6 +28,7 @@
 # endif
 #endif
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -407,6 +408,7 @@ using response_serializer = serializer<false, Body, Fields>;
 
 } // http
 } // beast
+} // boost
 
 #include <beast/http/impl/serializer.ipp>
 

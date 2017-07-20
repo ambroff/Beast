@@ -20,6 +20,7 @@ struct is_error_code_enum<beast::websocket::error>
 } // system
 } // boost
 
+namespace boost {
 namespace beast {
 namespace websocket {
 namespace detail {
@@ -92,5 +93,6 @@ make_error_code(error e)
 
 } // websocket
 } // beast
+} // boost
 
 #endif

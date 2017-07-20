@@ -14,6 +14,7 @@
 #include <ostream>
 #include <streambuf>
 
+namespace boost {
 namespace beast {
 namespace detail {
 
@@ -136,5 +137,6 @@ public:
 
 } // detail
 } // beast
+} // boost
 
 #endif

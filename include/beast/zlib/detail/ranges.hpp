@@ -40,6 +40,7 @@
 #include <cstdint>
 #include <type_traits>
 
+namespace boost {
 namespace beast {
 namespace zlib {
 namespace detail {
@@ -98,5 +99,6 @@ clamp(U u, V v)
 } // detail
 } // zlib
 } // beast
+} // boost
 
 #endif

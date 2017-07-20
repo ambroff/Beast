@@ -20,6 +20,7 @@
 #include <boost/asio/handler_invoke_hook.hpp>
 #include <boost/throw_exception.hpp>
 
+namespace boost {
 namespace beast {
 
 template<class Stream, class DynamicBuffer>
@@ -239,5 +240,6 @@ async_read_some(MutableBufferSequence const& buffers,
 }
 
 } // beast
+} // boost
 
 #endif

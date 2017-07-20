@@ -19,6 +19,7 @@
 #include <memory>
 #include <type_traits>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -728,6 +729,7 @@ make_chunk_last(
 
 } // http
 } // beast
+} // boost
 
 #include <beast/http/impl/chunk_encode.ipp>
 

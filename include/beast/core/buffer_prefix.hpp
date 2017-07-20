@@ -17,6 +17,7 @@
 #include <cstdint>
 #include <type_traits>
 
+namespace boost {
 namespace beast {
 
 /** A buffer sequence adapter that shortens the sequence size.
@@ -232,6 +233,7 @@ buffer_front(BufferSequence const& buffers)
 }
 
 } // beast
+} // boost
 
 #include <beast/core/impl/buffer_prefix.ipp>
 

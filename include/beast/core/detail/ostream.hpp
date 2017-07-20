@@ -18,6 +18,7 @@
 #include <type_traits>
 #include <utility>
 
+namespace boost {
 namespace beast {
 namespace detail {
 
@@ -316,5 +317,6 @@ public:
 
 } // detail
 } // beast
+} // boost
 
 #endif

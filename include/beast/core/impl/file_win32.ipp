@@ -17,6 +17,7 @@
 #include <limits>
 #include <utility>
 
+namespace boost {
 namespace beast {
 
 namespace detail {
@@ -354,5 +355,6 @@ write(void const* buffer, std::size_t n, error_code& ec)
 }
 
 } // beast
+} // boost
 
 #endif

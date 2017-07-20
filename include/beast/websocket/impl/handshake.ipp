@@ -24,6 +24,7 @@
 #include <boost/throw_exception.hpp>
 #include <memory>
 
+namespace boost {
 namespace beast {
 namespace websocket {
 
@@ -392,5 +393,6 @@ handshake_ex(response_type& res,
 
 } // websocket
 } // beast
+} // boost
 
 #endif

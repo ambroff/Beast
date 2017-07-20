@@ -19,6 +19,7 @@
 #include <string>
 #include <utility>
 
+namespace boost {
 namespace beast {
 
 /*  These diagrams illustrate the layout and state variables.
@@ -1047,5 +1048,6 @@ debug_check() const
 }
 
 } // beast
+} // boost
 
 #endif

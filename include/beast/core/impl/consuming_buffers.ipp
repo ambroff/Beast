@@ -17,6 +17,7 @@
 #include <type_traits>
 #include <utility>
 
+namespace boost {
 namespace beast {
 
 template<class Buffers>
@@ -233,5 +234,6 @@ consume(std::size_t amount)
 }
 
 } // beast
+} // boost
 
 #endif

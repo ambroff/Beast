@@ -12,6 +12,7 @@
 
 #include <limits>
 
+namespace boost {
 namespace beast {
 
 inline
@@ -223,5 +224,6 @@ write(void const* buffer, std::size_t n, error_code& ec)
 }
 
 } // beast
+} // boost
 
 #endif

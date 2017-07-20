@@ -26,6 +26,7 @@
 #include <boost/optional.hpp>
 #include <boost/throw_exception.hpp>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -790,5 +791,6 @@ async_read(
 
 } // http
 } // beast
+} // boost
 
 #endif

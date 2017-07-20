@@ -23,6 +23,7 @@
 #include <string>
 #include <utility>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -196,5 +197,6 @@ using string_body = basic_string_body<char>;
 
 } // http
 } // beast
+} // boost
 
 #endif

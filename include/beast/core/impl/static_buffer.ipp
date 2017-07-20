@@ -18,6 +18,7 @@
 #include <iterator>
 #include <stdexcept>
 
+namespace boost {
 namespace beast {
 
 template<bool isInput, class T>
@@ -315,5 +316,6 @@ operator=(static_buffer const& other) ->
 }
 
 } // beast
+} // boost
 
 #endif

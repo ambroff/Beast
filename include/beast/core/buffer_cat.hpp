@@ -14,6 +14,7 @@
 #include <beast/core/detail/type_traits.hpp>
 #include <tuple>
 
+namespace boost {
 namespace beast {
 
 /** A buffer sequence representing a concatenation of buffer sequences.
@@ -111,6 +112,7 @@ buffer_cat(B1 const& b1, B2 const& b2, Bn const&... bn)
 }
 
 } // beast
+} // boost
 
 #include <beast/core/impl/buffer_cat.ipp>
 

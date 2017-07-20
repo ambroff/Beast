@@ -19,6 +19,7 @@
 #include <type_traits>
 #include <utility>
 
+namespace boost {
 namespace beast {
 
 // Guidance from
@@ -156,5 +157,6 @@ public:
 #endif
 
 } // beast
+} // boost
 
 #endif

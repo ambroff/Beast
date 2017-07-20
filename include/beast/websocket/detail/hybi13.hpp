@@ -20,6 +20,7 @@
 #include <string>
 #include <type_traits>
 
+namespace boost {
 namespace beast {
 namespace websocket {
 namespace detail {
@@ -69,5 +70,6 @@ make_sec_ws_accept(sec_ws_accept_type& accept,
 } // detail
 } // websocket
 } // beast
+} // boost
 
 #endif

@@ -16,6 +16,7 @@
 #include <cstddef>
 #include <cstring>
 
+namespace boost {
 namespace beast {
 
 /** A flat @b DynamicBuffer with a fixed size internal buffer.
@@ -237,6 +238,7 @@ public:
 };
 
 } // beast
+} // boost
 
 #include <beast/core/impl/flat_static_buffer.ipp>
 

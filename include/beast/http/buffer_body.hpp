@@ -18,6 +18,7 @@
 #include <type_traits>
 #include <utility>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -222,5 +223,6 @@ operator<<(std::ostream& os, message<isRequest,
 
 } // http
 } // beast
+} // boost
 
 #endif

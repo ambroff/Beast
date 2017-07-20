@@ -15,6 +15,7 @@
 #include <type_traits>
 #include <utility>
 
+namespace boost {
 namespace beast {
 namespace detail {
 
@@ -137,5 +138,6 @@ using index_sequence_for =
 
 } // detail
 } // beast
+} // boost
 
 #endif

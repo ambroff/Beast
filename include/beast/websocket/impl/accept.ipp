@@ -27,6 +27,7 @@
 #include <memory>
 #include <type_traits>
 
+namespace boost {
 namespace beast {
 namespace websocket {
 
@@ -810,5 +811,6 @@ async_accept_ex(http::request<Body,
 
 } // websocket
 } // beast
+} // boost
 
 #endif

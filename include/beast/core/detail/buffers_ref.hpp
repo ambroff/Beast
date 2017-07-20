@@ -12,6 +12,7 @@
 
 #include <beast/core/type_traits.hpp>
 
+namespace boost {
 namespace beast {
 namespace detail {
 
@@ -60,5 +61,6 @@ make_buffers_ref(BufferSequence const& buffers)
 
 } // detail
 } // beast
+} // boost
 
 #endif

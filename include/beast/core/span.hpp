@@ -17,6 +17,7 @@
 #include <string>
 #include <type_traits>
 
+namespace boost {
 namespace beast {
 
 /** A range of bytes expressed as a ContiguousContainer
@@ -209,5 +210,6 @@ public:
 };
 
 } // beast
+} // boost
 
 #endif

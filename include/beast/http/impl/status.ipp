@@ -13,6 +13,7 @@
 #include <beast/core/detail/config.hpp>
 #include <boost/throw_exception.hpp>
 
+namespace boost {
 namespace beast {
 namespace http {
 namespace detail {
@@ -246,5 +247,6 @@ operator<<(std::ostream& os, status v)
 
 } // http
 } // beast
+} // boost
 
 #endif

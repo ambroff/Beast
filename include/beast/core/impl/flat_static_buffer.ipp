@@ -18,6 +18,7 @@
 #include <iterator>
 #include <stdexcept>
 
+namespace boost {
 namespace beast {
 
 /*  Memory is laid out thusly:
@@ -136,5 +137,6 @@ operator=(flat_static_buffer const& other) ->
 }
 
 } // beast
+} // boost
 
 #endif

@@ -16,6 +16,7 @@
 #include <boost/assert.hpp>
 #include <memory>
 
+namespace boost {
 namespace beast {
 
 template<class T, class Handler>
@@ -131,5 +132,6 @@ invoke(Args&&... args)
 }
 
 } // beast
+} // boost
 
 #endif

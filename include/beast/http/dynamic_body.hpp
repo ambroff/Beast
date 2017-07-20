@@ -13,6 +13,7 @@
 #include <beast/core/multi_buffer.hpp>
 #include <beast/http/basic_dynamic_body.hpp>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -24,5 +25,6 @@ using dynamic_body = basic_dynamic_body<multi_buffer>;
 
 } // http
 } // beast
+} // boost
 
 #endif

@@ -16,6 +16,7 @@
 #include <boost/asio/buffer.hpp>
 #include <type_traits>
 
+namespace boost {
 namespace beast {
 
 //------------------------------------------------------------------------------

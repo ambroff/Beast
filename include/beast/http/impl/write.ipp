@@ -26,6 +26,7 @@
 #include <ostream>
 #include <sstream>
 
+namespace boost {
 namespace beast {
 namespace http {
 namespace detail {
@@ -884,5 +885,6 @@ operator<<(std::ostream& os,
 
 } // http
 } // beast
+} // boost
 
 #endif

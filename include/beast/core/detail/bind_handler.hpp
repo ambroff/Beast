@@ -18,6 +18,7 @@
 #include <functional>
 #include <utility>
 
+namespace boost {
 namespace beast {
 namespace detail {
 
@@ -172,6 +173,7 @@ public:
 
 } // detail
 } // beast
+} // boost
 
 namespace std {
 template<class Handler, class... Args>

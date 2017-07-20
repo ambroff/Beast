@@ -13,6 +13,7 @@
 #include <beast/config.hpp>
 #include <beast/core/error.hpp>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -153,6 +154,7 @@ enum class error
 
 } // http
 } // beast
+} // boost
 
 #include <beast/http/impl/error.ipp>
 

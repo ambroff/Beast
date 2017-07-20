@@ -14,6 +14,7 @@
 #include <boost/optional.hpp>
 #include <cstdint>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -186,5 +187,6 @@ struct is_fields_helper : T
 } // detail
 } // http
 } // beast
+} // boost
 
 #endif

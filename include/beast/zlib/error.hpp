@@ -13,6 +13,7 @@
 #include <beast/config.hpp>
 #include <beast/core/error.hpp>
 
+namespace boost {
 namespace beast {
 namespace zlib {
 
@@ -130,6 +131,7 @@ enum class error
 
 } // zlib
 } // beast
+} // boost
 
 #include <beast/zlib/impl/error.ipp>
 

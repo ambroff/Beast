@@ -12,6 +12,7 @@
 
 #include <utility>
 
+namespace boost {
 namespace beast {
 namespace websocket {
 
@@ -50,5 +51,6 @@ async_teardown(teardown_tag,
 
 } // websocket
 } // beast
+} // boost
 
 #endif

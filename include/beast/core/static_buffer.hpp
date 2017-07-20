@@ -16,6 +16,7 @@
 #include <cstddef>
 #include <cstring>
 
+namespace boost {
 namespace beast {
 
 /** A circular @b DynamicBuffer with a fixed size internal buffer.
@@ -218,6 +219,7 @@ public:
 };
 
 } // beast
+} // boost
 
 #include <beast/core/impl/static_buffer.ipp>
 

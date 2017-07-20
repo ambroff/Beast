@@ -29,6 +29,7 @@
 #include <limits>
 #include <memory>
 
+namespace boost {
 namespace beast {
 namespace websocket {
 
@@ -1355,5 +1356,6 @@ async_read_some(
 
 } // websocket
 } // beast
+} // boost
 
 #endif

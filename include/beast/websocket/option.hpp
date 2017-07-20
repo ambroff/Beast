@@ -21,6 +21,7 @@
 #include <type_traits>
 #include <utility>
 
+namespace boost {
 namespace beast {
 namespace websocket {
 
@@ -67,5 +68,6 @@ struct permessage_deflate
 
 } // websocket
 } // beast
+} // boost
 
 #endif

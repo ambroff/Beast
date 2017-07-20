@@ -17,6 +17,7 @@
 #include <type_traits>
 #include <utility>
 
+namespace boost {
 namespace beast {
 
 /** An interface for customising the behaviour of an asynchronous initiation function.
@@ -203,5 +204,6 @@ using async_return_type = typename beast::async_result<
         Signature>::return_type;
 
 } // beast
+} // boost
 
 #endif

@@ -20,6 +20,7 @@
 #include <cstdint>
 #include <utility>
 
+namespace boost {
 namespace beast {
 
 /** A @b Stream with attached @b DynamicBuffer to buffer reads.
@@ -352,6 +353,7 @@ public:
 };
 
 } // beast
+} // boost
 
 #include <beast/core/impl/buffered_read_stream.ipp>
 

@@ -38,6 +38,7 @@
 #include <limits>
 #include <type_traits>
 
+namespace boost {
 namespace beast {
 namespace websocket {
 
@@ -3724,6 +3725,7 @@ private:
 
 } // websocket
 } // beast
+} // boost
 
 #include <beast/websocket/impl/accept.ipp>
 #include <beast/websocket/impl/close.ipp>

@@ -20,6 +20,7 @@
 #include <boost/asio/buffer.hpp>
 #include <utility>
 
+namespace boost {
 namespace beast {
 namespace websocket {
 namespace detail {
@@ -472,5 +473,6 @@ deflate(
 } // detail
 } // websocket
 } // beast
+} // boost
 
 #endif

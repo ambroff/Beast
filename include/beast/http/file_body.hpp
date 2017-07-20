@@ -19,6 +19,7 @@
 #include <cstdint>
 #include <utility>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -27,6 +28,7 @@ using file_body = basic_file_body<file>;
 
 } // http
 } // beast
+} // boost
 
 #include <beast/http/impl/file_body_win32.ipp>
 

@@ -11,6 +11,7 @@
 #define BOOST_BEAST_IMPL_STRING_PARAM_IPP
 
 namespace beast {
+namespace boost {
 
 template<class T>
 typename std::enable_if<
@@ -102,5 +103,6 @@ string_param(Args const&... args)
 }
 
 } // beast
+} // boost
 
 #endif

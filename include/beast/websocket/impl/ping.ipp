@@ -21,6 +21,7 @@
 #include <boost/throw_exception.hpp>
 #include <memory>
 
+namespace boost {
 namespace beast {
 namespace websocket {
 
@@ -269,5 +270,6 @@ pong(ping_data const& payload, error_code& ec)
 
 } // websocket
 } // beast
+} // boost
 
 #endif

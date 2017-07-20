@@ -17,6 +17,7 @@
 #include <streambuf>
 #include <utility>
 
+namespace boost {
 namespace beast {
 
 /** Return an object representing a @b ConstBufferSequence.
@@ -97,5 +98,6 @@ ostream(DynamicBuffer& buffer)
 }
 
 } // beast
+} // boost
 
 #endif

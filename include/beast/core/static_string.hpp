@@ -1104,6 +1104,7 @@ static_string<detail::max_digits(sizeof(Integer))>
 to_static_string(Integer x);
 
 } // beast
+} // boost
 
 #include <beast/core/impl/static_string.ipp>
 

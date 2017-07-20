@@ -19,6 +19,7 @@
 #include <type_traits>
 #include <utility>
 
+namespace boost {
 namespace beast {
 
 /** Adapter to trim the front of a `BufferSequence`.
@@ -143,6 +144,7 @@ public:
 };
 
 } // beast
+} // boost
 
 #include <beast/core/impl/consuming_buffers.ipp>
 

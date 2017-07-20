@@ -20,6 +20,7 @@
 #include <boost/endian/buffers.hpp>
 #include <cstdint>
 
+namespace boost {
 namespace beast {
 namespace websocket {
 namespace detail {
@@ -298,5 +299,6 @@ read_close(close_reason& cr,
 } // detail
 } // websocket
 } // beast
+} // boost
 
 #endif

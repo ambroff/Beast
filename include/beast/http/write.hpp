@@ -27,6 +27,7 @@
 #include <type_traits>
 #include <utility>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -557,6 +558,7 @@ operator<<(std::ostream& os,
 
 } // http
 } // beast
+} // boost
 
 #include <beast/http/impl/write.ipp>
 

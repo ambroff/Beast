@@ -16,6 +16,7 @@
 #include <limits>
 #include <memory>
 
+namespace boost {
 namespace beast {
 
 /** A linear dynamic buffer.
@@ -337,6 +338,7 @@ using flat_buffer =
     basic_flat_buffer<std::allocator<char>>;
 
 } // beast
+} // boost
 
 #include <beast/core/impl/flat_buffer.ipp>
 

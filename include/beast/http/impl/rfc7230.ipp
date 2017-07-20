@@ -13,6 +13,7 @@
 #include <beast/http/detail/rfc7230.hpp>
 #include <iterator>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -565,6 +566,7 @@ validate_list(detail::basic_parsed_list<
 
 } // http
 } // beast
+} // boost
 
 #endif
 

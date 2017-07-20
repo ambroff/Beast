@@ -36,6 +36,7 @@
 
 #include <iostream>
 
+namespace boost {
 namespace beast {
 namespace websocket {
 
@@ -926,5 +927,6 @@ do_response(response_type const& res,
 
 } // websocket
 } // beast
+} // boost
 
 #endif

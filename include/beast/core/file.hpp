@@ -17,6 +17,7 @@
 #include <beast/core/file_win32.hpp>
 #include <boost/config.hpp>
 
+namespace boost {
 namespace beast {
 
 /** An implementation of File.
@@ -39,5 +40,6 @@ using file = file_stdio;
 #endif
 
 } // beast
+} // boost
 
 #endif

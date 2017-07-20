@@ -21,6 +21,7 @@
 #include <type_traits>
 #include <utility>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -428,6 +429,7 @@ using response_parser = parser<false, Body, Allocator>;
 
 } // http
 } // beast
+} // boost
 
 #include <beast/http/impl/parser.ipp>
 

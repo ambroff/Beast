@@ -22,6 +22,7 @@ struct is_error_code_enum<beast::http::error>
 } // system
 } // boost
 
+namespace boost {
 namespace beast {
 namespace http {
 namespace detail {
@@ -115,5 +116,6 @@ make_error_code(error ev)
 
 } // http
 } // beast
+} // boost
 
 #endif

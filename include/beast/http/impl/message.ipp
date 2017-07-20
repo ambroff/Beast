@@ -16,6 +16,7 @@
 #include <boost/throw_exception.hpp>
 #include <stdexcept>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -413,5 +414,6 @@ swap(
 
 } // http
 } // beast
+} // boost
 
 #endif

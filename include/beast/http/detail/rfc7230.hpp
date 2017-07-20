@@ -14,6 +14,7 @@
 #include <iterator>
 #include <utility>
 
+namespace boost {
 namespace beast {
 namespace http {
 namespace detail {
@@ -466,6 +467,7 @@ struct opt_token_list_policy
 } // detail
 } // http
 } // beast
+} // boost
 
 #endif
 

@@ -29,6 +29,7 @@
 #endif
 #endif
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -1366,5 +1367,6 @@ swap(basic_fields& other, std::false_type)
 
 } // http
 } // beast
+} // boost
 
 #endif

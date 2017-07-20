@@ -14,6 +14,7 @@
 #include <boost/throw_exception.hpp>
 #include <stdexcept>
 
+namespace boost {
 namespace beast {
 
 /*  Memory is laid out thusly:
@@ -469,5 +470,6 @@ swap(
 }
 
 } // beast
+} // boost
 
 #endif
