@@ -39,20 +39,20 @@ class frame_test
 public:
     void testCloseCodes()
     {
-        BEAST_EXPECT(! is_valid_close_code(0));
-        BEAST_EXPECT(! is_valid_close_code(1));
-        BEAST_EXPECT(! is_valid_close_code(999));
-        BEAST_EXPECT(! is_valid_close_code(1004));
-        BEAST_EXPECT(! is_valid_close_code(1005));
-        BEAST_EXPECT(! is_valid_close_code(1006));
-        BEAST_EXPECT(! is_valid_close_code(1016));
-        BEAST_EXPECT(! is_valid_close_code(2000));
-        BEAST_EXPECT(! is_valid_close_code(2999));
-        BEAST_EXPECT(is_valid_close_code(1000));
-        BEAST_EXPECT(is_valid_close_code(1002));
-        BEAST_EXPECT(is_valid_close_code(3000));
-        BEAST_EXPECT(is_valid_close_code(4000));
-        BEAST_EXPECT(is_valid_close_code(5000));
+        BOOST_BEAST_EXPECT(! is_valid_close_code(0));
+        BOOST_BEAST_EXPECT(! is_valid_close_code(1));
+        BOOST_BEAST_EXPECT(! is_valid_close_code(999));
+        BOOST_BEAST_EXPECT(! is_valid_close_code(1004));
+        BOOST_BEAST_EXPECT(! is_valid_close_code(1005));
+        BOOST_BEAST_EXPECT(! is_valid_close_code(1006));
+        BOOST_BEAST_EXPECT(! is_valid_close_code(1016));
+        BOOST_BEAST_EXPECT(! is_valid_close_code(2000));
+        BOOST_BEAST_EXPECT(! is_valid_close_code(2999));
+        BOOST_BEAST_EXPECT(is_valid_close_code(1000));
+        BOOST_BEAST_EXPECT(is_valid_close_code(1002));
+        BOOST_BEAST_EXPECT(is_valid_close_code(3000));
+        BOOST_BEAST_EXPECT(is_valid_close_code(4000));
+        BOOST_BEAST_EXPECT(is_valid_close_code(5000));
     }
 
     struct test_fh : frame_header
@@ -92,16 +92,16 @@ public:
                     detail::frame_header fh1;
                     auto const n =
                         stream.read_fh1(fh1, b, code);
-                    if(! BEAST_EXPECT(! code))
+                    if(! BOOST_BEAST_EXPECT(! code))
                         return;
-                    if(! BEAST_EXPECT(b.size() == n))
+                    if(! BOOST_BEAST_EXPECT(b.size() == n))
                         return;
                     stream.read_fh2(fh1, b, code);
-                    if(! BEAST_EXPECT(! code))
+                    if(! BOOST_BEAST_EXPECT(! code))
                         return;
-                    if(! BEAST_EXPECT(b.size() == 0))
+                    if(! BOOST_BEAST_EXPECT(b.size() == 0))
                         return;
-                    BEAST_EXPECT(fh1 == fh);
+                    BOOST_BEAST_EXPECT(fh1 == fh);
                 };
 
             test_fh fh;
@@ -149,12 +149,12 @@ public:
                         pass();
                         return;
                     }
-                    if(! BEAST_EXPECT(b.size() == n))
+                    if(! BOOST_BEAST_EXPECT(b.size() == n))
                         return;
                     stream.read_fh2(fh1, b, code);
-                    if(! BEAST_EXPECT(code))
+                    if(! BOOST_BEAST_EXPECT(code))
                         return;
-                    if(! BEAST_EXPECT(b.size() == 0))
+                    if(! BOOST_BEAST_EXPECT(b.size() == 0))
                         return;
                 };
 
@@ -218,12 +218,12 @@ public:
             pass();
             return;
         }
-        if(! BEAST_EXPECT(b.size() == n))
+        if(! BOOST_BEAST_EXPECT(b.size() == n))
             return;
         stream.read_fh2(fh, b, code);
-        if(! BEAST_EXPECT(code))
+        if(! BOOST_BEAST_EXPECT(code))
             return;
-        if(! BEAST_EXPECT(b.size() == 0))
+        if(! BOOST_BEAST_EXPECT(b.size() == 0))
             return;
     }
 
@@ -246,7 +246,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(frame,websocket,beast);
+BOOST_BEAST_DEFINE_TESTSUITE(frame,websocket,beast);
 
 } // detail
 } // websocket

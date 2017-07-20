@@ -21,7 +21,7 @@ public:
     void
     check(string_param const& v, string_view s)
     {
-        BEAST_EXPECT(static_cast<string_view>(v) == s);
+        BOOST_BEAST_EXPECT(static_cast<string_view>(v) == s);
     }
 
     class repeater
@@ -74,6 +74,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(string_param,core,beast);
+BOOST_BEAST_DEFINE_TESTSUITE(string_param,core,beast);
 
 } // beast

@@ -20,8 +20,8 @@ public:
     check (std::string const& in, std::string const& out)
     {
         auto const encoded = base64_encode (in);
-        BEAST_EXPECT(encoded == out);
-        BEAST_EXPECT(base64_decode (encoded) == in);
+        BOOST_BEAST_EXPECT(encoded == out);
+        BOOST_BEAST_EXPECT(base64_decode (encoded) == in);
     }
 
     void
@@ -50,7 +50,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(base64,core,beast);
+BOOST_BEAST_DEFINE_TESTSUITE(base64,core,beast);
 
 } // detail
 } // beast

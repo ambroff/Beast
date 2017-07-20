@@ -12,7 +12,7 @@
 #include "ws_async_port.hpp"
 #include "ws_sync_port.hpp"
 
-#if BEAST_USE_OPENSSL
+#if BOOST_BEAST_USE_OPENSSL
 #include "https_ports.hpp"
 #include "multi_port.hpp"
 #include "wss_ports.hpp"
@@ -263,7 +263,7 @@ main(
     // an installed and configured OpenSSL as part of the build.
     //
 
-#if BEAST_USE_OPENSSL
+#if BOOST_BEAST_USE_OPENSSL
 
     ssl_certificate cert;
 

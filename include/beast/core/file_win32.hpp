@@ -5,20 +5,20 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_CORE_FILE_WIN32_HPP
-#define BEAST_CORE_FILE_WIN32_HPP
+#ifndef BOOST_BEAST_CORE_FILE_WIN32_HPP
+#define BOOST_BEAST_CORE_FILE_WIN32_HPP
 
 #include <boost/config.hpp>
 
-#if ! defined(BEAST_USE_WIN32_FILE)
+#if ! defined(BOOST_BEAST_USE_WIN32_FILE)
 # ifdef BOOST_MSVC
-#  define BEAST_USE_WIN32_FILE 1
+#  define BOOST_BEAST_USE_WIN32_FILE 1
 # else
-#  define BEAST_USE_WIN32_FILE 0
+#  define BOOST_BEAST_USE_WIN32_FILE 0
 # endif
 #endif
 
-#if BEAST_USE_WIN32_FILE
+#if BOOST_BEAST_USE_WIN32_FILE
 
 #include <beast/core/error.hpp>
 #include <beast/core/file_base.hpp>
@@ -43,7 +43,7 @@ public:
 
         This is platform-specific.
     */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     using native_handle_type = HANDLE;
 #else
     using native_handle_type = boost::detail::winapi::HANDLE_;

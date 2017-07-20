@@ -72,7 +72,7 @@ int main()
     req.version = 11;
     req.set(http::field::host, host + ":" +
         std::to_string(sock.remote_endpoint().port()));
-    req.set(http::field::user_agent, BEAST_VERSION_STRING);
+    req.set(http::field::user_agent, BOOST_BEAST_VERSION_STRING);
     req.prepare_payload();
 
     // Write the HTTP request to the remote host

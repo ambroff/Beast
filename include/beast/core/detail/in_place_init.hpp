@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_DETAIL_IN_PLACE_INIT_HPP
-#define BEAST_DETAIL_IN_PLACE_INIT_HPP
+#ifndef BOOST_BEAST_DETAIL_IN_PLACE_INIT_HPP
+#define BOOST_BEAST_DETAIL_IN_PLACE_INIT_HPP
 
 #include <boost/version.hpp>
 #include <boost/optional/optional.hpp>

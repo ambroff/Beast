@@ -6,7 +6,7 @@ GroupSources(include/beast beast)
 GroupSources(test/common "/")
 
 add_executable (common-test
-    ${BEAST_INCLUDES}
+    ${BOOST_BEAST_INCLUDES}
     ${COMMON_INCLUDES}
     detect_ssl.cpp
     mime_types.cpp

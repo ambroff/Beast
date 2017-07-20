@@ -22,18 +22,18 @@ public:
     {
         http::header<true> req;
         req.version = 10;
-        BEAST_EXPECT(! is_upgrade(req));
+        BOOST_BEAST_EXPECT(! is_upgrade(req));
         req.version = 11;
         req.method(http::verb::post);
         req.target("/");
-        BEAST_EXPECT(! is_upgrade(req));
+        BOOST_BEAST_EXPECT(! is_upgrade(req));
         req.method(http::verb::get);
         req.insert("Connection", "upgrade");
-        BEAST_EXPECT(! is_upgrade(req));
+        BOOST_BEAST_EXPECT(! is_upgrade(req));
         req.insert("Upgrade", "websocket");
-        BEAST_EXPECT(! is_upgrade(req));
+        BOOST_BEAST_EXPECT(! is_upgrade(req));
         req.insert("Sec-WebSocket-Version", "13");
-        BEAST_EXPECT(is_upgrade(req));
+        BOOST_BEAST_EXPECT(is_upgrade(req));
     }
 
     void
@@ -43,7 +43,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(rfc6455,websocket,beast);
+BOOST_BEAST_DEFINE_TESTSUITE(rfc6455,websocket,beast);
 
 } // websocket
 } // beast

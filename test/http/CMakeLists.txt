@@ -7,7 +7,7 @@ GroupSources(include/beast beast)
 GroupSources(test/http "/")
 
 add_executable (http-tests
-    ${BEAST_INCLUDES}
+    ${BOOST_BEAST_INCLUDES}
     ${EXAMPLE_INCLUDES}
     ${EXTRAS_INCLUDES}
     message_fuzz.hpp

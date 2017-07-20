@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_STATIC_STRING_HPP
-#define BEAST_STATIC_STRING_HPP
+#ifndef BOOST_BEAST_STATIC_STRING_HPP
+#define BOOST_BEAST_STATIC_STRING_HPP
 
 #include <beast/config.hpp>
 #include <beast/core/string.hpp>
@@ -139,7 +139,7 @@ public:
         obtained by converting `t` to `string_view_type`,
         and used to construct the string.
     */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     template<class T>
 #else
     template<class T, class = typename std::enable_if<
@@ -258,7 +258,7 @@ public:
         and used to assign the string.
     */
     template<class T>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     static_string&
 #else
     typename std::enable_if<std::is_convertible<T,
@@ -537,7 +537,7 @@ public:
     insert(const_iterator pos, size_type count, CharT ch);
 
     template<class InputIt>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     iterator
 #else
     typename std::enable_if<
@@ -559,7 +559,7 @@ public:
     }
 
     template<class T>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     static_string&
 #else
     typename std::enable_if<
@@ -623,7 +623,7 @@ public:
     }
 
     template<class InputIt>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     static_string&
 #else
     typename std::enable_if<
@@ -759,7 +759,7 @@ public:
     }
 
     template<class T>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     int
 #else
     typename std::enable_if<

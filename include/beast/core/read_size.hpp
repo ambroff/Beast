@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_READ_SIZE_HELPER_HPP
-#define BEAST_READ_SIZE_HELPER_HPP
+#ifndef BOOST_BEAST_READ_SIZE_HELPER_HPP
+#define BOOST_BEAST_READ_SIZE_HELPER_HPP
 
 #include <beast/config.hpp>
 #include <beast/core/type_traits.hpp>

@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_WEBSOCKET_DETAIL_PMD_EXTENSION_HPP
-#define BEAST_WEBSOCKET_DETAIL_PMD_EXTENSION_HPP
+#ifndef BOOST_BEAST_WEBSOCKET_DETAIL_PMD_EXTENSION_HPP
+#define BOOST_BEAST_WEBSOCKET_DETAIL_PMD_EXTENSION_HPP
 
 #include <beast/core/error.hpp>
 #include <beast/core/consuming_buffers.hpp>

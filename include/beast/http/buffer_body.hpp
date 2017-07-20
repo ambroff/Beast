@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_HTTP_BUFFER_BODY_HPP
-#define BEAST_HTTP_BUFFER_BODY_HPP
+#ifndef BOOST_BEAST_HTTP_BUFFER_BODY_HPP
+#define BOOST_BEAST_HTTP_BUFFER_BODY_HPP
 
 #include <beast/config.hpp>
 #include <beast/http/error.hpp>
@@ -92,7 +92,7 @@ struct buffer_body
 
         Meets the requirements of @b BodyReader.
     */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     using reader = implementation_defined;
 #else
     class reader
@@ -155,7 +155,7 @@ struct buffer_body
 
         Meets the requirements of @b BodyReader.
     */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     using writer = implementation_defined;
 #else
     class writer
@@ -210,7 +210,7 @@ struct buffer_body
 #endif
 };
 
-#if ! BEAST_DOXYGEN
+#if ! BOOST_BEAST_DOXYGEN
 // operator<< is not supported for buffer_body
 template<bool isRequest, class Fields>
 std::ostream&

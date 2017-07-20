@@ -300,8 +300,8 @@ public:
             error_code ec;
             test::string_ostream ss{ios_};
             async_write(ss, m, do_yield[ec]);
-            if(BEAST_EXPECTS(ec == error::end_of_stream, ec.message()))
-                BEAST_EXPECT(ss.str ==
+            if(BOOST_BEAST_EXPECTS(ec == error::end_of_stream, ec.message()))
+                BOOST_BEAST_EXPECT(ss.str ==
                     "HTTP/1.0 200 OK\r\n"
                     "Server: test\r\n"
                     "Content-Length: 5\r\n"
@@ -318,8 +318,8 @@ public:
             error_code ec;
             test::string_ostream ss(ios_);
             async_write(ss, m, do_yield[ec]);
-            if(BEAST_EXPECTS(! ec, ec.message()))
-                BEAST_EXPECT(ss.str ==
+            if(BOOST_BEAST_EXPECTS(! ec, ec.message()))
+                BOOST_BEAST_EXPECT(ss.str ==
                     "HTTP/1.1 200 OK\r\n"
                     "Server: test\r\n"
                     "Transfer-Encoding: chunked\r\n"
@@ -349,7 +349,7 @@ public:
             try
             {
                 write(fs, m);
-                BEAST_EXPECT(fs.next_layer().str ==
+                BOOST_BEAST_EXPECT(fs.next_layer().str ==
                     "GET / HTTP/1.0\r\n"
                     "User-Agent: test\r\n"
                     "Connection: keep-alive\r\n"
@@ -364,7 +364,7 @@ public:
             {
             }
         }
-        BEAST_EXPECT(n < limit);
+        BOOST_BEAST_EXPECT(n < limit);
 
         for(n = 0; n < limit; ++n)
         {
@@ -379,7 +379,7 @@ public:
             write(fs, m, ec);
             if(ec == error::end_of_stream)
             {
-                BEAST_EXPECT(fs.next_layer().str ==
+                BOOST_BEAST_EXPECT(fs.next_layer().str ==
                     "GET / HTTP/1.0\r\n"
                     "User-Agent: test\r\n"
                     "Transfer-Encoding: chunked\r\n"
@@ -394,7 +394,7 @@ public:
                 break;
             }
         }
-        BEAST_EXPECT(n < limit);
+        BOOST_BEAST_EXPECT(n < limit);
 
         for(n = 0; n < limit; ++n)
         {
@@ -409,7 +409,7 @@ public:
             async_write(fs, m, do_yield[ec]);
             if(ec == error::end_of_stream)
             {
-                BEAST_EXPECT(fs.next_layer().str ==
+                BOOST_BEAST_EXPECT(fs.next_layer().str ==
                     "GET / HTTP/1.0\r\n"
                     "User-Agent: test\r\n"
                     "Transfer-Encoding: chunked\r\n"
@@ -424,7 +424,7 @@ public:
                 break;
             }
         }
-        BEAST_EXPECT(n < limit);
+        BOOST_BEAST_EXPECT(n < limit);
 
         for(n = 0; n < limit; ++n)
         {
@@ -440,7 +440,7 @@ public:
             write(fs, m, ec);
             if(! ec)
             {
-                BEAST_EXPECT(fs.next_layer().str ==
+                BOOST_BEAST_EXPECT(fs.next_layer().str ==
                     "GET / HTTP/1.0\r\n"
                     "User-Agent: test\r\n"
                     "Connection: keep-alive\r\n"
@@ -451,7 +451,7 @@ public:
                 break;
             }
         }
-        BEAST_EXPECT(n < limit);
+        BOOST_BEAST_EXPECT(n < limit);
 
         for(n = 0; n < limit; ++n)
         {
@@ -467,7 +467,7 @@ public:
             async_write(fs, m, do_yield[ec]);
             if(! ec)
             {
-                BEAST_EXPECT(fs.next_layer().str ==
+                BOOST_BEAST_EXPECT(fs.next_layer().str ==
                     "GET / HTTP/1.0\r\n"
                     "User-Agent: test\r\n"
                     "Connection: keep-alive\r\n"
@@ -478,7 +478,7 @@ public:
                 break;
             }
         }
-        BEAST_EXPECT(n < limit);
+        BOOST_BEAST_EXPECT(n < limit);
     }
 
     void
@@ -493,7 +493,7 @@ public:
             m.set(field::user_agent, "test");
             m.body = "*";
             m.prepare_payload();
-            BEAST_EXPECT(str(m) ==
+            BOOST_BEAST_EXPECT(str(m) ==
                 "GET / HTTP/1.0\r\n"
                 "User-Agent: test\r\n"
                 "Content-Length: 1\r\n"
@@ -513,8 +513,8 @@ public:
             test::string_ostream ss(ios_);
             error_code ec;
             write(ss, m, ec);
-            BEAST_EXPECT(ec == error::end_of_stream);
-            BEAST_EXPECT(ss.str ==
+            BOOST_BEAST_EXPECT(ec == error::end_of_stream);
+            BOOST_BEAST_EXPECT(ss.str ==
                 "GET / HTTP/1.0\r\n"
                 "User-Agent: test\r\n"
                 "\r\n"
@@ -530,7 +530,7 @@ public:
             m.set(field::user_agent, "test");
             m.body = "*";
             m.prepare_payload();
-            BEAST_EXPECT(str(m) ==
+            BOOST_BEAST_EXPECT(str(m) ==
                 "GET / HTTP/1.1\r\n"
                 "User-Agent: test\r\n"
                 "Content-Length: 1\r\n"
@@ -550,7 +550,7 @@ public:
             test::string_ostream ss(ios_);
             error_code ec;
             write(ss, m, ec);
-            BEAST_EXPECT(ss.str ==
+            BOOST_BEAST_EXPECT(ss.str ==
                 "GET / HTTP/1.1\r\n"
                 "User-Agent: test\r\n"
                 "Transfer-Encoding: chunked\r\n"
@@ -571,7 +571,7 @@ public:
         m.version = 11;
         m.set(field::user_agent, "test");
         m.body = "*";
-        BEAST_EXPECT(boost::lexical_cast<std::string>(m) ==
+        BOOST_BEAST_EXPECT(boost::lexical_cast<std::string>(m) ==
             "GET / HTTP/1.1\r\nUser-Agent: test\r\n\r\n*");
     }
 
@@ -594,7 +594,7 @@ public:
             // after calling io_service::stop
             boost::asio::io_service ios;
             test::string_ostream os{ios};
-            BEAST_EXPECT(handler::count() == 0);
+            BOOST_BEAST_EXPECT(handler::count() == 0);
             request<string_body> m;
             m.method(verb::get);
             m.version = 11;
@@ -602,13 +602,13 @@ public:
             m.set("Content-Length", 5);
             m.body = "*****";
             async_write(os, m, handler{});
-            BEAST_EXPECT(handler::count() > 0);
+            BOOST_BEAST_EXPECT(handler::count() > 0);
             ios.stop();
-            BEAST_EXPECT(handler::count() > 0);
+            BOOST_BEAST_EXPECT(handler::count() > 0);
             ios.reset();
-            BEAST_EXPECT(handler::count() > 0);
+            BOOST_BEAST_EXPECT(handler::count() > 0);
             ios.run_one();
-            BEAST_EXPECT(handler::count() == 0);
+            BOOST_BEAST_EXPECT(handler::count() == 0);
         }
         {
             // Make sure uninvoked handlers are
@@ -616,7 +616,7 @@ public:
             {
                 boost::asio::io_service ios;
                 test::string_ostream is{ios};
-                BEAST_EXPECT(handler::count() == 0);
+                BOOST_BEAST_EXPECT(handler::count() == 0);
                 request<string_body> m;
                 m.method(verb::get);
                 m.version = 11;
@@ -624,9 +624,9 @@ public:
                 m.set("Content-Length", 5);
                 m.body = "*****";
                 async_write(is, m, handler{});
-                BEAST_EXPECT(handler::count() > 0);
+                BOOST_BEAST_EXPECT(handler::count() > 0);
             }
-            BEAST_EXPECT(handler::count() == 0);
+            BOOST_BEAST_EXPECT(handler::count() == 0);
         }
     }
 
@@ -646,7 +646,7 @@ public:
             write_some(stream, sr, ec);
             if(ec)
                 return;
-            BEAST_EXPECT(stream.nwrite <= 1);
+            BOOST_BEAST_EXPECT(stream.nwrite <= 1);
             if(sr.is_done())
                 break;
         }
@@ -669,7 +669,7 @@ public:
             async_write_some(stream, sr, yield[ec]);
             if(ec)
                 return;
-            BEAST_EXPECT(stream.nwrite <= 1);
+            BOOST_BEAST_EXPECT(stream.nwrite <= 1);
             if(sr.is_done())
                 break;
         }
@@ -699,8 +699,8 @@ public:
                 auto m = m0;
                 error_code ec;
                 do_write(p.client, m, ec);
-                BEAST_EXPECT(p.server.str() == result);
-                BEAST_EXPECT(equal_body<false>(
+                BOOST_BEAST_EXPECT(p.server.str() == result);
+                BOOST_BEAST_EXPECT(equal_body<false>(
                     p.server.str(), m.body.s));
                 p.server.clear();
             }
@@ -708,8 +708,8 @@ public:
                 auto m = m0;
                 error_code ec;
                 do_async_write(p.client, m, ec, yield);
-                BEAST_EXPECT(p.server.str() == result);
-                BEAST_EXPECT(equal_body<false>(
+                BOOST_BEAST_EXPECT(p.server.str() == result);
+                BOOST_BEAST_EXPECT(equal_body<false>(
                     p.server.str(), m.body.s));
                 p.server.clear();
             }
@@ -724,7 +724,7 @@ public:
                     if(sr.is_header_done())
                         break;
                 }
-                BEAST_EXPECT(! m.body.read);
+                BOOST_BEAST_EXPECT(! m.body.read);
                 p.server.clear();
             }
             {
@@ -738,7 +738,7 @@ public:
                     if(sr.is_header_done())
                         break;
                 }
-                BEAST_EXPECT(! m.body.read);
+                BOOST_BEAST_EXPECT(! m.body.read);
                 p.server.clear();
             }
         }
@@ -748,7 +748,7 @@ public:
                 auto m = m0;
                 error_code ec;
                 do_write(p.client, m, ec);
-                BEAST_EXPECT(equal_body<false>(
+                BOOST_BEAST_EXPECT(equal_body<false>(
                     p.server.str(), m.body.s));
                 p.server.clear();
             }
@@ -756,7 +756,7 @@ public:
                 auto m = m0;
                 error_code ec;
                 do_async_write(p.client, m, ec, yield);
-                BEAST_EXPECT(equal_body<false>(
+                BOOST_BEAST_EXPECT(equal_body<false>(
                     p.server.str(), m.body.s));
                 p.server.clear();
             }
@@ -772,7 +772,7 @@ public:
                     if(sr.is_header_done())
                         break;
                 }
-                BEAST_EXPECT(! m.body.read);
+                BOOST_BEAST_EXPECT(! m.body.read);
                 p.server.clear();
             }
             {
@@ -786,7 +786,7 @@ public:
                     if(sr.is_header_done())
                         break;
                 }
-                BEAST_EXPECT(! m.body.read);
+                BOOST_BEAST_EXPECT(! m.body.read);
                 p.server.clear();
             }
         }
@@ -832,7 +832,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(write,http,beast);
+BOOST_BEAST_DEFINE_TESTSUITE(write,http,beast);
 
 } // http
 } // beast

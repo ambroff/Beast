@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_HTTP_IMPL_WRITE_IPP
-#define BEAST_HTTP_IMPL_WRITE_IPP
+#ifndef BOOST_BEAST_HTTP_IMPL_WRITE_IPP
+#define BOOST_BEAST_HTTP_IMPL_WRITE_IPP
 
 #include <beast/http/type_traits.hpp>
 #include <beast/core/bind_handler.hpp>
@@ -289,7 +289,7 @@ operator()(error_code ec)
 
     case 2:
         state_ = 3;
-        BEAST_FALLTHROUGH;
+        BOOST_BEAST_FALLTHROUGH;
 
     case 3:
     {

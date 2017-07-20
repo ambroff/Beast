@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_TYPE_TRAITS_HPP
-#define BEAST_TYPE_TRAITS_HPP
+#ifndef BOOST_BEAST_TYPE_TRAITS_HPP
+#define BOOST_BEAST_TYPE_TRAITS_HPP
 
 #include <beast/config.hpp>
 #include <beast/core/file_base.hpp>
@@ -50,7 +50,7 @@ namespace beast {
     @endcode
 */
 template<class T>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
 struct is_const_buffer_sequence : std::integral_constant<bool, ...>
 #else
 struct is_const_buffer_sequence :
@@ -87,7 +87,7 @@ struct is_const_buffer_sequence :
     @endcode
 */
 template<class T>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
 struct is_mutable_buffer_sequence : std::integral_constant<bool, ...>
 #else
 struct is_mutable_buffer_sequence :
@@ -123,7 +123,7 @@ struct is_mutable_buffer_sequence :
     f(DynamicBuffer const& buffer);
     @endcode
 */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
 template<class T>
 struct is_dynamic_buffer : std::integral_constant<bool, ...> {};
 #else
@@ -192,7 +192,7 @@ struct is_dynamic_buffer<
     @endcode
 */
 template<class T, class Signature>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
 using is_completion_handler = std::integral_constant<bool, ...>;
 #else
 using is_completion_handler = std::integral_constant<bool,
@@ -248,7 +248,7 @@ using is_completion_handler = std::integral_constant<bool,
         "Missing get_io_service member");
     @endcode
 */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
 template<class T>
 struct has_get_io_service : std::integral_constant<bool, ...>{};
 #else
@@ -289,7 +289,7 @@ struct has_get_io_service<T, beast::detail::void_t<decltype(
         ! std::is_same<T, typename get_lowest_layer<T>::type>::value> {};
     @endcode
 */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
 template<class T>
 struct get_lowest_layer;
 #else
@@ -334,7 +334,7 @@ struct get_lowest_layer<T, detail::void_t<
         f(AsyncReadStream& stream);
     @endcode
 */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
 template<class T>
 struct is_async_read_stream : std::integral_constant<bool, ...>{};
 #else
@@ -378,7 +378,7 @@ struct is_async_read_stream<T, detail::void_t<decltype(
     f(AsyncWriteStream& stream);
     @endcode
 */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
 template<class T>
 struct is_async_write_stream : std::integral_constant<bool, ...>{};
 #else
@@ -422,7 +422,7 @@ struct is_async_write_stream<T, detail::void_t<decltype(
     f(SyncReadStream& stream);
     @endcode
 */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
 template<class T>
 struct is_sync_read_stream : std::integral_constant<bool, ...>{};
 #else
@@ -468,7 +468,7 @@ struct is_sync_read_stream<T, detail::void_t<decltype(
     f(SyncReadStream& stream);
     @endcode
 */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
 template<class T>
 struct is_sync_write_stream : std::integral_constant<bool, ...>{};
 #else
@@ -514,7 +514,7 @@ struct is_sync_write_stream<T, detail::void_t<decltype(
     f(AsyncStream& stream);
     @endcode
 */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
 template<class T>
 struct is_async_stream : std::integral_constant<bool, ...>{};
 #else
@@ -550,7 +550,7 @@ using is_async_stream = std::integral_constant<bool,
     f(SyncStream& stream);
     @endcode
 */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
 template<class T>
 struct is_sync_stream : std::integral_constant<bool, ...>{};
 #else
@@ -592,7 +592,7 @@ using is_sync_stream = std::integral_constant<bool,
     f(File& file);
     @endcode
 */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
 template<class T>
 struct is_file : std::integral_constant<bool, ...>{};
 #else

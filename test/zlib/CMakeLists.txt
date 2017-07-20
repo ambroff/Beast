@@ -33,7 +33,7 @@ if (MSVC)
 endif()
 
 add_executable (zlib-tests
-    ${BEAST_INCLUDES}
+    ${BOOST_BEAST_INCLUDES}
     ${EXTRAS_INCLUDES}
     ${ZLIB_SOURCES}
     ../../extras/beast/unit_test/main.cpp

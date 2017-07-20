@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_HTTP_DETAIL_RFC7230_HPP
-#define BEAST_HTTP_DETAIL_RFC7230_HPP
+#ifndef BOOST_BEAST_HTTP_DETAIL_RFC7230_HPP
+#define BOOST_BEAST_HTTP_DETAIL_RFC7230_HPP
 
 #include <beast/core/string.hpp>
 #include <iterator>

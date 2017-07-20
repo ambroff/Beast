@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_UNIT_TEST_SUITE_HPP
-#define BEAST_UNIT_TEST_SUITE_HPP
+#ifndef BOOST_BEAST_UNIT_TEST_SUITE_HPP
+#define BOOST_BEAST_UNIT_TEST_SUITE_HPP
 
 #include <beast/unit_test/runner.hpp>
 #include <boost/filesystem.hpp>
@@ -52,7 +52,7 @@ enum abort_t
 
     Derived classes execute a series of testcases, where each testcase is
     a series of pass/fail tests. To provide a unit test using this class,
-    derive from it and use the BEAST_DEFINE_UNIT_TEST macro in a
+    derive from it and use the BOOST_BEAST_DEFINE_UNIT_TEST macro in a
     translation unit.
 */
 class suite
@@ -599,20 +599,20 @@ run(runner& r)
     }
 }
 
-#ifndef BEAST_EXPECT
+#ifndef BOOST_BEAST_EXPECT
 /** Check a precondition.
 
     If the condition is false, the file and line number are reported.
 */
-#define BEAST_EXPECT(cond) expect(cond, __FILE__, __LINE__)
+#define BOOST_BEAST_EXPECT(cond) expect(cond, __FILE__, __LINE__)
 #endif
 
-#ifndef BEAST_EXPECTS
+#ifndef BOOST_BEAST_EXPECTS
 /** Check a precondition.
 
     If the condition is false, the file and line number are reported.
 */
-#define BEAST_EXPECTS(cond, reason) ((cond) ? (pass(), true) : \
+#define BOOST_BEAST_EXPECTS(cond, reason) ((cond) ? (pass(), true) : \
         (fail((reason), __FILE__, __LINE__), false))
 #endif
 
@@ -623,7 +623,7 @@ run(runner& r)
 
 // detail:
 // This inserts the suite with the given manual flag
-#define BEAST_DEFINE_TESTSUITE_INSERT(Class,Module,Library,manual) \
+#define BOOST_BEAST_DEFINE_TESTSUITE_INSERT(Class,Module,Library,manual) \
     static beast::unit_test::detail::insert_suite <Class##_test>   \
         Library ## Module ## Class ## _test_instance(             \
             #Class, #Module, #Library, manual)
@@ -635,15 +635,15 @@ run(runner& r)
 // If this is already defined, don't redefine it. This allows
 // programs to provide custom behavior for testsuite definitions
 //
-#ifndef BEAST_DEFINE_TESTSUITE
+#ifndef BOOST_BEAST_DEFINE_TESTSUITE
 
 /** Enables insertion of test suites into the global container.
     The default is to insert all test suite definitions into the global
-    container. If BEAST_DEFINE_TESTSUITE is user defined, this macro
+    container. If BOOST_BEAST_DEFINE_TESTSUITE is user defined, this macro
     has no effect.
 */
-#ifndef BEAST_NO_UNIT_TEST_INLINE
-#define BEAST_NO_UNIT_TEST_INLINE 0
+#ifndef BOOST_BEAST_NO_UNIT_TEST_INLINE
+#define BOOST_BEAST_NO_UNIT_TEST_INLINE 0
 #endif
 
 /** Define a unit test suite.
@@ -668,15 +668,15 @@ run(runner& r)
     The macro invocation must appear in the same namespace as the test class.
 */
 
-#if BEAST_NO_UNIT_TEST_INLINE
-#define BEAST_DEFINE_TESTSUITE(Class,Module,Library)
+#if BOOST_BEAST_NO_UNIT_TEST_INLINE
+#define BOOST_BEAST_DEFINE_TESTSUITE(Class,Module,Library)
 
 #else
 #include <beast/unit_test/global_suites.hpp>
-#define BEAST_DEFINE_TESTSUITE(Class,Module,Library) \
-        BEAST_DEFINE_TESTSUITE_INSERT(Class,Module,Library,false)
-#define BEAST_DEFINE_TESTSUITE_MANUAL(Class,Module,Library) \
-        BEAST_DEFINE_TESTSUITE_INSERT(Class,Module,Library,true)
+#define BOOST_BEAST_DEFINE_TESTSUITE(Class,Module,Library) \
+        BOOST_BEAST_DEFINE_TESTSUITE_INSERT(Class,Module,Library,false)
+#define BOOST_BEAST_DEFINE_TESTSUITE_MANUAL(Class,Module,Library) \
+        BOOST_BEAST_DEFINE_TESTSUITE_INSERT(Class,Module,Library,true)
 
 #endif
 

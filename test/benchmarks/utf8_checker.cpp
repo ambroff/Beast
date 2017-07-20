@@ -136,7 +136,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(utf8_checker,benchmarks,beast);
+BOOST_BEAST_DEFINE_TESTSUITE(utf8_checker,benchmarks,beast);
 
 } // beast
 

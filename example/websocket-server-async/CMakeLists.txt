@@ -5,7 +5,7 @@ GroupSources(example/common common)
 GroupSources(example/websocket-server-async "/")
 
 add_executable (websocket-server-async
-    ${BEAST_INCLUDES}
+    ${BOOST_BEAST_INCLUDES}
     ${COMMON_INCLUDES}
     websocket_server_async.cpp
 )

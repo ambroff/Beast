@@ -29,18 +29,18 @@ public:
         buf[1] = 0;
         buf[2] = 0;
         buf[3] = 0;
-        BEAST_EXPECT(boost::indeterminate(is_ssl_handshake(
+        BOOST_BEAST_EXPECT(boost::indeterminate(is_ssl_handshake(
             boost::asio::buffer(buf, 0))));
-        BEAST_EXPECT(boost::indeterminate(is_ssl_handshake(
+        BOOST_BEAST_EXPECT(boost::indeterminate(is_ssl_handshake(
             boost::asio::buffer(buf, 1))));
-        BEAST_EXPECT(boost::indeterminate(is_ssl_handshake(
+        BOOST_BEAST_EXPECT(boost::indeterminate(is_ssl_handshake(
             boost::asio::buffer(buf, 2))));
-        BEAST_EXPECT(boost::indeterminate(is_ssl_handshake(
+        BOOST_BEAST_EXPECT(boost::indeterminate(is_ssl_handshake(
             boost::asio::buffer(buf, 3))));
-        BEAST_EXPECT(is_ssl_handshake(
+        BOOST_BEAST_EXPECT(is_ssl_handshake(
             boost::asio::buffer(buf, 4)));
         buf[0] = 0;
-        BEAST_EXPECT(! is_ssl_handshake(
+        BOOST_BEAST_EXPECT(! is_ssl_handshake(
             boost::asio::buffer(buf, 1)));
     }
 
@@ -54,8 +54,8 @@ public:
             error_code ec;
             flat_buffer b;
             auto const result = detect_ssl(p.server, b, ec);
-            BEAST_EXPECTS(! ec, ec.message());
-            BEAST_EXPECT(result);
+            BOOST_BEAST_EXPECTS(! ec, ec.message());
+            BOOST_BEAST_EXPECT(result);
         }
         yield_to(
             [&](yield_context yield)
@@ -66,8 +66,8 @@ public:
                 error_code ec;
                 flat_buffer b;
                 auto const result = async_detect_ssl(p.server, b, yield[ec]);
-                BEAST_EXPECTS(! ec, ec.message());
-                BEAST_EXPECT(result);
+                BOOST_BEAST_EXPECTS(! ec, ec.message());
+                BOOST_BEAST_EXPECT(result);
             });
     }
 
@@ -79,7 +79,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(doc_core_samples,core,beast);
+BOOST_BEAST_DEFINE_TESTSUITE(doc_core_samples,core,beast);
 
 } // http
 } // beast

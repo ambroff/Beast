@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_CORE_IMPL_FILE_STDIO_IPP
-#define BEAST_CORE_IMPL_FILE_STDIO_IPP
+#ifndef BOOST_BEAST_CORE_IMPL_FILE_STDIO_IPP
+#define BOOST_BEAST_CORE_IMPL_FILE_STDIO_IPP
 
 #include <limits>
 

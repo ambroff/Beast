@@ -5,7 +5,7 @@ GroupSources(example/common common)
 GroupSources(example/http-server-fast "/")
 
 add_executable (http-server-fast
-    ${BEAST_INCLUDES}
+    ${BOOST_BEAST_INCLUDES}
     ${COMMON_INCLUDES}
     fields_alloc.hpp
     http_server_fast.cpp

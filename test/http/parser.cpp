@@ -80,7 +80,7 @@ public:
             error_code ec;
             parser_type<isRequest> p;
             put(buffer(s.data(), s.size()), p, ec);
-            if(! BEAST_EXPECTS(! ec, ec.message()))
+            if(! BOOST_BEAST_EXPECTS(! ec, ec.message()))
                 return;
             f(p);
         }
@@ -96,22 +96,22 @@ public:
             s.remove_prefix(used);
             if(ec == error::need_more)
                 ec.assign(0, ec.category());
-            if(! BEAST_EXPECTS(! ec, ec.message()))
+            if(! BOOST_BEAST_EXPECTS(! ec, ec.message()))
                 continue;
-            BEAST_EXPECT(! p.is_done());
+            BOOST_BEAST_EXPECT(! p.is_done());
             used = p.put(
                 buffer(s.data(), s.size()), ec);
             s.remove_prefix(used);
-            if(! BEAST_EXPECTS(! ec, ec.message()))
+            if(! BOOST_BEAST_EXPECTS(! ec, ec.message()))
                 continue;
-            BEAST_EXPECT(s.empty());
+            BOOST_BEAST_EXPECT(s.empty());
             if(p.need_eof())
             {
                 p.put_eof(ec);
-                if(! BEAST_EXPECTS(! ec, ec.message()))
+                if(! BOOST_BEAST_EXPECTS(! ec, ec.message()))
                     continue;
             }
-            if(BEAST_EXPECT(p.is_done()))
+            if(BOOST_BEAST_EXPECT(p.is_done()))
                 f(p);
         }
     }
@@ -127,14 +127,14 @@ public:
             [&](parser_type<false> const& p)
             {
                 auto const& m = p.get();
-                BEAST_EXPECT(! p.is_chunked());
-                BEAST_EXPECT(p.need_eof());
-                BEAST_EXPECT(p.content_length() == boost::none);
-                BEAST_EXPECT(m.version == 10);
-                BEAST_EXPECT(m.result() == status::ok);
-                BEAST_EXPECT(m.reason() == "OK");
-                BEAST_EXPECT(m["Server"] == "test");
-                BEAST_EXPECT(m.body == "Hello, world!");
+                BOOST_BEAST_EXPECT(! p.is_chunked());
+                BOOST_BEAST_EXPECT(p.need_eof());
+                BOOST_BEAST_EXPECT(p.content_length() == boost::none);
+                BOOST_BEAST_EXPECT(m.version == 10);
+                BOOST_BEAST_EXPECT(m.result() == status::ok);
+                BOOST_BEAST_EXPECT(m.reason() == "OK");
+                BOOST_BEAST_EXPECT(m["Server"] == "test");
+                BOOST_BEAST_EXPECT(m.body == "Hello, world!");
             }
         );
         doMatrix<false>(
@@ -154,17 +154,17 @@ public:
             [&](parser_type<false> const& p)
             {
                 auto const& m = p.get();
-                BEAST_EXPECT(! p.need_eof());
-                BEAST_EXPECT(p.is_chunked());
-                BEAST_EXPECT(p.content_length() == boost::none);
-                BEAST_EXPECT(m.version == 11);
-                BEAST_EXPECT(m.result() == status::ok);
-                BEAST_EXPECT(m.reason() == "OK");
-                BEAST_EXPECT(m["Server"] == "test");
-                BEAST_EXPECT(m["Transfer-Encoding"] == "chunked");
-                BEAST_EXPECT(m["Expires"] == "never");
-                BEAST_EXPECT(m["MD5-Fingerprint"] == "-");
-                BEAST_EXPECT(m.body == "*****--");
+                BOOST_BEAST_EXPECT(! p.need_eof());
+                BOOST_BEAST_EXPECT(p.is_chunked());
+                BOOST_BEAST_EXPECT(p.content_length() == boost::none);
+                BOOST_BEAST_EXPECT(m.version == 11);
+                BOOST_BEAST_EXPECT(m.result() == status::ok);
+                BOOST_BEAST_EXPECT(m.reason() == "OK");
+                BOOST_BEAST_EXPECT(m["Server"] == "test");
+                BOOST_BEAST_EXPECT(m["Transfer-Encoding"] == "chunked");
+                BOOST_BEAST_EXPECT(m["Expires"] == "never");
+                BOOST_BEAST_EXPECT(m["MD5-Fingerprint"] == "-");
+                BOOST_BEAST_EXPECT(m.body == "*****--");
             }
         );
         doMatrix<false>(
@@ -176,7 +176,7 @@ public:
             [&](parser_type<false> const& p)
             {
                 auto const& m = p.get();
-                BEAST_EXPECT(m.body == "*****");
+                BOOST_BEAST_EXPECT(m.body == "*****");
             }
         );
         doMatrix<true>(
@@ -186,12 +186,12 @@ public:
             [&](parser_type<true> const& p)
             {
                 auto const& m = p.get();
-                BEAST_EXPECT(m.method() == verb::get);
-                BEAST_EXPECT(m.target() == "/");
-                BEAST_EXPECT(m.version == 11);
-                BEAST_EXPECT(! p.need_eof());
-                BEAST_EXPECT(! p.is_chunked());
-                BEAST_EXPECT(p.content_length() == boost::none);
+                BOOST_BEAST_EXPECT(m.method() == verb::get);
+                BOOST_BEAST_EXPECT(m.target() == "/");
+                BOOST_BEAST_EXPECT(m.version == 11);
+                BOOST_BEAST_EXPECT(! p.need_eof());
+                BOOST_BEAST_EXPECT(! p.is_chunked());
+                BOOST_BEAST_EXPECT(p.content_length() == boost::none);
             }
         );
         doMatrix<true>(
@@ -202,7 +202,7 @@ public:
             [&](parser_type<true> const& p)
             {
                 auto const& m = p.get();
-                BEAST_EXPECT(m["X"] == "x");
+                BOOST_BEAST_EXPECT(m["X"] == "x");
             }
         );
 
@@ -219,15 +219,15 @@ public:
                 "*")
                 , ec);
             auto const& m = p.get();
-            BEAST_EXPECT(! ec);
-            BEAST_EXPECT(p.is_done());
-            BEAST_EXPECT(p.is_header_done());
-            BEAST_EXPECT(! p.need_eof());
-            BEAST_EXPECT(m.method() == verb::get);
-            BEAST_EXPECT(m.target() == "/");
-            BEAST_EXPECT(m.version == 11);
-            BEAST_EXPECT(m["User-Agent"] == "test");
-            BEAST_EXPECT(m.body == "*");
+            BOOST_BEAST_EXPECT(! ec);
+            BOOST_BEAST_EXPECT(p.is_done());
+            BOOST_BEAST_EXPECT(p.is_header_done());
+            BOOST_BEAST_EXPECT(! p.need_eof());
+            BOOST_BEAST_EXPECT(m.method() == verb::get);
+            BOOST_BEAST_EXPECT(m.target() == "/");
+            BOOST_BEAST_EXPECT(m.version == 11);
+            BOOST_BEAST_EXPECT(m["User-Agent"] == "test");
+            BOOST_BEAST_EXPECT(m.body == "*");
         }
         {
             // test partial parsing of final chunk
@@ -244,9 +244,9 @@ public:
                 "*";
             auto used = p.put(b.data(), ec);
             b.consume(used);
-            BEAST_EXPECT(! ec);
-            BEAST_EXPECT(! p.is_done());
-            BEAST_EXPECT(p.get().body == "*");
+            BOOST_BEAST_EXPECT(! ec);
+            BOOST_BEAST_EXPECT(! p.is_done());
+            BOOST_BEAST_EXPECT(p.get().body == "*");
             ostream(b) <<
                 "\r\n"
                 "0;d;e=3;f=\"4\"\r\n"
@@ -255,15 +255,15 @@ public:
             // incomplete parse, missing the final crlf
             used = p.put(b.data(), ec);
             b.consume(used);
-            BEAST_EXPECT(ec == error::need_more);
+            BOOST_BEAST_EXPECT(ec == error::need_more);
             ec.assign(0, ec.category());
-            BEAST_EXPECT(! p.is_done());
+            BOOST_BEAST_EXPECT(! p.is_done());
             ostream(b) <<
                 "\r\n"; // final crlf to end message
             used = p.put(b.data(), ec);
             b.consume(used);
-            BEAST_EXPECTS(! ec, ec.message());
-            BEAST_EXPECT(p.is_done());
+            BOOST_BEAST_EXPECTS(! ec, ec.message());
+            BOOST_BEAST_EXPECT(p.is_done());
         }
         // skip body
         {
@@ -276,10 +276,10 @@ public:
                 "\r\n"
                 "*****")
                 , ec);
-            BEAST_EXPECTS(! ec, ec.message());
-            BEAST_EXPECT(p.is_done());
-            BEAST_EXPECT(p.is_header_done());
-            BEAST_EXPECT(p.content_length() &&
+            BOOST_BEAST_EXPECTS(! ec, ec.message());
+            BOOST_BEAST_EXPECT(p.is_done());
+            BOOST_BEAST_EXPECT(p.is_header_done());
+            BOOST_BEAST_EXPECT(p.content_length() &&
                 *p.content_length() == 5);
         }
     }
@@ -298,17 +298,17 @@ public:
             ostream(b) <<
                 "GET / HTTP/1.1\r\n";
             used = p.put(b.data(), ec);
-            BEAST_EXPECTS(ec == error::need_more, ec.message());
+            BOOST_BEAST_EXPECTS(ec == error::need_more, ec.message());
             b.consume(used);
             ec.assign(0, ec.category());
             ostream(b) <<
                 "User-Agent: test\r\n"
                 "\r\n";
             used = p.put(b.data(), ec);
-            BEAST_EXPECTS(! ec, ec.message());
+            BOOST_BEAST_EXPECTS(! ec, ec.message());
             b.consume(used);
-            BEAST_EXPECT(p.is_done());
-            BEAST_EXPECT(p.is_header_done());
+            BOOST_BEAST_EXPECT(p.is_done());
+            BOOST_BEAST_EXPECT(p.is_header_done());
         }
     }
 
@@ -318,14 +318,14 @@ public:
         error_code ec;
         parser_type<true> p;
         auto used = p.put(buf(""), ec);
-        BEAST_EXPECT(ec == error::need_more);
-        BEAST_EXPECT(! p.got_some());
-        BEAST_EXPECT(used == 0);
+        BOOST_BEAST_EXPECT(ec == error::need_more);
+        BOOST_BEAST_EXPECT(! p.got_some());
+        BOOST_BEAST_EXPECT(used == 0);
         ec.assign(0, ec.category());
         used = p.put(buf("G"), ec);
-        BEAST_EXPECT(ec == error::need_more);
-        BEAST_EXPECT(p.got_some());
-        BEAST_EXPECT(used == 0);
+        BOOST_BEAST_EXPECT(ec == error::need_more);
+        BOOST_BEAST_EXPECT(p.got_some());
+        BOOST_BEAST_EXPECT(used == 0);
     }
 
     void
@@ -338,7 +338,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(parser,http,beast);
+BOOST_BEAST_DEFINE_TESTSUITE(parser,http,beast);
 
 } // http
 } // beast

@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_HTTP_IMPL_VERB_IPP
-#define BEAST_HTTP_IMPL_VERB_IPP
+#ifndef BOOST_BEAST_HTTP_IMPL_VERB_IPP
+#define BOOST_BEAST_HTTP_IMPL_VERB_IPP
 
 #include <beast/core/detail/config.hpp>
 #include <boost/throw_exception.hpp>
@@ -156,7 +156,7 @@ string_to_verb(string_view v)
                 return verb::connect;
             if(eq(v, "PY"))
                 return verb::copy;
-            BEAST_FALLTHROUGH;
+            BOOST_BEAST_FALLTHROUGH;
 
         default:
             break;
@@ -217,7 +217,7 @@ string_to_verb(string_view v)
         case 'O':
             if(eq(v, "VE"))
                 return verb::move;
-            BEAST_FALLTHROUGH;
+            BOOST_BEAST_FALLTHROUGH;
 
         default:
             break;
@@ -261,7 +261,7 @@ string_to_verb(string_view v)
                 return verb::purge;
             if(eq(v, "T"))
                 return verb::put;
-            BEAST_FALLTHROUGH;
+            BOOST_BEAST_FALLTHROUGH;
 
         default:
             break;

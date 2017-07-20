@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_HTTP_IMPL_READ_IPP_HPP
-#define BEAST_HTTP_IMPL_READ_IPP_HPP
+#ifndef BOOST_BEAST_HTTP_IMPL_READ_IPP_HPP
+#define BOOST_BEAST_HTTP_IMPL_READ_IPP_HPP
 
 #include <beast/http/type_traits.hpp>
 #include <beast/http/error.hpp>

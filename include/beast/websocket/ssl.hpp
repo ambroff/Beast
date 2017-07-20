@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_WEBSOCKET_SSL_HPP
-#define BEAST_WEBSOCKET_SSL_HPP
+#ifndef BOOST_BEAST_WEBSOCKET_SSL_HPP
+#define BOOST_BEAST_WEBSOCKET_SSL_HPP
 
 #include <beast/config.hpp>
 #include <beast/websocket/teardown.hpp>

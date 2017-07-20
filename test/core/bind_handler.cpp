@@ -38,7 +38,7 @@ public:
     void
     callback(int v)
     {
-        BEAST_EXPECT(v == 42);
+        BOOST_BEAST_EXPECT(v == 42);
     }
     
     void
@@ -64,6 +64,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(bind_handler,core,beast);
+BOOST_BEAST_DEFINE_TESTSUITE(bind_handler,core,beast);
 
 } // beast

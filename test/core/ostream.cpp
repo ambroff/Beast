@@ -26,7 +26,7 @@ public:
             auto os = ostream(b);
             os << "Hello, world!\n";
             os.flush();
-            BEAST_EXPECT(boost::lexical_cast<std::string>(
+            BOOST_BEAST_EXPECT(boost::lexical_cast<std::string>(
                 buffers(b.data())) == "Hello, world!\n");
             auto os2 = std::move(os);
         }
@@ -42,12 +42,12 @@ public:
                 "0123456789abcdef" "0123456789abcdef" "0123456789abcdef" "0123456789abcdef";
             multi_buffer b;
             ostream(b) << s;
-            BEAST_EXPECT(boost::lexical_cast<std::string>(
+            BOOST_BEAST_EXPECT(boost::lexical_cast<std::string>(
                 buffers(b.data())) == s);
         }
     }
 };
 
-BEAST_DEFINE_TESTSUITE(ostream,core,beast);
+BOOST_BEAST_DEFINE_TESTSUITE(ostream,core,beast);
 
 } // beast

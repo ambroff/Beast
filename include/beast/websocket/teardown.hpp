@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_WEBSOCKET_TEARDOWN_HPP
-#define BEAST_WEBSOCKET_TEARDOWN_HPP
+#ifndef BOOST_BEAST_WEBSOCKET_TEARDOWN_HPP
+#define BOOST_BEAST_WEBSOCKET_TEARDOWN_HPP
 
 #include <beast/config.hpp>
 #include <beast/websocket/error.hpp>

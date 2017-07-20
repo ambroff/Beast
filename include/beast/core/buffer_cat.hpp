@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_BUFFER_CAT_HPP
-#define BEAST_BUFFER_CAT_HPP
+#ifndef BOOST_BEAST_BUFFER_CAT_HPP
+#define BOOST_BEAST_BUFFER_CAT_HPP
 
 #include <beast/config.hpp>
 #include <beast/core/detail/type_traits.hpp>
@@ -30,7 +30,7 @@ public:
         then `value_type` will be `boost::asio::mutable_buffer`.
         Otherwise, `value_type` will be `boost::asio::const_buffer`.
     */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     using value_type = implementation_defined;
 #else
     using value_type = typename
@@ -91,7 +91,7 @@ public:
 
     @see @ref buffer_cat_view
 */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
 template<class... BufferSequence>
 buffer_cat_view<BufferSequence...>
 buffer_cat(BufferSequence const&... buffers)

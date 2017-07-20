@@ -8,7 +8,7 @@ GroupSources(include/beast beast)
 GroupSources(test/server "/")
 
 add_executable (server-test
-    ${BEAST_INCLUDES}
+    ${BOOST_BEAST_INCLUDES}
     ${COMMON_INCLUDES}
     ${SERVER_INCLUDES}
     ../../extras/beast/unit_test/main.cpp

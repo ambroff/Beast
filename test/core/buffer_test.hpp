@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_TEST_BUFFER_TEST_HPP
-#define BEAST_TEST_BUFFER_TEST_HPP
+#ifndef BOOST_BEAST_TEST_BUFFER_TEST_HPP
+#define BOOST_BEAST_TEST_BUFFER_TEST_HPP
 
 #include <beast/core/string.hpp>
 #include <beast/core/read_size.hpp>

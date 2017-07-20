@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_DETAIL_VARINT_HPP
-#define BEAST_DETAIL_VARINT_HPP
+#ifndef BOOST_BEAST_DETAIL_VARINT_HPP
+#define BOOST_BEAST_DETAIL_VARINT_HPP
 
 #include <boost/static_assert.hpp>
 #include <cstdlib>

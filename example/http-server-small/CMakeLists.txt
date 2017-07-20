@@ -5,7 +5,7 @@ GroupSources(include/beast beast)
 GroupSources(example/http-server-small "/")
 
 add_executable (http-server-small
-    ${BEAST_INCLUDES}
+    ${BOOST_BEAST_INCLUDES}
     http_server_small.cpp
 )
 

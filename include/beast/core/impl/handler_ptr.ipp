@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_IMPL_HANDLER_PTR_HPP
-#define BEAST_IMPL_HANDLER_PTR_HPP
+#ifndef BOOST_BEAST_IMPL_HANDLER_PTR_HPP
+#define BOOST_BEAST_IMPL_HANDLER_PTR_HPP
 
 #include <boost/asio/handler_alloc_hook.hpp>
 #include <boost/asio/handler_continuation_hook.hpp>

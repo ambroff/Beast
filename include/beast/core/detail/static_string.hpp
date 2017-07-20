@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_DETAIL_STATIC_STRING_HPP
-#define BEAST_DETAIL_STATIC_STRING_HPP
+#ifndef BOOST_BEAST_DETAIL_STATIC_STRING_HPP
+#define BOOST_BEAST_DETAIL_STATIC_STRING_HPP
 
 #include <beast/core/string.hpp>
 #include <boost/assert.hpp>

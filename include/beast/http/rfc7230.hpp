@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_HTTP_RFC7230_HPP
-#define BEAST_HTTP_RFC7230_HPP
+#ifndef BOOST_BEAST_HTTP_RFC7230_HPP
+#define BOOST_BEAST_HTTP_RFC7230_HPP
 
 #include <beast/config.hpp>
 #include <beast/http/detail/rfc7230.hpp>
@@ -62,7 +62,7 @@ public:
         std::pair<string_view, string_view>;
 
     /// A constant iterator to the list
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     using const_iterator = implementation_defined;
 #else
     class const_iterator;
@@ -151,7 +151,7 @@ public:
     using value_type = std::pair<string_view, param_list>;
 
     /// A constant iterator to the list
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     using const_iterator = implementation_defined;
 #else
     class const_iterator;
@@ -239,7 +239,7 @@ public:
     using value_type = string_view;
 
     /// A constant iterator to the list
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     using const_iterator = implementation_defined;
 #else
     class const_iterator;

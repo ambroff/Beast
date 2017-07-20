@@ -35,8 +35,8 @@
 
 */
 
-#ifndef BEAST_DETAIL_BASE64_HPP
-#define BEAST_DETAIL_BASE64_HPP
+#ifndef BOOST_BEAST_DETAIL_BASE64_HPP
+#define BOOST_BEAST_DETAIL_BASE64_HPP
 
 #include <cctype>
 #include <string>

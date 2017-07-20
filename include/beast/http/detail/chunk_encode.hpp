@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_HTTP_DETAIL_CHUNK_ENCODE_HPP
-#define BEAST_HTTP_DETAIL_CHUNK_ENCODE_HPP
+#ifndef BOOST_BEAST_HTTP_DETAIL_CHUNK_ENCODE_HPP
+#define BOOST_BEAST_HTTP_DETAIL_CHUNK_ENCODE_HPP
 
 #include <beast/core/type_traits.hpp>
 #include <beast/http/type_traits.hpp>

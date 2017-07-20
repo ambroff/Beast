@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_FLAT_BUFFER_HPP
-#define BEAST_FLAT_BUFFER_HPP
+#ifndef BOOST_BEAST_FLAT_BUFFER_HPP
+#define BOOST_BEAST_FLAT_BUFFER_HPP
 
 #include <beast/config.hpp>
 #include <beast/core/detail/empty_base_optimization.hpp>
@@ -39,14 +39,14 @@ namespace beast {
 */
 template<class Allocator>
 class basic_flat_buffer
-#if ! BEAST_DOXYGEN
+#if ! BOOST_BEAST_DOXYGEN
     : private detail::empty_base_optimization<
         typename std::allocator_traits<Allocator>::
             template rebind_alloc<char>>
 #endif
 {
 public:
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     /// The type of allocator used.
     using allocator_type = Allocator;
 #else

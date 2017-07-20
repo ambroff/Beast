@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_ZLIB_INFLATE_STREAM_HPP
-#define BEAST_ZLIB_INFLATE_STREAM_HPP
+#ifndef BOOST_BEAST_ZLIB_INFLATE_STREAM_HPP
+#define BOOST_BEAST_ZLIB_INFLATE_STREAM_HPP
 
 #include <beast/config.hpp>
 #include <beast/zlib/detail/inflate_stream.hpp>

@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_ERROR_HPP
-#define BEAST_ERROR_HPP
+#ifndef BOOST_BEAST_ERROR_HPP
+#define BOOST_BEAST_ERROR_HPP
 
 #include <beast/config.hpp>
 #include <boost/system/error_code.hpp>
@@ -24,7 +24,7 @@ using system_error = boost::system::system_error;
 using error_category = boost::system::error_category;
 
 /// A function to return the generic error category used by the library
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
 error_category const&
 generic_category();
 #else
@@ -32,7 +32,7 @@ using boost::system::generic_category;
 #endif
 
 /// A function to return the system error category used by the library
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
 error_category const&
 system_category();
 #else
@@ -43,7 +43,7 @@ using boost::system::system_category;
 using error_condition = boost::system::error_condition;
 
 /// The set of constants used for cross-platform error codes
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
 enum errc{};
 #else
 namespace errc = boost::system::errc;

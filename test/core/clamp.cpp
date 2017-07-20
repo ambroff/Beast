@@ -19,7 +19,7 @@ class clamp_test : public beast::unit_test::suite
 public:
     void testClamp()
     {
-        BEAST_EXPECT(clamp(
+        BOOST_BEAST_EXPECT(clamp(
             (std::numeric_limits<std::uint64_t>::max)()) ==
                 (std::numeric_limits<std::size_t>::max)());
     }
@@ -30,7 +30,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(clamp,core,beast);
+BOOST_BEAST_DEFINE_TESTSUITE(clamp,core,beast);
 
 } // detail
 } // beast

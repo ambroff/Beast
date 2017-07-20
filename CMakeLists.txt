@@ -82,10 +82,10 @@ endif()
 find_package(OpenSSL)
 
 if (OPENSSL_FOUND)
-    add_definitions (-DBEAST_USE_OPENSSL=1)
+    add_definitions (-DBOOST_BEAST_USE_OPENSSL=1)
 
 else()
-    add_definitions (-DBEAST_USE_OPENSSL=0)
+    add_definitions (-DBOOST_BEAST_USE_OPENSSL=0)
     message("OpenSSL not found.")
 endif()
 
@@ -125,7 +125,7 @@ elseif ("${VARIANT}" STREQUAL "ubasan")
     if (MSVC)
     else()
         set (CMAKE_CXX_FLAGS
-          "${CMAKE_CXX_FLAGS} -DBEAST_NO_SLOW_TESTS=1 -msse4.2 -funsigned-char -fno-omit-frame-pointer -fsanitize=address,undefined -fsanitize-blacklist=${PROJECT_SOURCE_DIR}/scripts/blacklist.supp")
+          "${CMAKE_CXX_FLAGS} -DBOOST_BEAST_NO_SLOW_TESTS=1 -msse4.2 -funsigned-char -fno-omit-frame-pointer -fsanitize=address,undefined -fsanitize-blacklist=${PROJECT_SOURCE_DIR}/scripts/blacklist.supp")
         set (CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -fsanitize=address,undefined")
         set (CMAKE_BUILD_TYPE RELWITHDEBINFO)
     endif()
@@ -165,7 +165,7 @@ if (OPENSSL_FOUND)
     include_directories (${OPENSSL_INCLUDE_DIR})
 endif()
 
-file(GLOB_RECURSE BEAST_INCLUDES
+file(GLOB_RECURSE BOOST_BEAST_INCLUDES
     ${PROJECT_SOURCE_DIR}/include/beast/*.hpp
     ${PROJECT_SOURCE_DIR}/include/beast/*.ipp
 )

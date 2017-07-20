@@ -28,6 +28,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(file_stdio,core,beast);
+BOOST_BEAST_DEFINE_TESTSUITE(file_stdio,core,beast);
 
 } // beast

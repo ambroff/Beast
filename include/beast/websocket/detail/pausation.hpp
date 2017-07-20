@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_WEBSOCKET_DETAIL_PAUSATION_HPP
-#define BEAST_WEBSOCKET_DETAIL_PAUSATION_HPP
+#ifndef BOOST_BEAST_WEBSOCKET_DETAIL_PAUSATION_HPP
+#define BOOST_BEAST_WEBSOCKET_DETAIL_PAUSATION_HPP
 
 #include <beast/core/handler_ptr.hpp>
 #include <boost/assert.hpp>

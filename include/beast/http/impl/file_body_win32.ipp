@@ -5,10 +5,10 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_HTTP_IMPL_FILE_BODY_WIN32_IPP
-#define BEAST_HTTP_IMPL_FILE_BODY_WIN32_IPP
+#ifndef BOOST_BEAST_HTTP_IMPL_FILE_BODY_WIN32_IPP
+#define BOOST_BEAST_HTTP_IMPL_FILE_BODY_WIN32_IPP
 
-#if BEAST_USE_WIN32_FILE
+#if BOOST_BEAST_USE_WIN32_FILE
 
 #include <beast/core/async_result.hpp>
 #include <beast/core/bind_handler.hpp>

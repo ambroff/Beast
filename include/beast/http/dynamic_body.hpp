@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_HTTP_DYNAMIC_BODY_HPP
-#define BEAST_HTTP_DYNAMIC_BODY_HPP
+#ifndef BOOST_BEAST_HTTP_DYNAMIC_BODY_HPP
+#define BOOST_BEAST_HTTP_DYNAMIC_BODY_HPP
 
 #include <beast/core/multi_buffer.hpp>
 #include <beast/http/basic_dynamic_body.hpp>

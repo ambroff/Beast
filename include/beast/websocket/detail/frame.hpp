@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_WEBSOCKET_DETAIL_FRAME_HPP
-#define BEAST_WEBSOCKET_DETAIL_FRAME_HPP
+#ifndef BOOST_BEAST_WEBSOCKET_DETAIL_FRAME_HPP
+#define BOOST_BEAST_WEBSOCKET_DETAIL_FRAME_HPP
 
 #include <beast/websocket/rfc6455.hpp>
 #include <beast/websocket/detail/utf8_checker.hpp>

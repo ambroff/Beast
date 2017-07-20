@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_STRING_PARAM_HPP
-#define BEAST_STRING_PARAM_HPP
+#ifndef BOOST_BEAST_STRING_PARAM_HPP
+#define BOOST_BEAST_STRING_PARAM_HPP
 
 #include <beast/config.hpp>
 #include <beast/core/string.hpp>

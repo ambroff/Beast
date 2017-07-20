@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_EXAMPLE_SERVER_FILE_SERVICE_HPP
-#define BEAST_EXAMPLE_SERVER_FILE_SERVICE_HPP
+#ifndef BOOST_BEAST_EXAMPLE_SERVER_FILE_SERVICE_HPP
+#define BOOST_BEAST_EXAMPLE_SERVER_FILE_SERVICE_HPP
 
 #include "framework.hpp"
 #include "../common/mime_types.hpp"

@@ -8,7 +8,7 @@ GroupSources(test/websocket "/")
 #include_directories(../../example/)
 
 add_executable (websocket-tests
-    ${BEAST_INCLUDES}
+    ${BOOST_BEAST_INCLUDES}
     ${EXTRAS_INCLUDES}
     ../../extras/beast/unit_test/main.cpp
     websocket_async_echo_server.hpp

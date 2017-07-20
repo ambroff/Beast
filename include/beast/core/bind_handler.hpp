@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_BIND_HANDLER_HPP
-#define BEAST_BIND_HANDLER_HPP
+#ifndef BOOST_BEAST_BIND_HANDLER_HPP
+#define BOOST_BEAST_BIND_HANDLER_HPP
 
 #include <beast/config.hpp>
 #include <beast/core/type_traits.hpp>
@@ -52,7 +52,7 @@ namespace beast {
     arguments are forwarded into the returned object.
 */
 template<class Handler, class... Args>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
 implementation_defined
 #else
 detail::bound_handler<

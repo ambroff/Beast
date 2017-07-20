@@ -6,7 +6,7 @@ GroupSources(extras/beast extras)
 GroupSources(test/wstest "/")
 
 add_executable (wstest
-    ${BEAST_INCLUDES}
+    ${BOOST_BEAST_INCLUDES}
     ${COMMON_INCLUDES}
     ${EXTRAS_INCLUDES}
     main.cpp

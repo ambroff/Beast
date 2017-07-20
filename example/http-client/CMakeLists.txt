@@ -5,7 +5,7 @@ GroupSources(include/beast beast)
 GroupSources(example/http-client "/")
 
 add_executable (http-client
-    ${BEAST_INCLUDES}
+    ${BOOST_BEAST_INCLUDES}
     ${EXTRAS_INCLUDES}
     http_client.cpp
 )

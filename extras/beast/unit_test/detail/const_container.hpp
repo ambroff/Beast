@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_UNIT_TEST_DETAIL_CONST_CONTAINER_HPP
-#define BEAST_UNIT_TEST_DETAIL_CONST_CONTAINER_HPP
+#ifndef BOOST_BEAST_UNIT_TEST_DETAIL_CONST_CONTAINER_HPP
+#define BOOST_BEAST_UNIT_TEST_DETAIL_CONST_CONTAINER_HPP
 
 namespace beast {
 namespace unit_test {

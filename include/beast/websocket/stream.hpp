@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_WEBSOCKET_STREAM_HPP
-#define BEAST_WEBSOCKET_STREAM_HPP
+#ifndef BOOST_BEAST_WEBSOCKET_STREAM_HPP
+#define BOOST_BEAST_WEBSOCKET_STREAM_HPP
 
 #include <beast/config.hpp>
 #include <beast/websocket/error.hpp>
@@ -469,7 +469,7 @@ public:
         state of the current frame, if any.
     */
     template<class DynamicBuffer
-#if ! BEAST_DOXYGEN
+#if ! BOOST_BEAST_DOXYGEN
         , class = typename std::enable_if<
             ! std::is_integral<DynamicBuffer>::value>::type
 #endif
@@ -877,7 +877,7 @@ public:
         @throws system_error Thrown on failure.
     */
     template<class ConstBufferSequence>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void
 #else
     typename std::enable_if<! http::detail::is_header<
@@ -924,7 +924,7 @@ public:
     */
     template<class ConstBufferSequence,
         class ResponseDecorator>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void
 #else
     typename std::enable_if<! http::detail::is_header<
@@ -963,7 +963,7 @@ public:
         @param ec Set to indicate what error occurred, if any.
     */
     template<class ConstBufferSequence>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void
 #else
     typename std::enable_if<! http::detail::is_header<
@@ -1011,7 +1011,7 @@ public:
         @param ec Set to indicate what error occurred, if any.
     */
     template<class ConstBufferSequence, class ResponseDecorator>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void
 #else
     typename std::enable_if<! http::detail::is_header<
@@ -1401,7 +1401,7 @@ public:
         manner equivalent to using `boost::asio::io_service::post`.
     */
     template<class AcceptHandler>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void_or_deduced
 #else
     async_return_type<
@@ -1459,7 +1459,7 @@ public:
         manner equivalent to using `boost::asio::io_service::post`.
     */
     template<class ResponseDecorator, class AcceptHandler>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void_or_deduced
 #else
     async_return_type<
@@ -1516,7 +1516,7 @@ public:
         manner equivalent to using `boost::asio::io_service::post`.
     */
     template<class ConstBufferSequence, class AcceptHandler>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void_or_deduced
 #else
     typename std::enable_if<
@@ -1584,7 +1584,7 @@ public:
     */
     template<class ConstBufferSequence,
         class ResponseDecorator, class AcceptHandler>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void_or_deduced
 #else
     typename std::enable_if<
@@ -1642,7 +1642,7 @@ public:
     */
     template<class Body, class Allocator,
         class AcceptHandler>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void_or_deduced
 #else
     async_return_type<
@@ -1708,7 +1708,7 @@ public:
     */
     template<class Body, class Allocator,
         class ResponseDecorator, class AcceptHandler>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void_or_deduced
 #else
     async_return_type<
@@ -1773,7 +1773,7 @@ public:
     */
     template<class Body, class Allocator,
         class ConstBufferSequence, class AcceptHandler>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void_or_deduced
 #else
     async_return_type<
@@ -1850,7 +1850,7 @@ public:
         class ConstBufferSequence,
         class ResponseDecorator,
         class AcceptHandler>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void_or_deduced
 #else
     async_return_type<
@@ -2334,7 +2334,7 @@ public:
         manner equivalent to using `boost::asio::io_service::post`.
     */
     template<class HandshakeHandler>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void_or_deduced
 #else
     async_return_type<
@@ -2390,7 +2390,7 @@ public:
         manner equivalent to using `boost::asio::io_service::post`.
     */
     template<class HandshakeHandler>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void_or_deduced
 #else
     async_return_type<
@@ -2452,7 +2452,7 @@ public:
         manner equivalent to using `boost::asio::io_service::post`.
     */
     template<class RequestDecorator, class HandshakeHandler>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void_or_deduced
 #else
     async_return_type<
@@ -2518,7 +2518,7 @@ public:
         manner equivalent to using `boost::asio::io_service::post`.
     */
     template<class RequestDecorator, class HandshakeHandler>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void_or_deduced
 #else
     async_return_type<
@@ -2639,7 +2639,7 @@ public:
         manner equivalent to using `boost::asio::io_service::post`.
     */
     template<class CloseHandler>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void_or_deduced
 #else
     async_return_type<
@@ -2721,7 +2721,7 @@ public:
         manner equivalent to using `boost::asio::io_service::post`.
     */
     template<class WriteHandler>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void_or_deduced
 #else
     async_return_type<
@@ -2818,7 +2818,7 @@ public:
         manner equivalent to using `boost::asio::io_service::post`.
     */
     template<class WriteHandler>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void_or_deduced
 #else
     async_return_type<
@@ -2886,7 +2886,7 @@ public:
         manner equivalent to using boost::asio::io_service::post().
     */
     template<class DynamicBuffer, class ReadHandler>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void_or_deduced
 #else
     async_return_type<ReadHandler, void(error_code, bool)>
@@ -3032,7 +3032,7 @@ public:
         manner equivalent to using `boost::asio::io_service::post`.
     */
     template<class DynamicBuffer, class ReadHandler>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void_or_deduced
 #else
     async_return_type<
@@ -3194,7 +3194,7 @@ public:
         manner equivalent to using `boost::asio::io_service::post`.
     */
     template<class DynamicBuffer, class ReadHandler>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void_or_deduced
 #else
     async_return_type<
@@ -3373,7 +3373,7 @@ public:
         manner equivalent to using `boost::asio::io_service::post`.
     */
     template<class MutableBufferSequence, class ReadHandler>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void_or_deduced
 #else
     async_return_type<ReadHandler, void(error_code, std::size_t)>
@@ -3505,7 +3505,7 @@ public:
         manner equivalent to using `boost::asio::io_service::post`.
     */
     template<class ConstBufferSequence, class WriteHandler>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void_or_deduced
 #else
     async_return_type<
@@ -3621,7 +3621,7 @@ public:
         ); @endcode
     */
     template<class ConstBufferSequence, class WriteHandler>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void_or_deduced
 #else
     async_return_type<

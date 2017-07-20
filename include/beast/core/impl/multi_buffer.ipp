@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_IMPL_MULTI_BUFFER_IPP
-#define BEAST_IMPL_MULTI_BUFFER_IPP
+#ifndef BOOST_BEAST_IMPL_MULTI_BUFFER_IPP
+#define BOOST_BEAST_IMPL_MULTI_BUFFER_IPP
 
 #include <beast/core/detail/type_traits.hpp>
 #include <boost/assert.hpp>
@@ -634,7 +634,7 @@ prepare(size_type n) ->
             out_end_ = out_->size();
             reuse.splice(reuse.end(), list_,
                 std::next(out_), list_.end());
-        #if BEAST_MULTI_BUFFER_DEBUG_CHECK
+        #if BOOST_BEAST_MULTI_BUFFER_DEBUG_CHECK
             debug_check();
         #endif
         }
@@ -649,7 +649,7 @@ prepare(size_type n) ->
             out_end_ = out_pos_ + n;
             n = 0;
         }
-    #if BEAST_MULTI_BUFFER_DEBUG_CHECK
+    #if BOOST_BEAST_MULTI_BUFFER_DEBUG_CHECK
         debug_check();
     #endif
     }
@@ -670,7 +670,7 @@ prepare(size_type n) ->
             out_end_ = n;
             n = 0;
         }
-    #if BEAST_MULTI_BUFFER_DEBUG_CHECK
+    #if BOOST_BEAST_MULTI_BUFFER_DEBUG_CHECK
         debug_check();
     #endif
     }
@@ -700,7 +700,7 @@ prepare(size_type n) ->
         if(out_ == list_.end())
             out_ = list_.iterator_to(e);
         out_end_ = n;
-    #if BEAST_MULTI_BUFFER_DEBUG_CHECK
+    #if BOOST_BEAST_MULTI_BUFFER_DEBUG_CHECK
         debug_check();
     #endif
     }
@@ -726,7 +726,7 @@ commit(size_type n)
         {
             out_pos_ += n;
             in_size_ += n;
-        #if BEAST_MULTI_BUFFER_DEBUG_CHECK
+        #if BOOST_BEAST_MULTI_BUFFER_DEBUG_CHECK
             debug_check();
         #endif
             return;
@@ -735,7 +735,7 @@ commit(size_type n)
         n -= avail;
         out_pos_ = 0;
         in_size_ += avail;
-    #if BEAST_MULTI_BUFFER_DEBUG_CHECK
+    #if BOOST_BEAST_MULTI_BUFFER_DEBUG_CHECK
         debug_check();
     #endif
     }
@@ -749,7 +749,7 @@ commit(size_type n)
         out_pos_ = 0;
         out_end_ = 0;
     }
-#if BEAST_MULTI_BUFFER_DEBUG_CHECK
+#if BOOST_BEAST_MULTI_BUFFER_DEBUG_CHECK
     debug_check();
 #endif
 }
@@ -771,7 +771,7 @@ consume(size_type n)
             {
                 in_size_ -= n;
                 in_pos_ += n;
-            #if BEAST_MULTI_BUFFER_DEBUG_CHECK
+            #if BOOST_BEAST_MULTI_BUFFER_DEBUG_CHECK
                 debug_check();
             #endif
                 break;
@@ -782,7 +782,7 @@ consume(size_type n)
             auto& e = list_.front();
             list_.erase(list_.iterator_to(e));
             delete_element(e);
-        #if BEAST_MULTI_BUFFER_DEBUG_CHECK
+        #if BOOST_BEAST_MULTI_BUFFER_DEBUG_CHECK
             debug_check();
         #endif
         }
@@ -811,7 +811,7 @@ consume(size_type n)
                     out_end_ = 0;
                 }
             }
-        #if BEAST_MULTI_BUFFER_DEBUG_CHECK
+        #if BOOST_BEAST_MULTI_BUFFER_DEBUG_CHECK
             debug_check();
         #endif
             break;

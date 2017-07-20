@@ -60,7 +60,7 @@ private:
     client_error(http::status result, beast::string_view text)
     {
         http::response<http::span_body<char const>> res{result, 11};
-        res.set(http::field::server, BEAST_VERSION_STRING);
+        res.set(http::field::server, BOOST_BEAST_VERSION_STRING);
         res.set(http::field::content_type, "text/plain");
         res.set(http::field::connection, "close");
         res.body = text;
@@ -74,7 +74,7 @@ private:
     not_found() const
     {
         http::response<http::string_body> res{http::status::not_found, 11};
-        res.set(http::field::server, BEAST_VERSION_STRING);
+        res.set(http::field::server, BOOST_BEAST_VERSION_STRING);
         res.set(http::field::content_type, "text/html");
         res.set(http::field::connection, "close");
         res.body = "The file was not found";
@@ -88,7 +88,7 @@ private:
     server_error(beast::error_code const& ec) const
     {
         http::response<http::string_body> res{http::status::internal_server_error, 11};
-        res.set(http::field::server, BEAST_VERSION_STRING);
+        res.set(http::field::server, BOOST_BEAST_VERSION_STRING);
         res.set(http::field::content_type, "text/html");
         res.set(http::field::connection, "close");
         res.body = "Error: " + ec.message();
@@ -103,7 +103,7 @@ private:
         beast::error_code& ec) const
     {
         http::response<http::file_body> res;
-        res.set(http::field::server, BEAST_VERSION_STRING);
+        res.set(http::field::server, BOOST_BEAST_VERSION_STRING);
         res.set(http::field::content_type, mime_type(full_path));
         res.set(http::field::connection, "close");
         res.body.open(full_path.string<std::string>().c_str(), beast::file_mode::scan, ec);

@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_CORE_FILE_HPP
-#define BEAST_CORE_FILE_HPP
+#ifndef BOOST_BEAST_CORE_FILE_HPP
+#define BOOST_BEAST_CORE_FILE_HPP
 
 #include <beast/config.hpp>
 #include <beast/core/file_base.hpp>
@@ -22,14 +22,14 @@ namespace beast {
     This alias is set to the best available implementation
     of @b File given the platform and build settings.
 */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
 struct file : file_stdio
 {
 };
 #else
-#if BEAST_USE_WIN32_FILE
+#if BOOST_BEAST_USE_WIN32_FILE
 using file = file_win32;
-#elif BEAST_USE_POSIX_FILE
+#elif BOOST_BEAST_USE_POSIX_FILE
 using file = file_posix;
 #else
 using file = file_stdio;

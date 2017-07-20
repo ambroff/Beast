@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_IMPL_BUFFERS_ADAPTER_IPP
-#define BEAST_IMPL_BUFFERS_ADAPTER_IPP
+#ifndef BOOST_BEAST_IMPL_BUFFERS_ADAPTER_IPP
+#define BOOST_BEAST_IMPL_BUFFERS_ADAPTER_IPP
 
 #include <beast/core/detail/type_traits.hpp>
 #include <boost/asio/buffer.hpp>

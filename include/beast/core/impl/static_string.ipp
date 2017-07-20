@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_IMPL_STATIC_STRING_IPP
-#define BEAST_IMPL_STATIC_STRING_IPP
+#ifndef BOOST_BEAST_IMPL_STATIC_STRING_IPP
+#define BOOST_BEAST_IMPL_STATIC_STRING_IPP
 
 #include <beast/core/detail/static_string.hpp>
 #include <beast/core/detail/type_traits.hpp>

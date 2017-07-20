@@ -99,34 +99,34 @@ public:
         std::list<const_buffer> b6;
         auto bs = buffer_cat(
             b1, b2, b3, b4, b5, b6);
-        BEAST_EXPECT(buffer_size(bs) == 10);
-        BEAST_EXPECT(bsize1(bs) == 10);
-        BEAST_EXPECT(bsize2(bs) == 10);
-        BEAST_EXPECT(bsize3(bs) == 10);
-        BEAST_EXPECT(bsize4(bs) == 10);
+        BOOST_BEAST_EXPECT(buffer_size(bs) == 10);
+        BOOST_BEAST_EXPECT(bsize1(bs) == 10);
+        BOOST_BEAST_EXPECT(bsize2(bs) == 10);
+        BOOST_BEAST_EXPECT(bsize3(bs) == 10);
+        BOOST_BEAST_EXPECT(bsize4(bs) == 10);
         std::vector<const_buffer> v;
         for(auto iter = make_reverse_iterator(bs.end());
                 iter != make_reverse_iterator(bs.begin()); ++iter)
             v.emplace_back(*iter);
-        BEAST_EXPECT(buffer_size(bs) == 10);
+        BOOST_BEAST_EXPECT(buffer_size(bs) == 10);
         decltype(bs) bs2(bs);
         auto bs3(std::move(bs));
         {
             boost::asio::streambuf sb1, sb2;
-            BEAST_EXPECT(buffer_size(buffer_cat(
+            BOOST_BEAST_EXPECT(buffer_size(buffer_cat(
                 sb1.prepare(5), sb2.prepare(7))) == 12);
             sb1.commit(5);
             sb2.commit(7);
-            BEAST_EXPECT(buffer_size(buffer_cat(
+            BOOST_BEAST_EXPECT(buffer_size(buffer_cat(
                 sb1.data(), sb2.data())) == 12);
         }
         for(auto it = bs.begin(); it != bs.end(); ++it)
         {
             decltype(bs)::const_iterator copy;
             copy = it;
-            BEAST_EXPECT(copy == it);
+            BOOST_BEAST_EXPECT(copy == it);
             copy = copy;
-            BEAST_EXPECT(copy == it);
+            BOOST_BEAST_EXPECT(copy == it);
         }
     }
 
@@ -179,7 +179,7 @@ public:
             std::size_t n = 0;
             for(auto it = rbegin; it != rend; ++it)
                 n += buffer_size(*it);
-            BEAST_EXPECT(n == 9);
+            BOOST_BEAST_EXPECT(n == 9);
         }
 #endif
 
@@ -205,11 +205,11 @@ public:
             pass();
         }
         auto bs2 = bs;
-        BEAST_EXPECT(bs.begin() != bs2.begin());
-        BEAST_EXPECT(bs.end() != bs2.end());
+        BOOST_BEAST_EXPECT(bs.begin() != bs2.begin());
+        BOOST_BEAST_EXPECT(bs.end() != bs2.end());
         decltype(bs)::const_iterator it;
         decltype(bs2)::const_iterator it2;
-        BEAST_EXPECT(it == it2);
+        BOOST_BEAST_EXPECT(it == it2);
     }
 
     void run() override
@@ -261,6 +261,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(buffer_cat,core,beast);
+BOOST_BEAST_DEFINE_TESTSUITE(buffer_cat,core,beast);
 
 } // beast

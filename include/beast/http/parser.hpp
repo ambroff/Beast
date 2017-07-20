@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_HTTP_PARSER_HPP
-#define BEAST_HTTP_PARSER_HPP
+#ifndef BOOST_BEAST_HTTP_PARSER_HPP
+#define BOOST_BEAST_HTTP_PARSER_HPP
 
 #include <beast/config.hpp>
 #include <beast/http/basic_parser.hpp>
@@ -106,7 +106,7 @@ public:
         resolution only if the first argument is not a
         @ref parser.
     */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     template<class... Args>
     explicit
     parser(Args&&... args);
@@ -150,7 +150,7 @@ public:
         @note This function participates in overload resolution only
         if the other parser uses a different body type.
     */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     template<class OtherBody, class... Args>
 #else
     template<class OtherBody, class... Args,

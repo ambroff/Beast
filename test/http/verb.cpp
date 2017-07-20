@@ -23,7 +23,7 @@ public:
         auto const good =
             [&](verb v)
             {
-                BEAST_EXPECT(string_to_verb(to_string(v)) == v);
+                BOOST_BEAST_EXPECT(string_to_verb(to_string(v)) == v);
             };
 
         good(verb::unknown);
@@ -66,7 +66,7 @@ public:
             [&](string_view s)
             {
                 auto const v = string_to_verb(s);
-                BEAST_EXPECTS(v == verb::unknown, to_string(v));
+                BOOST_BEAST_EXPECTS(v == verb::unknown, to_string(v));
             };
 
         bad("AC_");
@@ -121,7 +121,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(verb,http,beast);
+BOOST_BEAST_DEFINE_TESTSUITE(verb,http,beast);
 
 } // http
 } // beast

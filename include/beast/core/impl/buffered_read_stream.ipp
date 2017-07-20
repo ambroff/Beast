@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_IMPL_BUFFERED_READ_STREAM_IPP
-#define BEAST_IMPL_BUFFERED_READ_STREAM_IPP
+#ifndef BOOST_BEAST_IMPL_BUFFERED_READ_STREAM_IPP
+#define BOOST_BEAST_IMPL_BUFFERED_READ_STREAM_IPP
 
 #include <beast/core/bind_handler.hpp>
 #include <beast/core/error.hpp>
@@ -121,7 +121,7 @@ read_some_op<MutableBufferSequence, Handler>::operator()(
 
     case 2:
         s_.sb_.commit(bytes_transferred);
-        BEAST_FALLTHROUGH;
+        BOOST_BEAST_FALLTHROUGH;
 
     case 3:
         bytes_transferred =

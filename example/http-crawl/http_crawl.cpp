@@ -77,7 +77,7 @@ main(int, char const*[])
         // Set up an HTTP GET request
         http::request<http::string_body> req{http::verb::get, "/", 11};
         req.set(http::field::host, host + std::string(":") + std::to_string(ep.port()));
-        req.set(http::field::user_agent, BEAST_VERSION_STRING);
+        req.set(http::field::user_agent, BOOST_BEAST_VERSION_STRING);
 
         // Set the Connection: close field, this way the server will close
         // the connection. This consumes less resources (no TIME_WAIT) because

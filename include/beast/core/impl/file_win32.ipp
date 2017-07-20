@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_CORE_IMPL_FILE_WIN32_IPP
-#define BEAST_CORE_IMPL_FILE_WIN32_IPP
+#ifndef BOOST_BEAST_CORE_IMPL_FILE_WIN32_IPP
+#define BOOST_BEAST_CORE_IMPL_FILE_WIN32_IPP
 
 #include <boost/detail/winapi/access_rights.hpp>
 #include <boost/detail/winapi/error_codes.hpp>

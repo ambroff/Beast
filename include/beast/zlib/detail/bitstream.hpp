@@ -32,8 +32,8 @@
     (zlib format), rfc1951 (deflate format) and rfc1952 (gzip format).
 */
 
-#ifndef BEAST_ZLIB_DETAIL_BITSTREAM_HPP
-#define BEAST_ZLIB_DETAIL_BITSTREAM_HPP
+#ifndef BOOST_BEAST_ZLIB_DETAIL_BITSTREAM_HPP
+#define BOOST_BEAST_ZLIB_DETAIL_BITSTREAM_HPP
 
 #include <boost/assert.hpp>
 #include <cstdint>

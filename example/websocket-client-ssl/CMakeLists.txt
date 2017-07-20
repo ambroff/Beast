@@ -5,7 +5,7 @@ GroupSources(include/beast beast)
 GroupSources(example/websocket-client-ssl "/")
 
 add_executable (websocket-client-ssl
-    ${BEAST_INCLUDES}
+    ${BOOST_BEAST_INCLUDES}
     websocket_client_ssl.cpp
 )
 

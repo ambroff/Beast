@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_STATIC_BUFFER_HPP
-#define BEAST_STATIC_BUFFER_HPP
+#ifndef BOOST_BEAST_STATIC_BUFFER_HPP
+#define BOOST_BEAST_STATIC_BUFFER_HPP
 
 #include <beast/config.hpp>
 #include <boost/asio/buffer.hpp>
@@ -50,7 +50,7 @@ class static_buffer_base
 
 public:
     /// The type used to represent the input sequence as a list of buffers.
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     using const_buffers_type = implementation_defined;
 #else
     using const_buffers_type =
@@ -58,7 +58,7 @@ public:
 #endif
 
     /// The type used to represent the mutable input sequence as a list of buffers.
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     using mutable_data_type = implementation_defined;
 #else
     using mutable_data_type =
@@ -66,7 +66,7 @@ public:
 #endif
 
     /// The type used to represent the output sequence as a list of buffers.
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     using mutable_buffers_type = implementation_defined;
 #else
     using mutable_buffers_type =

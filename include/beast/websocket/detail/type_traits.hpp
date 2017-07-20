@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_WEBSOCKET_DETAIL_TYPE_TRAITS_HPP
-#define BEAST_WEBSOCKET_DETAIL_TYPE_TRAITS_HPP
+#ifndef BOOST_BEAST_WEBSOCKET_DETAIL_TYPE_TRAITS_HPP
+#define BOOST_BEAST_WEBSOCKET_DETAIL_TYPE_TRAITS_HPP
 
 #include <beast/websocket/rfc6455.hpp>
 #include <beast/core/detail/type_traits.hpp>

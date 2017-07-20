@@ -31,7 +31,7 @@ public:
             varint_write(it, n0);
             it = &buf[0];
             auto n = varint_read(it);
-            BEAST_EXPECT(n == n0);
+            BOOST_BEAST_EXPECT(n == n0);
             n = n0 + n1;
             if(n < n1)
                 break;
@@ -47,6 +47,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(varint,core,beast);
+BOOST_BEAST_DEFINE_TESTSUITE(varint,core,beast);
 
 } // beast

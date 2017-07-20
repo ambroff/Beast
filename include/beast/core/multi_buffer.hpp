@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_MULTI_BUFFER_HPP
-#define BEAST_MULTI_BUFFER_HPP
+#ifndef BOOST_BEAST_MULTI_BUFFER_HPP
+#define BOOST_BEAST_MULTI_BUFFER_HPP
 
 #include <beast/config.hpp>
 #include <boost/asio/buffer.hpp>
@@ -33,7 +33,7 @@ template<class Allocator>
 class basic_multi_buffer
 {
 public:
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     /// The type of allocator used.
     using allocator_type = Allocator;
 #else
@@ -77,7 +77,7 @@ private:
     allocator_type alloc_;  // the allocator
 
 public:
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     /// The type used to represent the input sequence as a list of buffers.
     using const_buffers_type = implementation_defined;
 

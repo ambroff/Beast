@@ -5,7 +5,7 @@ GroupSources(example/common common)
 GroupSources(example/http-server-threaded "/")
 
 add_executable (http-server-threaded
-    ${BEAST_INCLUDES}
+    ${BOOST_BEAST_INCLUDES}
     ${COMMON_INCLUDES}
     http_server_threaded.cpp
 )

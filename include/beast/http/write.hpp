@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_HTTP_WRITE_HPP
-#define BEAST_HTTP_WRITE_HPP
+#ifndef BOOST_BEAST_HTTP_WRITE_HPP
+#define BOOST_BEAST_HTTP_WRITE_HPP
 
 #include <beast/config.hpp>
 #include <beast/core/buffer_cat.hpp>
@@ -159,7 +159,7 @@ template<
     class AsyncWriteStream,
     bool isRequest, class Body, class Fields,
     class WriteHandler>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void_or_deduced
 #else
 async_return_type<WriteHandler, void(error_code)>
@@ -281,7 +281,7 @@ template<
     class AsyncWriteStream,
     bool isRequest, class Body, class Fields,
     class WriteHandler>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void_or_deduced
 #else
 async_return_type<WriteHandler, void(error_code)>
@@ -394,7 +394,7 @@ template<
     class AsyncWriteStream,
     bool isRequest, class Body, class Fields,
     class WriteHandler>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void_or_deduced
 #else
 async_return_type<WriteHandler, void(error_code)>

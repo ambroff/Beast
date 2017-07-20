@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_WEBSOCKET_IMPL_WRITE_IPP
-#define BEAST_WEBSOCKET_IMPL_WRITE_IPP
+#ifndef BOOST_BEAST_WEBSOCKET_IMPL_WRITE_IPP
+#define BOOST_BEAST_WEBSOCKET_IMPL_WRITE_IPP
 
 #include <beast/core/bind_handler.hpp>
 #include <beast/core/buffer_cat.hpp>
@@ -595,7 +595,7 @@ operator()(error_code ec)
     {
     case 2:
         d.step = 3;
-        BEAST_FALLTHROUGH;
+        BOOST_BEAST_FALLTHROUGH;
     case 3:
     case 0:
     {

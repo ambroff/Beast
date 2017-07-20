@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_TEST_YIELD_TO_HPP
-#define BEAST_TEST_YIELD_TO_HPP
+#ifndef BOOST_BEAST_TEST_YIELD_TO_HPP
+#define BOOST_BEAST_TEST_YIELD_TO_HPP
 
 #include <boost/asio/io_service.hpp>
 #include <boost/asio/spawn.hpp>
@@ -78,7 +78,7 @@ public:
 
         @param fn... One or more functions to invoke.
     */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     template<class... FN>
     void
     yield_to(FN&&... fn)

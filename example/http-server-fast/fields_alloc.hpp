@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_EXAMPLE_FIELDS_ALLOC_HPP
-#define BEAST_EXAMPLE_FIELDS_ALLOC_HPP
+#ifndef BOOST_BEAST_EXAMPLE_FIELDS_ALLOC_HPP
+#define BOOST_BEAST_EXAMPLE_FIELDS_ALLOC_HPP
 
 #include <boost/throw_exception.hpp>
 #include <cstdlib>

@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_ZTEST_HPP
-#define BEAST_ZTEST_HPP
+#ifndef BOOST_BEAST_ZTEST_HPP
+#define BOOST_BEAST_ZTEST_HPP
 
 #include "zlib-1.2.11/zlib.h"
 #include <cstdint>

@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_WEBSOCKET_IMPL_TEARDOWN_IPP
-#define BEAST_WEBSOCKET_IMPL_TEARDOWN_IPP
+#ifndef BOOST_BEAST_WEBSOCKET_IMPL_TEARDOWN_IPP
+#define BOOST_BEAST_WEBSOCKET_IMPL_TEARDOWN_IPP
 
 #include <beast/core/async_result.hpp>
 #include <beast/core/handler_ptr.hpp>

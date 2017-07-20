@@ -19,7 +19,7 @@ if ((NOT "${VARIANT}" STREQUAL "coverage") AND
     GroupSources(test "/")
 
     add_executable (lib-tests
-        ${BEAST_INCLUDES}
+        ${BOOST_BEAST_INCLUDES}
         ${EXTRAS_INCLUDES}
         ../extras/beast/unit_test/main.cpp
         config.cpp

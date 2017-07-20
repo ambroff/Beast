@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_HTTP_SPAN_BODY_HPP
-#define BEAST_HTTP_SPAN_BODY_HPP
+#ifndef BOOST_BEAST_HTTP_SPAN_BODY_HPP
+#define BOOST_BEAST_HTTP_SPAN_BODY_HPP
 
 #include <beast/config.hpp>
 #include <beast/core/span.hpp>
@@ -60,7 +60,7 @@ public:
 
         Meets the requirements of @b BodyReader.
     */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     using reader = implementation_defined;
 #else
     class reader
@@ -102,7 +102,7 @@ public:
 
         Meets the requirements of @b BodyReader.
     */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     using writer = implementation_defined;
 #else
     class writer

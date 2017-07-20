@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_BUFFER_PREFIX_HPP
-#define BEAST_BUFFER_PREFIX_HPP
+#ifndef BOOST_BEAST_BUFFER_PREFIX_HPP
+#define BOOST_BEAST_BUFFER_PREFIX_HPP
 
 #include <beast/config.hpp>
 #include <beast/core/type_traits.hpp>
@@ -59,7 +59,7 @@ public:
                     boost::asio::mutable_buffer,
                         boost::asio::const_buffer>::type;
 
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     /// A bidirectional iterator type that may be used to read elements.
     using const_iterator = implementation_defined;
 
@@ -186,7 +186,7 @@ buffer_prefix(std::size_t size,
     not transferred.
 */
 template<class BufferSequence>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
 buffer_prefix_view<BufferSequence>
 #else
 inline

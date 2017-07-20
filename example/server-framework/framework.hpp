@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_EXAMPLE_SERVER_FRAMEWORK_HPP
-#define BEAST_EXAMPLE_SERVER_FRAMEWORK_HPP
+#ifndef BOOST_BEAST_EXAMPLE_SERVER_FRAMEWORK_HPP
+#define BOOST_BEAST_EXAMPLE_SERVER_FRAMEWORK_HPP
 
 #include <boost/asio/io_service.hpp>
 #include <boost/asio/strand.hpp>

@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_CONSUMING_BUFFERS_HPP
-#define BEAST_CONSUMING_BUFFERS_HPP
+#ifndef BOOST_BEAST_CONSUMING_BUFFERS_HPP
+#define BOOST_BEAST_CONSUMING_BUFFERS_HPP
 
 #include <beast/config.hpp>
 #include <beast/core/detail/in_place_init.hpp>
@@ -62,7 +62,7 @@ public:
         `boost::asio::mutable_buffer`, else this type will be
         `boost::asio::const_buffer`.
     */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     using value_type = implementation_defined;
 #else
     using value_type = typename std::conditional<
@@ -73,7 +73,7 @@ public:
                         boost::asio::const_buffer>::type;
 #endif
 
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     /// A bidirectional iterator type that may be used to read elements.
     using const_iterator = implementation_defined;
 

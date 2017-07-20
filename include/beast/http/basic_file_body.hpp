@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_HTTP_BASIC_FILE_BODY_HPP
-#define BEAST_HTTP_BASIC_FILE_BODY_HPP
+#ifndef BOOST_BEAST_HTTP_BASIC_FILE_BODY_HPP
+#define BOOST_BEAST_HTTP_BASIC_FILE_BODY_HPP
 
 #include <beast/config.hpp>
 #include <beast/core/error.hpp>
@@ -514,7 +514,7 @@ finish(error_code& ec)
 
 //]
 
-#if ! BEAST_DOXYGEN
+#if ! BOOST_BEAST_DOXYGEN
 // operator<< is not supported for file_body
 template<bool isRequest, class File, class Fields>
 std::ostream&

@@ -7,7 +7,7 @@ GroupSources(test/benchmarks "/")
 GroupSources(test/http "/")
 
 add_executable (benchmarks
-    ${BEAST_INCLUDES}
+    ${BOOST_BEAST_INCLUDES}
     ${EXTRAS_INCLUDES}
     ../../extras/beast/unit_test/main.cpp
     ../http/message_fuzz.hpp

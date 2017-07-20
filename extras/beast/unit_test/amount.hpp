@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_UNIT_TEST_AMOUNT_HPP
-#define BEAST_UNIT_TEST_AMOUNT_HPP
+#ifndef BOOST_BEAST_UNIT_TEST_AMOUNT_HPP
+#define BOOST_BEAST_UNIT_TEST_AMOUNT_HPP
 
 #include <cstddef>
 #include <ostream>

@@ -53,7 +53,7 @@ public:
         {
             mg.request(v[i]);
             size_ += v[i].size();
-            BEAST_EXPECT(v[i].size() > 0);
+            BOOST_BEAST_EXPECT(v[i].size() > 0);
         }
         return v;
     }
@@ -68,7 +68,7 @@ public:
         {
             mg.response(v[i]);
             size_ += v[i].size();
-            BEAST_EXPECT(v[i].size() > 0);
+            BOOST_BEAST_EXPECT(v[i].size() > 0);
         }
         return v;
     }
@@ -113,7 +113,7 @@ public:
                 Parser p;
                 error_code ec;
                 p.write(b.data(), ec);
-                if(! BEAST_EXPECTS(! ec, ec.message()))
+                if(! BOOST_BEAST_EXPECTS(! ec, ec.message()))
                     log << to_string(b.data()) << std::endl;
             }
     }
@@ -129,7 +129,7 @@ public:
                 p.header_limit((std::numeric_limits<std::uint32_t>::max)());
                 error_code ec;
                 feed(b.data(), p, ec);
-                if(! BEAST_EXPECTS(! ec, ec.message()))
+                if(! BOOST_BEAST_EXPECTS(! ec, ec.message()))
                     log << to_string(b.data()) << std::endl;
             }
     }
@@ -291,7 +291,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(parser,benchmarks,beast);
+BOOST_BEAST_DEFINE_TESTSUITE(parser,benchmarks,beast);
 
 } // http
 } // beast

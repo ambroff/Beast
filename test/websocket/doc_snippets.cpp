@@ -233,7 +233,7 @@ void echo(stream<boost::asio::ip::tcp::socket>& ws,
 
 //------------------------------------------------------------------------------
 
-#if BEAST_USE_OPENSSL
+#if BOOST_BEAST_USE_OPENSSL
 
 //[wss_snippet_1
 #include <beast/websocket/ssl.hpp>

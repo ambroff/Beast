@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_WEBSOCKET_IMPL_STREAM_IPP
-#define BEAST_WEBSOCKET_IMPL_STREAM_IPP
+#ifndef BOOST_BEAST_WEBSOCKET_IMPL_STREAM_IPP
+#define BOOST_BEAST_WEBSOCKET_IMPL_STREAM_IPP
 
 #include <beast/websocket/rfc6455.hpp>
 #include <beast/websocket/teardown.hpp>
@@ -727,7 +727,7 @@ build_request(detail::sec_ws_key_type& key,
     decorator(req);
     if(! req.count(http::field::user_agent))
         req.set(http::field::user_agent,
-            BEAST_VERSION_STRING);
+            BOOST_BEAST_VERSION_STRING);
     return req;
 }
 
@@ -745,8 +745,8 @@ build_response(http::request<Body,
             decorator(res);
             if(! res.count(http::field::server))
             {
-                BOOST_STATIC_ASSERT(sizeof(BEAST_VERSION_STRING) < 20);
-                static_string<20> s(BEAST_VERSION_STRING);
+                BOOST_STATIC_ASSERT(sizeof(BOOST_BEAST_VERSION_STRING) < 20);
+                static_string<20> s(BOOST_BEAST_VERSION_STRING);
                 res.set(http::field::server, s);
             }
         };

@@ -5,20 +5,20 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_DETAIL_CPU_INFO_HPP
-#define BEAST_DETAIL_CPU_INFO_HPP
+#ifndef BOOST_BEAST_DETAIL_CPU_INFO_HPP
+#define BOOST_BEAST_DETAIL_CPU_INFO_HPP
 
 #include <boost/config.hpp>
 
-#ifndef BEAST_NO_INTRINSICS
+#ifndef BOOST_BEAST_NO_INTRINSICS
 # if defined(BOOST_MSVC) || ((defined(BOOST_GCC) || defined(BOOST_CLANG)) && defined(__SSE4_2__))
-#  define BEAST_NO_INTRINSICS 0
+#  define BOOST_BEAST_NO_INTRINSICS 0
 # else
-#  define BEAST_NO_INTRINSICS 1
+#  define BOOST_BEAST_NO_INTRINSICS 1
 # endif
 #endif
 
-#if ! BEAST_NO_INTRINSICS
+#if ! BOOST_BEAST_NO_INTRINSICS
 
 #ifdef BOOST_MSVC
 #include <intrin.h> // __cpuid

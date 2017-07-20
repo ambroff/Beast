@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_BUFFERED_READ_STREAM_HPP
-#define BEAST_BUFFERED_READ_STREAM_HPP
+#ifndef BOOST_BEAST_BUFFERED_READ_STREAM_HPP
+#define BOOST_BEAST_BUFFERED_READ_STREAM_HPP
 
 #include <beast/config.hpp>
 #include <beast/core/async_result.hpp>
@@ -265,7 +265,7 @@ public:
         manner equivalent to using `boost::asio::io_service::post`.
     */
     template<class MutableBufferSequence, class ReadHandler>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void_or_deduced
 #else
     async_return_type<ReadHandler, void(error_code)>
@@ -340,7 +340,7 @@ public:
         manner equivalent to using `boost::asio::io_service::post`.
     */
     template<class ConstBufferSequence, class WriteHandler>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void_or_deduced
 #else
     async_return_type<WriteHandler, void(error_code)>

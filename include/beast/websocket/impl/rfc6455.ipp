@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_WEBSOCKET_IMPL_RFC6455_IPP
-#define BEAST_WEBSOCKET_IMPL_RFC6455_IPP
+#ifndef BOOST_BEAST_WEBSOCKET_IMPL_RFC6455_IPP
+#define BOOST_BEAST_WEBSOCKET_IMPL_RFC6455_IPP
 
 #include <beast/http/fields.hpp>
 #include <beast/http/rfc7230.hpp>

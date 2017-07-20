@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_HTTP_DETAIL_BASIC_PARSED_LIST_HPP
-#define BEAST_HTTP_DETAIL_BASIC_PARSED_LIST_HPP
+#ifndef BOOST_BEAST_HTTP_DETAIL_BASIC_PARSED_LIST_HPP
+#define BOOST_BEAST_HTTP_DETAIL_BASIC_PARSED_LIST_HPP
 
 #include <beast/core/string.hpp>
 #include <beast/core/detail/empty_base_optimization.hpp>
@@ -32,7 +32,7 @@ public:
     using value_type = typename Policy::value_type;
 
     /// A constant iterator to a list element.
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     using const_iterator = implementation_defined;
 #else
     class const_iterator;

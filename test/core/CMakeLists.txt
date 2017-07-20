@@ -7,7 +7,7 @@ GroupSources(include/beast beast)
 GroupSources(test/core "/")
 
 add_executable (core-tests
-    ${BEAST_INCLUDES}
+    ${BOOST_BEAST_INCLUDES}
     ${EXAMPLE_INCLUDES}
     ${EXTRAS_INCLUDES}
     ../../extras/beast/unit_test/main.cpp

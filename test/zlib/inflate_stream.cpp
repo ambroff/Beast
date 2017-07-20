@@ -326,7 +326,7 @@ public:
             m("1. zlib ", ZLib {half, half}, check);
         }
 
-    #if ! BEAST_NO_SLOW_TESTS
+    #if ! BOOST_BEAST_NO_SLOW_TESTS
         {
             Matrix m{*this};
             auto const check = corpus1(50000);
@@ -409,7 +409,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(inflate_stream,core,beast);
+BOOST_BEAST_DEFINE_TESTSUITE(inflate_stream,core,beast);
 
 } // zlib
 } // beast

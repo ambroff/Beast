@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_HTTP_READ_HPP
-#define BEAST_HTTP_READ_HPP
+#ifndef BOOST_BEAST_HTTP_READ_HPP
+#define BOOST_BEAST_HTTP_READ_HPP
 
 #include <beast/config.hpp>
 #include <beast/core/async_result.hpp>
@@ -194,7 +194,7 @@ template<
     class DynamicBuffer,
     bool isRequest, class Derived,
     class ReadHandler>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void_or_deduced
 #else
 async_return_type<
@@ -377,7 +377,7 @@ template<
     class DynamicBuffer,
     bool isRequest, class Derived,
     class ReadHandler>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void_or_deduced
 #else
 async_return_type<
@@ -560,7 +560,7 @@ template<
     class DynamicBuffer,
     bool isRequest, class Derived,
     class ReadHandler>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void_or_deduced
 #else
 async_return_type<
@@ -742,7 +742,7 @@ template<
     class DynamicBuffer,
     bool isRequest, class Body, class Allocator,
     class ReadHandler>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     void_or_deduced
 #else
 async_return_type<

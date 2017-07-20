@@ -39,7 +39,7 @@ public:
     testSpan()
     {
         span<char const> sp{"hello", 5};
-        BEAST_EXPECT(sp.size() == 5);
+        BOOST_BEAST_EXPECT(sp.size() == 5);
         std::string s("world");
         sp = s;
     }
@@ -51,6 +51,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(span,core,beast);
+BOOST_BEAST_DEFINE_TESTSUITE(span,core,beast);
 
 } // beast

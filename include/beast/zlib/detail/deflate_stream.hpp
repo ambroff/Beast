@@ -32,8 +32,8 @@
     (zlib format), rfc1951 (deflate format) and rfc1952 (gzip format).
 */
 
-#ifndef BEAST_ZLIB_DETAIL_DEFLATE_STREAM_HPP
-#define BEAST_ZLIB_DETAIL_DEFLATE_STREAM_HPP
+#ifndef BOOST_BEAST_ZLIB_DETAIL_DEFLATE_STREAM_HPP
+#define BOOST_BEAST_ZLIB_DETAIL_DEFLATE_STREAM_HPP
 
 #include <beast/zlib/zlib.hpp>
 #include <beast/zlib/detail/ranges.hpp>

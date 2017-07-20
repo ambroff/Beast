@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_HTTP_MESSAGE_HPP
-#define BEAST_HTTP_MESSAGE_HPP
+#ifndef BOOST_BEAST_HTTP_MESSAGE_HPP
+#define BOOST_BEAST_HTTP_MESSAGE_HPP
 
 #include <beast/config.hpp>
 #include <beast/http/fields.hpp>
@@ -40,7 +40,7 @@ namespace http {
 
     A `header` includes the start-line and header-fields.
 */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
 template<bool isRequest, class Fields = fields>
 struct header : Fields
 
@@ -56,7 +56,7 @@ struct header<true, Fields> : Fields
         "Fields requirements not met");
 
     /// Indicates if the header is a request or response.
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     using is_request = std::integral_constant<bool, isRequest>;
 #else
     using is_request = std::true_type;
@@ -171,7 +171,7 @@ struct header<true, Fields> : Fields
         not convertible to @ref header, @ref verb, or
         @ref status.
     */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     template<class... Args>
     explicit
     header(Args&&... args);
@@ -356,7 +356,7 @@ struct header<false, Fields> : Fields
     reason(string_view s);
 
 private:
-#if ! BEAST_DOXYGEN
+#if ! BOOST_BEAST_DOXYGEN
     template<bool, class, class>
     friend struct message;
 
@@ -479,7 +479,7 @@ struct message : header<isRequest, Fields>
 
         @note This function is only available when `isRequest == true`.
     */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     message(verb method, string_view target, unsigned version);
 #else
     template<class Version,
@@ -500,7 +500,7 @@ struct message : header<isRequest, Fields>
 
         @note This function is only available when `isRequest == true`.
     */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     template<class BodyArg>
     message(verb method, string_view target,
         unsigned version, BodyArg&& body_arg);
@@ -526,7 +526,7 @@ struct message : header<isRequest, Fields>
 
         @note This function is only available when `isRequest == true`.
     */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     template<class BodyArg, class FieldsArg>
     message(verb method, string_view target, unsigned version,
         BodyArg&& body_arg, FieldsArg&& fields_arg);
@@ -546,7 +546,7 @@ struct message : header<isRequest, Fields>
 
         @note This member is only available when `isRequest == false`.
     */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     message(status result, unsigned version);
 #else
     template<class Version,
@@ -565,7 +565,7 @@ struct message : header<isRequest, Fields>
 
         @note This member is only available when `isRequest == false`.
     */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     template<class BodyArg>
     message(status result, unsigned version, BodyArg&& body_arg);
 #else
@@ -587,7 +587,7 @@ struct message : header<isRequest, Fields>
 
         @note This member is only available when `isRequest == false`.
     */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     template<class BodyArg, class FieldsArg>
     message(status result, unsigned version,
         BodyArg&& body_arg, FieldsArg&& fields_arg);
@@ -809,7 +809,7 @@ using response = message<false, Body, Fields>;
 
 //------------------------------------------------------------------------------
 
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
 /** Swap two header objects.
 
     @par Requirements

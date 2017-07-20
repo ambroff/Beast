@@ -70,11 +70,11 @@ public:
         handler_ptr<T, handler> p4{std::move(h)};
         bool b = false;
         p4.invoke(std::ref(b));
-        BEAST_EXPECT(b);
+        BOOST_BEAST_EXPECT(b);
     }
 };
 
-BEAST_DEFINE_TESTSUITE(handler_ptr,core,beast);
+BOOST_BEAST_DEFINE_TESTSUITE(handler_ptr,core,beast);
 
 } // beast
 

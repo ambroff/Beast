@@ -43,11 +43,11 @@ public:
     void run() override
     {
         maskgen_t<test_generator> mg;
-        BEAST_EXPECT(mg() != 0);
+        BOOST_BEAST_EXPECT(mg() != 0);
     }
 };
 
-BEAST_DEFINE_TESTSUITE(mask,websocket,beast);
+BOOST_BEAST_DEFINE_TESTSUITE(mask,websocket,beast);
 
 } // detail
 } // websocket

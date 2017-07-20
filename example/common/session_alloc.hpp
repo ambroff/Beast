@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_EXAMPLE_COMMON_SESSION_ALLOC_HPP
-#define BEAST_EXAMPLE_COMMON_SESSION_ALLOC_HPP
+#ifndef BOOST_BEAST_EXAMPLE_COMMON_SESSION_ALLOC_HPP
+#define BOOST_BEAST_EXAMPLE_COMMON_SESSION_ALLOC_HPP
 
 #include <boost/asio/handler_alloc_hook.hpp>
 #include <boost/asio/handler_continuation_hook.hpp>

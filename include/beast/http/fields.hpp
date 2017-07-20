@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_HTTP_FIELDS_HPP
-#define BEAST_HTTP_FIELDS_HPP
+#ifndef BOOST_BEAST_HTTP_FIELDS_HPP
+#define BOOST_BEAST_HTTP_FIELDS_HPP
 
 #include <beast/config.hpp>
 #include <beast/core/string_param.hpp>
@@ -138,7 +138,7 @@ public:
     };
 
     /// The algorithm used to serialize the header
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     using reader = implementation_defined;
 #else
     class reader;
@@ -231,7 +231,7 @@ public:
 
 public:
     /// A constant iterator to the field sequence.
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     using const_iterator = implementation_defined;
 #else
     using const_iterator = typename list_t::const_iterator;

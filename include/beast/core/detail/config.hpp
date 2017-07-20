@@ -5,16 +5,16 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_CORE_DETAIL_CONFIG_HPP
-#define BEAST_CORE_DETAIL_CONFIG_HPP
+#ifndef BOOST_BEAST_CORE_DETAIL_CONFIG_HPP
+#define BOOST_BEAST_CORE_DETAIL_CONFIG_HPP
 
 #include <boost/config.hpp>
 #include <boost/version.hpp>
 
 #if BOOST_VERSION >= 106500 || ! defined(BOOST_GCC) || BOOST_GCC < 70000
-# define BEAST_FALLTHROUGH BOOST_FALLTHROUGH
+# define BOOST_BEAST_FALLTHROUGH BOOST_FALLTHROUGH
 #else
-# define BEAST_FALLTHROUGH __attribute__((fallthrough))
+# define BOOST_BEAST_FALLTHROUGH __attribute__((fallthrough))
 #endif
 
 #endif

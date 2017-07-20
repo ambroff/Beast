@@ -24,8 +24,8 @@ public:
     {
         using boost::asio::buffer_size;
         drain_buffer b;
-        BEAST_EXPECT(buffer_size(b.prepare(0)) == 0);
-        BEAST_EXPECT(buffer_size(b.prepare(100)) == 100);
+        BOOST_BEAST_EXPECT(buffer_size(b.prepare(0)) == 0);
+        BOOST_BEAST_EXPECT(buffer_size(b.prepare(100)) == 100);
         try
         {
             b.prepare(b.max_size() + 1);
@@ -36,16 +36,16 @@ public:
             pass();
         }
         b.prepare(10);
-        BEAST_EXPECT(b.size() == 0);
+        BOOST_BEAST_EXPECT(b.size() == 0);
         b.commit(10);
-        BEAST_EXPECT(b.size() == 0);
+        BOOST_BEAST_EXPECT(b.size() == 0);
         b.consume(10);
-        BEAST_EXPECT(b.size() == 0);
+        BOOST_BEAST_EXPECT(b.size() == 0);
         b.consume(1000);
-        BEAST_EXPECT(b.size() == 0);
+        BOOST_BEAST_EXPECT(b.size() == 0);
     }
 };
 
-BEAST_DEFINE_TESTSUITE(drain_buffer,core,beast);
+BOOST_BEAST_DEFINE_TESTSUITE(drain_buffer,core,beast);
 
 } // beast

@@ -39,13 +39,13 @@ public:
         multi_buffer b;
         read(ss, b, p);
         auto const& m = p.get();
-        BEAST_EXPECT(boost::lexical_cast<std::string>(
+        BOOST_BEAST_EXPECT(boost::lexical_cast<std::string>(
             buffers(m.body.data())) == "xyz");
-        BEAST_EXPECT(boost::lexical_cast<std::string>(m) == s);
+        BOOST_BEAST_EXPECT(boost::lexical_cast<std::string>(m) == s);
     }
 };
 
-BEAST_DEFINE_TESTSUITE(dynamic_body,http,beast);
+BOOST_BEAST_DEFINE_TESTSUITE(dynamic_body,http,beast);
 
 } // http
 } // beast

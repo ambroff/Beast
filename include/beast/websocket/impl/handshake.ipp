@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_WEBSOCKET_IMPL_HANDSHAKE_IPP
-#define BEAST_WEBSOCKET_IMPL_HANDSHAKE_IPP
+#ifndef BOOST_BEAST_WEBSOCKET_IMPL_HANDSHAKE_IPP
+#define BOOST_BEAST_WEBSOCKET_IMPL_HANDSHAKE_IPP
 
 #include <beast/websocket/detail/type_traits.hpp>
 #include <beast/http/empty_body.hpp>

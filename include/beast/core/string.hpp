@@ -5,20 +5,20 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_STRING_HPP
-#define BEAST_STRING_HPP
+#ifndef BOOST_BEAST_STRING_HPP
+#define BOOST_BEAST_STRING_HPP
 
 #include <beast/config.hpp>
 #include <boost/version.hpp>
-#ifndef BEAST_NO_BOOST_STRING_VIEW
+#ifndef BOOST_BEAST_NO_BOOST_STRING_VIEW
 # if BOOST_VERSION >= 106400
-#  define BEAST_NO_BOOST_STRING_VIEW 0
+#  define BOOST_BEAST_NO_BOOST_STRING_VIEW 0
 # else
-#  define BEAST_NO_BOOST_STRING_VIEW 1
+#  define BOOST_BEAST_NO_BOOST_STRING_VIEW 1
 # endif
 #endif
 
-#if BEAST_NO_BOOST_STRING_VIEW
+#if BOOST_BEAST_NO_BOOST_STRING_VIEW
 #include <boost/utility/string_ref.hpp>
 #else
 #include <boost/utility/string_view.hpp>
@@ -28,7 +28,7 @@
 
 namespace beast {
 
-#if BEAST_NO_BOOST_STRING_VIEW
+#if BOOST_BEAST_NO_BOOST_STRING_VIEW
 /// The type of string view used by the library
 using string_view = boost::string_ref;
 

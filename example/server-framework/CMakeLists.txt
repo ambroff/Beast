@@ -10,7 +10,7 @@ file(GLOB_RECURSE SERVER_INCLUDES
   )
 
 add_executable (server-framework
-    ${BEAST_INCLUDES}
+    ${BOOST_BEAST_INCLUDES}
     ${COMMON_INCLUDES}
     ${SERVER_INCLUDES}
     main.cpp

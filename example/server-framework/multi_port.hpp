@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_EXAMPLE_SERVER_MULTI_PORT_HPP
-#define BEAST_EXAMPLE_SERVER_MULTI_PORT_HPP
+#ifndef BOOST_BEAST_EXAMPLE_SERVER_MULTI_PORT_HPP
+#define BOOST_BEAST_EXAMPLE_SERVER_MULTI_PORT_HPP
 
 #include "ws_async_port.hpp"
 #include "http_async_port.hpp"

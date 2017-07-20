@@ -32,8 +32,8 @@
     (zlib format), rfc1951 (deflate format) and rfc1952 (gzip format).
 */
 
-#ifndef BEAST_ZLIB_IMPL_ERROR_IPP
-#define BEAST_ZLIB_IMPL_ERROR_IPP
+#ifndef BOOST_BEAST_ZLIB_IMPL_ERROR_IPP
+#define BOOST_BEAST_ZLIB_IMPL_ERROR_IPP
 
 #include <beast/core/error.hpp>
 #include <type_traits>

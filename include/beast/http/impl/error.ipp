@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_HTTP_IMPL_ERROR_IPP
-#define BEAST_HTTP_IMPL_ERROR_IPP
+#ifndef BOOST_BEAST_HTTP_IMPL_ERROR_IPP
+#define BOOST_BEAST_HTTP_IMPL_ERROR_IPP
 
 #include <type_traits>
 

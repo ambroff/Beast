@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_CORE_DETAIL_CLAMP_HPP
-#define BEAST_CORE_DETAIL_CLAMP_HPP
+#ifndef BOOST_BEAST_CORE_DETAIL_CLAMP_HPP
+#define BOOST_BEAST_CORE_DETAIL_CLAMP_HPP
 
 #include <cstdlib>
 #include <limits>

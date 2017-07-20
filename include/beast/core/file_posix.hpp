@@ -5,26 +5,26 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_CORE_FILE_POSIX_HPP
-#define BEAST_CORE_FILE_POSIX_HPP
+#ifndef BOOST_BEAST_CORE_FILE_POSIX_HPP
+#define BOOST_BEAST_CORE_FILE_POSIX_HPP
 
 #include <boost/config.hpp>
 
-#if ! defined(BEAST_NO_POSIX_FILE)
+#if ! defined(BOOST_BEAST_NO_POSIX_FILE)
 # if ! defined(__APPLE__) && ! defined(__linux__)
-#  define BEAST_NO_POSIX_FILE
+#  define BOOST_BEAST_NO_POSIX_FILE
 # endif
 #endif
 
-#if ! defined(BEAST_USE_POSIX_FILE)
-# if ! defined(BEAST_NO_POSIX_FILE)
-#  define BEAST_USE_POSIX_FILE 1
+#if ! defined(BOOST_BEAST_USE_POSIX_FILE)
+# if ! defined(BOOST_BEAST_NO_POSIX_FILE)
+#  define BOOST_BEAST_USE_POSIX_FILE 1
 # else
-#  define BEAST_USE_POSIX_FILE 0
+#  define BOOST_BEAST_USE_POSIX_FILE 0
 # endif
 #endif
 
-#if BEAST_USE_POSIX_FILE
+#if BOOST_BEAST_USE_POSIX_FILE
 
 #include <beast/core/error.hpp>
 #include <beast/core/file_base.hpp>

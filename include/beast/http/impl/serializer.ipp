@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_HTTP_IMPL_SERIALIZER_IPP
-#define BEAST_HTTP_IMPL_SERIALIZER_IPP
+#ifndef BOOST_BEAST_HTTP_IMPL_SERIALIZER_IPP
+#define BOOST_BEAST_HTTP_IMPL_SERIALIZER_IPP
 
 #include <beast/core/detail/buffers_ref.hpp>
 #include <beast/http/error.hpp>
@@ -83,7 +83,7 @@ next(error_code& ec, Visit&& visit)
         if(chunked_)
             goto go_init_c;
         s_ = do_init;
-        BEAST_FALLTHROUGH;
+        BOOST_BEAST_FALLTHROUGH;
     }
 
     case do_init:
@@ -106,7 +106,7 @@ next(error_code& ec, Visit&& visit)
             frd_->get(),
             result->first};
         s_ = do_header;
-        BEAST_FALLTHROUGH;
+        BOOST_BEAST_FALLTHROUGH;
     }
 
     case do_header:
@@ -122,7 +122,7 @@ next(error_code& ec, Visit&& visit)
 
     case do_body:
         s_ = do_body + 1;
-        BEAST_FALLTHROUGH;
+        BOOST_BEAST_FALLTHROUGH;
 
     case do_body + 1:
     {
@@ -134,7 +134,7 @@ next(error_code& ec, Visit&& visit)
         more_ = result->second;
         v_ = cb3_t{result->first};
         s_ = do_body + 2;
-        BEAST_FALLTHROUGH;
+        BOOST_BEAST_FALLTHROUGH;
     }
 
     case do_body + 2:
@@ -160,7 +160,7 @@ next(error_code& ec, Visit&& visit)
         if(! result)
             goto go_header_only_c;
         more_ = result->second;
-    #ifndef BEAST_NO_BIG_VARIANTS
+    #ifndef BOOST_BEAST_NO_BIG_VARIANTS
         if(! more_)
         {
             // do it all in one buffer
@@ -187,7 +187,7 @@ next(error_code& ec, Visit&& visit)
             result->first,
             chunk_crlf{}};
         s_ = do_header_c;
-        BEAST_FALLTHROUGH;
+        BOOST_BEAST_FALLTHROUGH;
     }
 
     case do_header_c:
@@ -203,7 +203,7 @@ next(error_code& ec, Visit&& visit)
 
     case do_body_c:
         s_ = do_body_c + 1;
-        BEAST_FALLTHROUGH;
+        BOOST_BEAST_FALLTHROUGH;
 
     case do_body_c + 1:
     {
@@ -213,7 +213,7 @@ next(error_code& ec, Visit&& visit)
         if(! result)
             goto go_final_c;
         more_ = result->second;
-    #ifndef BEAST_NO_BIG_VARIANTS
+    #ifndef BOOST_BEAST_NO_BIG_VARIANTS
         if(! more_)
         {
             // do it all in one buffer
@@ -238,14 +238,14 @@ next(error_code& ec, Visit&& visit)
             result->first,
             chunk_crlf{}};
         s_ = do_body_c + 2;
-        BEAST_FALLTHROUGH;
+        BOOST_BEAST_FALLTHROUGH;
     }
 
     case do_body_c + 2:
         do_visit<pcb5_t, cb5_t>(ec, visit);
         break;
 
-#ifndef BEAST_NO_BIG_VARIANTS
+#ifndef BOOST_BEAST_NO_BIG_VARIANTS
     go_body_final_c:
         s_ = do_body_final_c;
     case do_body_final_c:
@@ -267,7 +267,7 @@ next(error_code& ec, Visit&& visit)
             boost::asio::const_buffers_1{nullptr, 0},
             chunk_crlf{}};
         s_ = do_final_c + 1;
-        BEAST_FALLTHROUGH;
+        BOOST_BEAST_FALLTHROUGH;
 
     case do_final_c + 1:
         do_visit<pcb8_t, cb8_t>(ec, visit);
@@ -382,7 +382,7 @@ consume(std::size_t n)
             s_ = do_final_c;
         break;
 
-#ifndef BEAST_NO_BIG_VARIANTS
+#ifndef BOOST_BEAST_NO_BIG_VARIANTS
     case do_body_final_c:
     {
         auto& b = boost::get<cb6_t>(v_);

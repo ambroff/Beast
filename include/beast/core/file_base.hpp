@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_CORE_FILE_BASE_HPP
-#define BEAST_CORE_FILE_BASE_HPP
+#ifndef BOOST_BEAST_CORE_FILE_BASE_HPP
+#define BOOST_BEAST_CORE_FILE_BASE_HPP
 
 #include <beast/config.hpp>
 #include <beast/core/string.hpp>

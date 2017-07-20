@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_CONFIG_HPP
-#define BEAST_CONFIG_HPP
+#ifndef BOOST_BEAST_CONFIG_HPP
+#define BOOST_BEAST_CONFIG_HPP
 
 #include <boost/config.hpp>
 

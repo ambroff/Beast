@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_DETAIL_BUFFERS_REF_HPP
-#define BEAST_DETAIL_BUFFERS_REF_HPP
+#ifndef BOOST_BEAST_DETAIL_BUFFERS_REF_HPP
+#define BOOST_BEAST_DETAIL_BUFFERS_REF_HPP
 
 #include <beast/core/type_traits.hpp>
 

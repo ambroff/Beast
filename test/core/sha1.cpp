@@ -54,7 +54,7 @@ public:
         init(ctx);
         update(ctx, message.data(), message.size());
         finish(ctx, &result[0]);
-        BEAST_EXPECT(result == digest);
+        BOOST_BEAST_EXPECT(result == digest);
     }
 
     void
@@ -73,7 +73,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(sha1,core,beast);
+BOOST_BEAST_DEFINE_TESTSUITE(sha1,core,beast);
 
 } // test
 } // beast

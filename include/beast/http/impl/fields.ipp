@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_HTTP_IMPL_FIELDS_IPP
-#define BEAST_HTTP_IMPL_FIELDS_IPP
+#ifndef BOOST_BEAST_HTTP_IMPL_FIELDS_IPP
+#define BOOST_BEAST_HTTP_IMPL_FIELDS_IPP
 
 #include <beast/core/buffer_cat.hpp>
 #include <beast/core/string.hpp>
@@ -22,8 +22,8 @@
 
 #if defined(BOOST_LIBSTDCXX_VERSION) && BOOST_LIBSTDCXX_VERSION < 60000
     // Workaround for https://gcc.gnu.org/bugzilla/show_bug.cgi?id=56437
-#ifndef BEAST_HTTP_NO_FIELDS_BASIC_STRING_ALLOCATOR
-#define BEAST_HTTP_NO_FIELDS_BASIC_STRING_ALLOCATOR
+#ifndef BOOST_BEAST_HTTP_NO_FIELDS_BASIC_STRING_ALLOCATOR
+#define BOOST_BEAST_HTTP_NO_FIELDS_BASIC_STRING_ALLOCATOR
 #endif
 #endif
 
@@ -999,7 +999,7 @@ set_chunked_impl(bool value)
         }
         else
         {
-        #ifdef BEAST_HTTP_NO_FIELDS_BASIC_STRING_ALLOCATOR
+        #ifdef BOOST_BEAST_HTTP_NO_FIELDS_BASIC_STRING_ALLOCATOR
             // Workaround for https://gcc.gnu.org/bugzilla/show_bug.cgi?id=56437
             std::string s;
         #else
@@ -1036,7 +1036,7 @@ set_chunked_impl(bool value)
     }
     catch(std::length_error const&)
     {
-    #ifdef BEAST_HTTP_NO_FIELDS_BASIC_STRING_ALLOCATOR
+    #ifdef BOOST_BEAST_HTTP_NO_FIELDS_BASIC_STRING_ALLOCATOR
         // Workaround for https://gcc.gnu.org/bugzilla/show_bug.cgi?id=56437
         std::string s;
     #else
@@ -1093,7 +1093,7 @@ set_keep_alive_impl(
     }
     catch(std::length_error const&)
     {
-    #ifdef BEAST_HTTP_NO_FIELDS_BASIC_STRING_ALLOCATOR
+    #ifdef BOOST_BEAST_HTTP_NO_FIELDS_BASIC_STRING_ALLOCATOR
         // Workaround for https://gcc.gnu.org/bugzilla/show_bug.cgi?id=56437
         std::string s;
     #else

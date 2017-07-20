@@ -39,6 +39,6 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(read_size,core,beast);
+BOOST_BEAST_DEFINE_TESTSUITE(read_size,core,beast);
 
 } // beast

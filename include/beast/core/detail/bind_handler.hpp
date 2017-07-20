@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_BIND_DETAIL_HANDLER_HPP
-#define BEAST_BIND_DETAIL_HANDLER_HPP
+#ifndef BOOST_BEAST_BIND_DETAIL_HANDLER_HPP
+#define BOOST_BEAST_BIND_DETAIL_HANDLER_HPP
 
 #include <beast/core/detail/integer_sequence.hpp>
 #include <boost/asio/handler_alloc_hook.hpp>

@@ -46,9 +46,9 @@ public:
         handler h2;
         handler_alloc<char, handler> a1{h};
         handler_alloc<char, handler> a2{h2};
-        BEAST_EXPECT(a2 == a1);
+        BOOST_BEAST_EXPECT(a2 == a1);
         auto a3 = a1;
-        BEAST_EXPECT(a3 == a1);
+        BOOST_BEAST_EXPECT(a3 == a1);
         {
             std::vector<char,
                 handler_alloc<char, handler>> v(a1);
@@ -58,7 +58,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(handler_alloc,core,beast);
+BOOST_BEAST_DEFINE_TESTSUITE(handler_alloc,core,beast);
 
 } // beast
 

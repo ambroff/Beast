@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_HTTP_CHUNK_ENCODE_HPP
-#define BEAST_HTTP_CHUNK_ENCODE_HPP
+#ifndef BOOST_BEAST_HTTP_CHUNK_ENCODE_HPP
+#define BOOST_BEAST_HTTP_CHUNK_ENCODE_HPP
 
 #include <beast/config.hpp>
 #include <beast/core/buffer_cat.hpp>
@@ -42,7 +42,7 @@ struct chunk_crlf
     //-----
 
     /// Required for @b ConstBufferSequence
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     using value_type = implementation_defined;
 #else
     using value_type = detail::chunk_crlf_iter::value_type;
@@ -175,7 +175,7 @@ public:
         @see https://tools.ietf.org/html/rfc7230#section-4.1
     */
     template<class ChunkExtensions
-#if ! BEAST_DOXYGEN
+#if ! BOOST_BEAST_DOXYGEN
         , class = typename std::enable_if<
             detail::is_chunk_extensions<
                 ChunkExtensions>::value>::type
@@ -211,7 +211,7 @@ public:
         @see https://tools.ietf.org/html/rfc7230#section-4.1
     */
     template<class ChunkExtensions, class Allocator
-#if ! BEAST_DOXYGEN
+#if ! BOOST_BEAST_DOXYGEN
         , class = typename std::enable_if<
             detail::is_chunk_extensions<
                 ChunkExtensions>::value>::type
@@ -225,14 +225,14 @@ public:
     //-----
 
     /// Required for @b ConstBufferSequence
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     using value_type = implementation_defined;
 #else
     using value_type = typename view_type::value_type;
 #endif
 
     /// Required for @b ConstBufferSequence
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     using const_iterator = implementation_defined;
 #else
     using const_iterator = typename view_type::const_iterator;
@@ -366,7 +366,7 @@ public:
         @see https://tools.ietf.org/html/rfc7230#section-4.1
     */
     template<class ChunkExtensions
-#if ! BEAST_DOXYGEN
+#if ! BOOST_BEAST_DOXYGEN
         , class = typename std::enable_if<
             ! std::is_convertible<typename std::decay<
                 ChunkExtensions>::type, string_view>::value>::type
@@ -405,7 +405,7 @@ public:
         @see https://tools.ietf.org/html/rfc7230#section-4.1
     */
     template<class ChunkExtensions, class Allocator
-#if ! BEAST_DOXYGEN
+#if ! BOOST_BEAST_DOXYGEN
         , class = typename std::enable_if<
             ! std::is_convertible<typename std::decay<
                 ChunkExtensions>::type, string_view>::value>::type
@@ -419,14 +419,14 @@ public:
     //-----
 
     /// Required for @b ConstBufferSequence
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     using value_type = implementation_defined;
 #else
     using value_type = typename view_type::value_type;
 #endif
 
     /// Required for @b ConstBufferSequence
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     using const_iterator = implementation_defined;
 #else
     using const_iterator = typename view_type::const_iterator;
@@ -507,7 +507,7 @@ public:
         @param allocator The allocator to use for storing temporary
         data associated with the serialized trailer buffers.
     */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     template<class Allocator>
     chunk_last(Trailer const& trailer, Allocator const& allocator);
 #else
@@ -524,7 +524,7 @@ public:
     chunk_last(chunk_last const&) = default;
 
     /// Required for @b ConstBufferSequence
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     using value_type = implementation_defined;
 #else
     using value_type =
@@ -532,7 +532,7 @@ public:
 #endif
 
     /// Required for @b ConstBufferSequence
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     using const_iterator = implementation_defined;
 #else
     using const_iterator =

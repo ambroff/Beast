@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_WRITE_OSTREAM_HPP
-#define BEAST_WRITE_OSTREAM_HPP
+#ifndef BOOST_BEAST_WRITE_OSTREAM_HPP
+#define BOOST_BEAST_WRITE_OSTREAM_HPP
 
 #include <beast/config.hpp>
 #include <beast/core/type_traits.hpp>
@@ -39,7 +39,7 @@ namespace beast {
     is still responsible for managing its lifetime.
 */
 template<class ConstBufferSequence>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
 implementation_defined
 #else
 detail::buffers_helper<ConstBufferSequence>
@@ -78,7 +78,7 @@ buffers(ConstBufferSequence const& b)
     lifetime of the output stream.
 */
 template<class DynamicBuffer>
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
 implementation_defined
 #else
 detail::ostream_helper<

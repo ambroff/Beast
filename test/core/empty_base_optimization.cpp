@@ -82,13 +82,13 @@ public:
     void
     run()
     {
-        BEAST_EXPECT(test_one());
-        BEAST_EXPECT(test_two());
+        BOOST_BEAST_EXPECT(test_one());
+        BOOST_BEAST_EXPECT(test_two());
         pass();
     }
 };
 
-BEAST_DEFINE_TESTSUITE(empty_base_optimization,core,beast);
+BOOST_BEAST_DEFINE_TESTSUITE(empty_base_optimization,core,beast);
 
 } // detail
 } // beast

@@ -8,7 +8,7 @@
 // Test that header file is self-contained.
 #include <beast/core/file_posix.hpp>
 
-#if BEAST_USE_POSIX_FILE
+#if BOOST_BEAST_USE_POSIX_FILE
 
 #include "file_test.hpp"
 
@@ -30,7 +30,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(file_posix,core,beast);
+BOOST_BEAST_DEFINE_TESTSUITE(file_posix,core,beast);
 
 } // beast
 

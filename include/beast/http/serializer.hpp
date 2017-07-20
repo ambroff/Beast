@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_HTTP_SERIALIZER_HPP
-#define BEAST_HTTP_SERIALIZER_HPP
+#ifndef BOOST_BEAST_HTTP_SERIALIZER_HPP
+#define BOOST_BEAST_HTTP_SERIALIZER_HPP
 
 #include <beast/config.hpp>
 #include <beast/core/buffer_cat.hpp>
@@ -20,9 +20,9 @@
 #include <boost/optional.hpp>
 #include <boost/variant.hpp>
 
-#ifndef BEAST_NO_BIG_VARIANTS
+#ifndef BOOST_BEAST_NO_BIG_VARIANTS
 # if defined(BOOST_GCC) && BOOST_GCC < 50000 && BOOST_VERSION < 106400
-#  define BEAST_NO_BIG_VARIANTS
+#  define BOOST_BEAST_NO_BIG_VARIANTS
 # endif
 #endif
 
@@ -74,7 +74,7 @@ public:
         This may be const or non-const depending on the
         implementation of the corresponding @b BodyReader.
     */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     using value_type = implementation_defined;
 #else
     using value_type =
@@ -102,7 +102,7 @@ private:
         do_header_c         =  70,
         do_body_c           =  80,
         do_final_c          =  90,
-    #ifndef BEAST_NO_BIG_VARIANTS
+    #ifndef BOOST_BEAST_NO_BIG_VARIANTS
         do_body_final_c     = 100,
         do_all_c            = 110,
     #endif
@@ -149,7 +149,7 @@ private:
         chunk_crlf>>;                               // crlf
     using pcb5_t = buffer_prefix_view<cb5_t const&>;
 
-#ifndef BEAST_NO_BIG_VARIANTS
+#ifndef BOOST_BEAST_NO_BIG_VARIANTS
     using cb6_t = consuming_buffers<buffer_cat_view<
         detail::chunk_size,                         // chunk-header
         boost::asio::const_buffers_1,               // chunk-size
@@ -185,13 +185,13 @@ private:
     boost::optional<typename Fields::reader> frd_;
     boost::variant<boost::blank,
         cb1_t, cb2_t, cb3_t, cb4_t, cb5_t
-    #ifndef BEAST_NO_BIG_VARIANTS
+    #ifndef BOOST_BEAST_NO_BIG_VARIANTS
         ,cb6_t, cb7_t
     #endif
         , cb8_t> v_;
     boost::variant<boost::blank,
         pcb1_t, pcb2_t, pcb3_t, pcb4_t, pcb5_t
-    #ifndef BEAST_NO_BIG_VARIANTS
+    #ifndef BOOST_BEAST_NO_BIG_VARIANTS
         ,pcb6_t, pcb7_t
     #endif
         , pcb8_t> pv_;

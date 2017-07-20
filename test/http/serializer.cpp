@@ -105,7 +105,7 @@ public:
         for(;;)
         {
             sr.next(ec, visit);
-            BEAST_EXPECT(visit.size <= limit);
+            BOOST_BEAST_EXPECT(visit.size <= limit);
             sr.consume(visit.size);
             if(sr.is_done())
                 break;
@@ -119,7 +119,7 @@ public:
     }
 };
 
-BEAST_DEFINE_TESTSUITE(serializer,http,beast);
+BOOST_BEAST_DEFINE_TESTSUITE(serializer,http,beast);
 
 } // http
 } // beast

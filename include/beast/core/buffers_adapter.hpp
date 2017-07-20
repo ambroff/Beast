@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_BUFFERS_ADAPTER_HPP
-#define BEAST_BUFFERS_ADAPTER_HPP
+#ifndef BOOST_BEAST_BUFFERS_ADAPTER_HPP
+#define BOOST_BEAST_BUFFERS_ADAPTER_HPP
 
 #include <beast/config.hpp>
 #include <beast/core/type_traits.hpp>
@@ -64,7 +64,7 @@ class buffers_adapter
     }
 
 public:
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
     /// The type used to represent the input sequence as a list of buffers.
     using const_buffers_type = implementation_defined;
 

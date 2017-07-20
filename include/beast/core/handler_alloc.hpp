@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_HANDLER_ALLOC_HPP
-#define BEAST_HANDLER_ALLOC_HPP
+#ifndef BOOST_BEAST_HANDLER_ALLOC_HPP
+#define BOOST_BEAST_HANDLER_ALLOC_HPP
 
 #include <beast/config.hpp>
 #include <boost/asio/handler_alloc_hook.hpp>
@@ -37,7 +37,7 @@ namespace beast {
     the handler is invoked or undefined behavior results. This behavior
     is described as the "deallocate before invocation" Asio guarantee.
 */
-#if BEAST_DOXYGEN
+#if BOOST_BEAST_DOXYGEN
 template<class T, class Handler>
 class handler_alloc;
 #else

@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_DETAIL_OSTREAM_HPP
-#define BEAST_DETAIL_OSTREAM_HPP
+#ifndef BOOST_BEAST_DETAIL_OSTREAM_HPP
+#define BOOST_BEAST_DETAIL_OSTREAM_HPP
 
 #include <boost/asio/buffer.hpp>
 #include <beast/core/read_size.hpp>

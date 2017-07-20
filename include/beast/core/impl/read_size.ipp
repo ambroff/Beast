@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_IMPL_READ_SIZE_IPP
-#define BEAST_IMPL_READ_SIZE_IPP
+#ifndef BOOST_BEAST_IMPL_READ_SIZE_IPP
+#define BOOST_BEAST_IMPL_READ_SIZE_IPP
 
 namespace beast {
 

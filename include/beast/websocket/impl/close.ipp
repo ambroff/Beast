@@ -5,8 +5,8 @@
 // file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
 
-#ifndef BEAST_WEBSOCKET_IMPL_CLOSE_IPP
-#define BEAST_WEBSOCKET_IMPL_CLOSE_IPP
+#ifndef BOOST_BEAST_WEBSOCKET_IMPL_CLOSE_IPP
+#define BOOST_BEAST_WEBSOCKET_IMPL_CLOSE_IPP
 
 #include <beast/core/handler_ptr.hpp>
 #include <beast/core/flat_static_buffer.hpp>
