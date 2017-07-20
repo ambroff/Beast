@@ -27,11 +27,11 @@ namespace framework {
 */
 class http_base
 {
-    beast::string_view server_name_;
+    boost::beast::string_view server_name_;
 
 public:
     explicit
-    http_base(beast::string_view server_name)
+    http_base(boost::beast::string_view server_name)
         : server_name_(server_name)
     {
     }
@@ -40,17 +40,17 @@ protected:
     // Returns a bad request result response
     //
     template<class Body, class Fields>
-    beast::http::response<beast::http::string_body>
-    bad_request(beast::http::request<Body, Fields> const& req) const
+    boost::beast::http::response<boost::beast::http::string_body>
+    bad_request(boost::beast::http::request<Body, Fields> const& req) const
     {
-        beast::http::response<beast::http::string_body> res;
+        boost::beast::http::response<boost::beast::http::string_body> res;
 
         // Match the version to the request
         res.version = req.version;
 
-        res.result(beast::http::status::bad_request);
-        res.set(beast::http::field::server, server_name_);
-        res.set(beast::http::field::content_type, "text/html");
+        res.result(boost::beast::http::status::bad_request);
+        res.set(boost::beast::http::field::server, server_name_);
+        res.set(boost::beast::http::field::content_type, "text/html");
         res.body = "Bad request";
         res.prepare_payload();
         return res;
@@ -59,16 +59,16 @@ protected:
     // Returns a 100 Continue result response
     //
     template<class Body, class Fields>
-    beast::http::response<beast::http::empty_body>
-    continue_100(beast::http::request<Body, Fields> const& req) const
+    boost::beast::http::response<boost::beast::http::empty_body>
+    continue_100(boost::beast::http::request<Body, Fields> const& req) const
     {
-        beast::http::response<beast::http::empty_body> res;
+        boost::beast::http::response<boost::beast::http::empty_body> res;
 
         // Match the version to the request
         res.version = req.version;
 
-        res.result(beast::http::status::continue_);
-        res.set(beast::http::field::server, server_name_);
+        res.result(boost::beast::http::status::continue_);
+        res.set(boost::beast::http::field::server, server_name_);
 
         return res;
     }

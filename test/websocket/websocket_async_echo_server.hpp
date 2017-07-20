@@ -34,7 +34,7 @@ namespace websocket {
 class async_echo_server
 {
 public:
-    using error_code = beast::error_code;
+    using error_code = boost::beast::error_code;
     using address_type = boost::asio::ip::address;
     using socket_type = boost::asio::ip::tcp::socket;
     using endpoint_type = boost::asio::ip::tcp::endpoint;
@@ -50,7 +50,7 @@ private:
         {
             virtual ~callable() = default;
             virtual void operator()(
-                beast::websocket::stream<NextLayer>&) = 0;
+                boost::beast::websocket::stream<NextLayer>&) = 0;
         };
 
         template<class T>
@@ -66,7 +66,7 @@ private:
             }
 
             void
-            operator()(beast::websocket::stream<NextLayer>& ws)
+            operator()(boost::beast::websocket::stream<NextLayer>& ws)
             {
                 t_(ws);
             }
@@ -87,7 +87,7 @@ private:
             }
 
             void
-            operator()(beast::websocket::stream<NextLayer>& ws) const
+            operator()(boost::beast::websocket::stream<NextLayer>& ws) const
             {
                 ws.set_option(opt_);
             }
@@ -108,7 +108,7 @@ private:
         }
 
         void
-        set_options(beast::websocket::stream<NextLayer>& ws)
+        set_options(boost::beast::websocket::stream<NextLayer>& ws)
         {
             for(auto const& op : list_)
                 (*op.second)(ws);
@@ -215,9 +215,9 @@ private:
             async_echo_server& server;
             endpoint_type ep;
             int state = 0;
-            beast::websocket::stream<socket_type> ws;
+            boost::beast::websocket::stream<socket_type> ws;
             boost::asio::io_service::strand strand;
-            beast::multi_buffer db;
+            boost::beast::multi_buffer db;
             std::size_t id;
 
             data(async_echo_server& server_,
@@ -263,7 +263,7 @@ private:
         {
             auto& d = *d_;
             d.ws.async_accept_ex(
-                [](beast::websocket::response_type& res)
+                [](boost::beast::websocket::response_type& res)
                 {
                     res.insert(
                         "Server", "async_echo_server");
@@ -280,7 +280,7 @@ private:
             using boost::asio::buffer_copy;
             if(db.size() < N-1)
                 return false;
-            beast::static_string<N-1> t;
+            boost::beast::static_string<N-1> t;
             t.resize(N-1);
             buffer_copy(buffer(t.data(), t.size()),
                 db.data());
@@ -320,7 +320,7 @@ private:
 
             // got message
             case 2:
-                if(ec == beast::websocket::error::closed)
+                if(ec == boost::beast::websocket::error::closed)
                     return;
                 if(ec)
                     return fail("async_read", ec);
@@ -341,7 +341,7 @@ private:
                 }
                 else if(match(d.db, "PING"))
                 {
-                    beast::websocket::ping_data payload;
+                    boost::beast::websocket::ping_data payload;
                     d.db.consume(buffer_copy(
                         buffer(payload.data(), payload.size()),
                             d.db.data()));
@@ -372,7 +372,7 @@ private:
         {
             auto& d = *d_;
             if(d.server.log_)
-                if(ec != beast::websocket::error::closed)
+                if(ec != boost::beast::websocket::error::closed)
                     d.server.fail("[#" + std::to_string(d.id) +
                         " " + boost::lexical_cast<std::string>(d.ep) +
                             "] " + what, ec);

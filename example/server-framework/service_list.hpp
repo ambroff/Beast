@@ -120,7 +120,7 @@ public:
     respond(
         Stream&& stream,
         endpoint_type const& ep,
-        beast::http::request<Body>&& req,
+        boost::beast::http::request<Body>&& req,
         Send const& send) const
     {
         return try_respond(
@@ -143,7 +143,7 @@ private:
     try_respond(
         Stream&&,
         endpoint_type const&,
-        beast::http::request<Body>&&,
+        boost::beast::http::request<Body>&&,
         Send const&,
         C<sizeof...(Services)> const&) const
     {
@@ -164,7 +164,7 @@ private:
     try_respond(
         Stream&& stream,
         endpoint_type const& ep,
-        beast::http::request<Body>&& req,
+        boost::beast::http::request<Body>&& req,
         Send const& send,
         C<I> const&) const
     {

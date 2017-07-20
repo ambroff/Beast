@@ -33,7 +33,7 @@ namespace websocket {
 class sync_echo_server
 {
 public:
-    using error_code = beast::error_code;
+    using error_code = boost::beast::error_code;
     using endpoint_type = boost::asio::ip::tcp::endpoint;
     using address_type = boost::asio::ip::address;
     using socket_type = boost::asio::ip::tcp::socket;
@@ -49,7 +49,7 @@ private:
         {
             virtual ~callable() = default;
             virtual void operator()(
-                beast::websocket::stream<NextLayer>&) = 0;
+                boost::beast::websocket::stream<NextLayer>&) = 0;
         };
 
         template<class T>
@@ -65,7 +65,7 @@ private:
             }
 
             void
-            operator()(beast::websocket::stream<NextLayer>& ws)
+            operator()(boost::beast::websocket::stream<NextLayer>& ws)
             {
                 t_(ws);
             }
@@ -86,7 +86,7 @@ private:
             }
 
             void
-            operator()(beast::websocket::stream<NextLayer>& ws) const
+            operator()(boost::beast::websocket::stream<NextLayer>& ws) const
             {
                 ws.set_option(opt_);
             }
@@ -107,7 +107,7 @@ private:
         }
 
         void
-        set_options(beast::websocket::stream<NextLayer>& ws)
+        set_options(boost::beast::websocket::stream<NextLayer>& ws)
         {
             for(auto const& op : list_)
                 (*op.second)(ws);
@@ -214,7 +214,7 @@ private:
         std::size_t id, endpoint_type const& ep)
     {
         if(log_)
-            if(ec != beast::websocket::error::closed)
+            if(ec != boost::beast::websocket::error::closed)
                 fail("[#" + std::to_string(id) + " " +
                     boost::lexical_cast<std::string>(ep) +
                         "] " + what, ec);
@@ -272,7 +272,7 @@ private:
         using boost::asio::buffer_copy;
         if(db.size() < N-1)
             return false;
-        beast::static_string<N-1> t;
+        boost::beast::static_string<N-1> t;
         t.resize(N-1);
         buffer_copy(buffer(t.data(), t.size()),
             db.data());
@@ -288,12 +288,12 @@ private:
     {
         using boost::asio::buffer;
         using boost::asio::buffer_copy;
-        beast::websocket::stream<
+        boost::beast::websocket::stream<
             socket_type> ws{std::move(sock)};
         opts_.set_options(ws);
         error_code ec;
         ws.accept_ex(
-            [](beast::websocket::response_type& res)
+            [](boost::beast::websocket::response_type& res)
             {
                 res.insert(
                     "Server", "sync_echo_server");
@@ -306,7 +306,7 @@ private:
         }
         for(;;)
         {
-            beast::multi_buffer b;
+            boost::beast::multi_buffer b;
             ws.read(b, ec);
             if(ec)
             {
@@ -326,7 +326,7 @@ private:
             }
             else if(match(b, "PING"))
             {
-                beast::websocket::ping_data payload;
+                boost::beast::websocket::ping_data payload;
                 b.consume(buffer_copy(
                     buffer(payload.data(), payload.size()),
                         b.data()));
@@ -343,7 +343,7 @@ private:
             if(ec)
                 break;
         }
-        if(ec && ec != beast::websocket::error::closed)
+        if(ec && ec != boost::beast::websocket::error::closed)
         {
             fail("read", ec, id, ep);
         }

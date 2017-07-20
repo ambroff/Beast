@@ -56,7 +56,7 @@ class multi_con
     boost::asio::ssl::context& ctx_;
 
     // Holds the data we read during ssl detection
-    beast::flat_static_buffer<6> buffer_;
+    boost::beast::flat_static_buffer<6> buffer_;
 
 public:
     // Constructor
@@ -183,7 +183,7 @@ private:
         // not_connected happens under normal
         // circumstances so don't bother reporting it.
         //
-        if(ec && ec != beast::errc::not_connected)
+        if(ec && ec != boost::beast::errc::not_connected)
             return this->fail("shutdown", ec);
     }
 };
@@ -215,8 +215,8 @@ protected:
     //        crash with gcc and clang using libstdc++
 
     // The types of the on_stream callback
-    using on_new_stream_cb1 = boost::function<void(beast::websocket::stream<socket_type>&)>;
-    using on_new_stream_cb2 = boost::function<void(beast::websocket::stream<ssl_stream<socket_type>>&)>;
+    using on_new_stream_cb1 = boost::function<void(boost::beast::websocket::stream<socket_type>&)>;
+    using on_new_stream_cb2 = boost::function<void(boost::beast::websocket::stream<ssl_stream<socket_type>>&)>;
 
     // Reference to the server instance that made us
     server& instance_;
@@ -246,7 +246,7 @@ public:
         should have this equivalent signature:
         @code
         template<class NextLayer>
-        void callback(beast::websocket::stream<NextLayer>&);
+        void callback(boost::beast::websocket::stream<NextLayer>&);
         @endcode
         In C++14 this can be accomplished with a generic lambda. In
         C++11 it will be necessary to write out a lambda manually,
@@ -282,7 +282,7 @@ public:
     on_upgrade(
         socket_type&& sock,
         endpoint_type ep,
-        beast::http::request<Body>&& req)
+        boost::beast::http::request<Body>&& req)
     {
         // Create the connection and call the version of
         // run that takes the request since we have it already
@@ -313,7 +313,7 @@ public:
     on_upgrade(
         ssl_stream<socket_type>&& stream,
         endpoint_type ep,
-        beast::http::request<Body>&& req)
+        boost::beast::http::request<Body>&& req)
     {
         std::make_shared<async_wss_con>(
             std::move(stream),

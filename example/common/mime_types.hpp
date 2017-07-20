@@ -16,10 +16,10 @@
 // Return a reasonable mime type based on the extension of a file.
 //
 template<class = void>
-beast::string_view
+boost::beast::string_view
 mime_type(boost::filesystem::path const& path)
 {
-    using beast::iequals;
+    using boost::beast::iequals;
     auto const ext = path.extension().string();
     if(iequals(ext, ".txt"))  return "text/plain";
     if(iequals(ext, ".htm"))  return "text/html";

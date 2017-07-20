@@ -17,15 +17,15 @@
 #include <iostream>
 #include <string>
 
-using tcp = boost::asio::ip::tcp; // from <boost/asio.hpp>
-namespace ssl = boost::asio::ssl; // from <boost/asio/ssl.hpp>
-namespace http = beast::http; // from <beast/http.hpp>
+using tcp = boost::asio::ip::tcp;       // from <boost/asio.hpp>
+namespace ssl = boost::asio::ssl;       // from <boost/asio/ssl.hpp>
+namespace http = boost::beast::http;    // from <boost/beast/http.hpp>
 
 int main()
 {
     // A helper for reporting errors
     auto const fail =
-        [](std::string what, beast::error_code ec)
+        [](std::string what, boost::beast::error_code ec)
         {
             std::cerr << what << ": " << ec.message() << std::endl;
             std::cerr.flush();
@@ -83,7 +83,7 @@ int main()
         return fail("write", ec);
 
     // This buffer is used for reading and must be persisted
-    beast::flat_buffer b;
+    boost::beast::flat_buffer b;
 
     // Declare a container to hold the response
     http::response<http::dynamic_body> res;

@@ -75,13 +75,13 @@ public:
     respond(
         Stream&& stream,
         endpoint_type const& ep,
-        beast::http::request<Body>&& req,
+        boost::beast::http::request<Body>&& req,
         Send const&) const
     {
         // If its not an upgrade request, return `false`
         // to indicate that we are not handling it.
         //
-        if(! beast::websocket::is_upgrade(req))
+        if(! boost::beast::websocket::is_upgrade(req))
             return false;
 
         // Its an ugprade request, so transfer ownership

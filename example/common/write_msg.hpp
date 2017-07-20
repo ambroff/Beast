@@ -46,15 +46,15 @@ class write_msg_op
         // operation takes ownership of the message and destroys
         // it when it is done.
         //
-        beast::http::message<isRequest, Body, Fields> msg;
+        boost::beast::http::message<isRequest, Body, Fields> msg;
 
         // Serializer for the message
-        beast::http::serializer<isRequest, Body, Fields> sr;
+        boost::beast::http::serializer<isRequest, Body, Fields> sr;
 
         data(
             Handler& handler,
             AsyncWriteStream& stream_,
-            beast::http::message<isRequest, Body, Fields>&& msg_)
+            boost::beast::http::message<isRequest, Body, Fields>&& msg_)
             : stream(stream_)
             , msg(std::move(msg_))
             , sr(msg)
@@ -69,7 +69,7 @@ class write_msg_op
     // and it also helps to meet Asio's deallocate-before-invocation
     // guarantee.
     //
-    beast::handler_ptr<data, Handler> d_;
+    boost::beast::handler_ptr<data, Handler> d_;
 
 public:
     // Asio can move and copy the handler, we support both
@@ -101,16 +101,16 @@ public:
     operator()()
     {
         auto& d = *d_;
-        beast::http::async_write(
+        boost::beast::http::async_write(
             d.stream, d.sr, std::move(*this));
     }
 
     // Completion handler
     //
-    // This gets called when beast::http::async_write completes
+    // This gets called when boost::beast::http::async_write completes
     //
     void
-    operator()(beast::error_code ec)
+    operator()(boost::beast::error_code ec)
     {
         d_.invoke(ec);
     }
@@ -198,27 +198,27 @@ template<
     class AsyncWriteStream,
     bool isRequest, class Body, class Fields,
     class WriteHandler>
-beast::async_return_type<WriteHandler, void(beast::error_code)>
+boost::beast::async_return_type<WriteHandler, void(boost::beast::error_code)>
 async_write_msg(
     AsyncWriteStream& stream,
-    beast::http::message<isRequest, Body, Fields>&& msg,
+    boost::beast::http::message<isRequest, Body, Fields>&& msg,
     WriteHandler&& handler)
 {
     static_assert(
-        beast::is_async_write_stream<AsyncWriteStream>::value,
+        boost::beast::is_async_write_stream<AsyncWriteStream>::value,
         "AsyncWriteStream requirements not met");
 
-    static_assert(beast::http::is_body<Body>::value,
+    static_assert(boost::beast::http::is_body<Body>::value,
         "Body requirements not met");
 
-    static_assert(beast::http::is_body_reader<Body>::value,
+    static_assert(boost::beast::http::is_body_reader<Body>::value,
         "BodyReader requirements not met");
 
-    beast::async_completion<WriteHandler, void(beast::error_code)> init{handler};
+    boost::beast::async_completion<WriteHandler, void(boost::beast::error_code)> init{handler};
 
     ::detail::write_msg_op<
         AsyncWriteStream,
-        beast::handler_type<WriteHandler, void(beast::error_code)>,
+        boost::beast::handler_type<WriteHandler, void(boost::beast::error_code)>,
         isRequest, Body, Fields>{
             init.completion_handler,
             stream,

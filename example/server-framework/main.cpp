@@ -60,17 +60,17 @@ sig_wait()
 */
 class set_ws_options
 {
-    beast::websocket::permessage_deflate pmd_;
+    boost::beast::websocket::permessage_deflate pmd_;
 
 public:
-    set_ws_options(beast::websocket::permessage_deflate const& pmd)
+    set_ws_options(boost::beast::websocket::permessage_deflate const& pmd)
         : pmd_(pmd)
     {
     }
 
     template<class NextLayer>
     void
-    operator()(beast::websocket::stream<NextLayer>& ws) const
+    operator()(boost::beast::websocket::stream<NextLayer>& ws) const
     {
         ws.auto_fragment(false);
         ws.set_option(pmd_);
@@ -133,7 +133,7 @@ main(
     boost::filesystem::path const root =  vm["root"].as<std::string>();
 
     // These settings will be applied to all new websocket connections
-    beast::websocket::permessage_deflate pmd;
+    boost::beast::websocket::permessage_deflate pmd;
     pmd.client_enable = true;
     pmd.server_enable = true;
     pmd.compLevel = 3;

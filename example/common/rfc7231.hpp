@@ -29,11 +29,11 @@ namespace rfc7231 {
 */
 template<class Body, class Allocator>
 bool
-is_expect_100_continue(beast::http::request<
-    Body, beast::http::basic_fields<Allocator>> const& req)
+is_expect_100_continue(boost::beast::http::request<
+    Body, boost::beast::http::basic_fields<Allocator>> const& req)
 {
-    return beast::iequals(
-        req[beast::http::field::expect], "100-continue");
+    return boost::beast::iequals(
+        req[boost::beast::http::field::expect], "100-continue");
 }
 
 } // rfc7231
