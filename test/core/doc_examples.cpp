@@ -15,6 +15,7 @@
 #include <beast/test/yield_to.hpp>
 #include <beast/unit_test/suite.hpp>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -85,3 +86,4 @@ BOOST_BEAST_DEFINE_TESTSUITE(doc_core_samples,core,beast);
 
 } // http
 } // beast
+} // boost

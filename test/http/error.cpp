@@ -13,6 +13,7 @@
 #include <beast/unit_test/suite.hpp>
 #include <memory>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -68,3 +69,4 @@ BOOST_BEAST_DEFINE_TESTSUITE(error,http,beast);
 
 } // http
 } // beast
+} // boost

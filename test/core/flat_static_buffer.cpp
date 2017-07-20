@@ -17,6 +17,7 @@
 #include <beast/unit_test/suite.hpp>
 #include <string>
 
+namespace boost {
 namespace beast {
 
 static_assert(
@@ -234,3 +235,4 @@ public:
 BOOST_BEAST_DEFINE_TESTSUITE(flat_static_buffer,core,beast);
 
 } // beast
+} // boost

@@ -27,6 +27,7 @@
 #include <mutex>
 #include <condition_variable>
 
+namespace boost {
 namespace beast {
 namespace websocket {
 
@@ -1933,3 +1934,4 @@ BOOST_BEAST_DEFINE_TESTSUITE(stream,websocket,beast);
 
 } // websocket
 } // beast
+} // boost

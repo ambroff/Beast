@@ -13,6 +13,7 @@
 #include <beast/core/string.hpp>
 #include <beast/unit_test/suite.hpp>
 
+namespace boost {
 namespace beast {
 
 class span_test : public beast::unit_test::suite
@@ -56,3 +57,4 @@ public:
 BOOST_BEAST_DEFINE_TESTSUITE(span,core,beast);
 
 } // beast
+} // boost

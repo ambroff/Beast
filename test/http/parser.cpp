@@ -24,6 +24,7 @@
 #include <beast/http/string_body.hpp>
 #include <boost/system/system_error.hpp>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -344,4 +345,4 @@ BOOST_BEAST_DEFINE_TESTSUITE(parser,http,beast);
 
 } // http
 } // beast
-
+} // boost

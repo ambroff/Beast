@@ -13,6 +13,7 @@
 #include <beast/http/string_body.hpp>
 #include <beast/unit_test/suite.hpp>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -125,3 +126,4 @@ BOOST_BEAST_DEFINE_TESTSUITE(serializer,http,beast);
 
 } // http
 } // beast
+} // boost

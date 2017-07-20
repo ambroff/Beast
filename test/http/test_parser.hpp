@@ -15,6 +15,7 @@
 #include <string>
 #include <unordered_map>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -173,5 +174,6 @@ public:
 
 } // http
 } // beast
+} // boost
 
 #endif

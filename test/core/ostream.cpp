@@ -15,6 +15,7 @@
 #include <boost/lexical_cast.hpp>
 #include <ostream>
 
+namespace boost {
 namespace beast {
 
 class ostream_test : public beast::unit_test::suite
@@ -53,3 +54,4 @@ public:
 BOOST_BEAST_DEFINE_TESTSUITE(ostream,core,beast);
 
 } // beast
+} // boost

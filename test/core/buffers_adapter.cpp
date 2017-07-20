@@ -19,6 +19,7 @@
 #include <boost/lexical_cast.hpp>
 #include <iterator>
 
+namespace boost {
 namespace beast {
 
 class buffers_adapter_test : public unit_test::suite
@@ -199,3 +200,4 @@ public:
 BOOST_BEAST_DEFINE_TESTSUITE(buffers_adapter,core,beast);
 
 } // beast
+} // boost

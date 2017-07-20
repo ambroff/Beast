@@ -11,10 +11,12 @@
 #include <beast/zlib/inflate_stream.hpp>
 
 #include "ztest.hpp"
+
 #include <beast/unit_test/suite.hpp>
 #include <chrono>
 #include <random>
 
+namespace boost {
 namespace beast {
 namespace zlib {
 
@@ -415,3 +417,4 @@ BOOST_BEAST_DEFINE_TESTSUITE(inflate_stream,core,beast);
 
 } // zlib
 } // beast
+} // boost

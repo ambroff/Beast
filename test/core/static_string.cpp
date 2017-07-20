@@ -12,6 +12,7 @@
 
 #include <beast/unit_test/suite.hpp>
 
+namespace boost {
 namespace beast {
 
 class static_string_test : public beast::unit_test::suite
@@ -1476,3 +1477,4 @@ public:
 BOOST_BEAST_DEFINE_TESTSUITE(static_string,core,beast);
 
 } // beast
+} // boost

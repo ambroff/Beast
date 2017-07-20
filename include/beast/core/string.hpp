@@ -150,5 +150,6 @@ struct iequal
 };
 
 } // beast
+} // boost
 
 #endif

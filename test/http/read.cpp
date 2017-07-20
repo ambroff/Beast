@@ -26,6 +26,7 @@
 #include <boost/asio/spawn.hpp>
 #include <atomic>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -464,3 +465,4 @@ BOOST_BEAST_DEFINE_TESTSUITE(read,http,beast);
 
 } // http
 } // beast
+} // boost

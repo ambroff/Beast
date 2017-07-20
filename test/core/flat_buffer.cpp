@@ -20,6 +20,7 @@
 #include <boost/lexical_cast.hpp>
 #include <algorithm>
 
+namespace boost {
 namespace beast {
 
 static_assert(is_dynamic_buffer<flat_buffer>::value,
@@ -352,3 +353,4 @@ public:
 BOOST_BEAST_DEFINE_TESTSUITE(flat_buffer,core,beast);
 
 } // beast
+} // boost

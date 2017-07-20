@@ -11,6 +11,7 @@
 #define BOOST_BEAST_ZTEST_HPP
 
 #include "zlib-1.2.11/zlib.h"
+
 #include <cstdint>
 #include <random>
 #include <string>

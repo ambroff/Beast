@@ -26,6 +26,7 @@
 #include <mutex>
 #include <utility>
 
+namespace boost {
 namespace beast {
 namespace test {
 
@@ -527,5 +528,6 @@ async_write_some(ConstBufferSequence const& buffers,
 
 } // test
 } // beast
+} // boost
 
 #endif

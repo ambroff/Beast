@@ -14,6 +14,7 @@
 #include <cstddef>
 #include <memory>
 
+namespace boost {
 namespace beast {
 namespace test {
 
@@ -164,5 +165,6 @@ public:
 
 } // test
 } // beast
+} // boost
 
 #endif

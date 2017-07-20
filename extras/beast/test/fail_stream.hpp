@@ -18,6 +18,7 @@
 #include <beast/test/fail_counter.hpp>
 #include <boost/optional.hpp>
 
+namespace boost {
 namespace beast {
 namespace test {
 
@@ -190,5 +191,6 @@ public:
 
 } // test
 } // beast
+} // boost
 
 #endif

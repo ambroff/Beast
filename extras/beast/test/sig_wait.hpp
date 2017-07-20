@@ -12,6 +12,7 @@
 
 #include <boost/asio.hpp>
 
+namespace boost {
 namespace beast {
 namespace test {
 
@@ -32,5 +33,6 @@ sig_wait()
 
 } // test
 } // beast
+} // boost
 
 #endif

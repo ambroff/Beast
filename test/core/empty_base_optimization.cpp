@@ -12,6 +12,7 @@
 
 #include <beast/unit_test/suite.hpp>
 
+namespace boost {
 namespace beast {
 namespace detail {
 
@@ -94,3 +95,4 @@ BOOST_BEAST_DEFINE_TESTSUITE(empty_base_optimization,core,beast);
 
 } // detail
 } // beast
+} // boost

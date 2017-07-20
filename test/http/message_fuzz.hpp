@@ -16,6 +16,7 @@
 #include <random>
 #include <string>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -602,5 +603,6 @@ chunkExtensionsTest(
 
 } // http
 } // beast
+} // boost
 
 #endif

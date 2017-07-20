@@ -12,6 +12,7 @@
 
 #include <beast/unit_test/suite.hpp>
 
+namespace boost {
 namespace beast {
 namespace websocket {
 
@@ -49,3 +50,4 @@ BOOST_BEAST_DEFINE_TESTSUITE(rfc6455,websocket,beast);
 
 } // websocket
 } // beast
+} // boost

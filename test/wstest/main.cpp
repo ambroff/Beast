@@ -29,9 +29,9 @@
 namespace asio = boost::asio;
 namespace ip = boost::asio::ip;
 using tcp = boost::asio::ip::tcp;
-namespace ws = beast::websocket;
+namespace ws = boost::beast::websocket;
 namespace ph = std::placeholders;
-using error_code = beast::error_code;
+using error_code = boost::beast::error_code;
 
 class test_buffer : public asio::const_buffers_1
 {
@@ -277,7 +277,7 @@ throughput(
 int
 main(int argc, char** argv)
 {
-    beast::unit_test::dstream dout(std::cerr);
+    boost::beast::unit_test::dstream dout(std::cerr);
 
     try
     {

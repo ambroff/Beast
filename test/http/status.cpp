@@ -12,6 +12,7 @@
 
 #include <beast/unit_test/suite.hpp>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -175,4 +176,5 @@ BOOST_BEAST_DEFINE_TESTSUITE(status,http,beast);
 
 } // http
 } // beast
+} // boost
 

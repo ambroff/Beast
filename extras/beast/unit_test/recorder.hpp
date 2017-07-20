@@ -13,6 +13,7 @@
 #include <beast/unit_test/results.hpp>
 #include <beast/unit_test/runner.hpp>
 
+namespace boost {
 namespace beast {
 namespace unit_test {
 
@@ -90,5 +91,6 @@ private:
 
 } // unit_test
 } // beast
+} // boost
 
 #endif

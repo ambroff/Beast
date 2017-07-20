@@ -10,7 +10,9 @@
 
 #include <beast/unit_test/suite.hpp>
 
+namespace boost {
 namespace beast {
+namespace detail {
 
 class varint_test : public beast::unit_test::suite
 {
@@ -18,9 +20,6 @@ public:
     void
     testVarint()
     {
-        using beast::detail::varint_read;
-        using beast::detail::varint_size;
-        using beast::detail::varint_write;
         std::size_t n0 = 0;
         std::size_t n1 = 1;
         for(;;)
@@ -49,4 +48,6 @@ public:
 
 BOOST_BEAST_DEFINE_TESTSUITE(varint,core,beast);
 
+} // detail
 } // beast
+} // boost

@@ -18,6 +18,7 @@
 #include <boost/asio/buffer.hpp>
 #include <string>
 
+namespace boost {
 namespace beast {
 
 class consuming_buffers_test : public beast::unit_test::suite
@@ -181,3 +182,4 @@ public:
 BOOST_BEAST_DEFINE_TESTSUITE(consuming_buffers,core,beast);
 
 } // beast
+} // boost

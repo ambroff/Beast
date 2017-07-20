@@ -20,6 +20,7 @@
 #include <boost/throw_exception.hpp>
 #include <string>
 
+namespace boost {
 namespace beast {
 namespace test {
 
@@ -147,5 +148,6 @@ public:
 
 } // test
 } // beast
+} // boost
 
 #endif

@@ -15,6 +15,7 @@
 #include <initializer_list>
 #include <climits>
 
+namespace boost {
 namespace beast {
 namespace websocket {
 namespace detail {
@@ -253,3 +254,4 @@ BOOST_BEAST_DEFINE_TESTSUITE(frame,websocket,beast);
 } // detail
 } // websocket
 } // beast
+} // boost

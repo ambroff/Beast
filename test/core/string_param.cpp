@@ -13,6 +13,7 @@
 #include <beast/unit_test/suite.hpp>
 #include <beast/core/detail/type_traits.hpp>
 
+namespace boost {
 namespace beast {
 
 class string_param_test : public unit_test::suite
@@ -79,3 +80,4 @@ public:
 BOOST_BEAST_DEFINE_TESTSUITE(string_param,core,beast);
 
 } // beast
+} // boost

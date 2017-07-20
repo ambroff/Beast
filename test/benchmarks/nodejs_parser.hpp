@@ -24,6 +24,7 @@
 #include <type_traits>
 #include <utility>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -636,5 +637,6 @@ private:
 
 } // http
 } // beast
+} // boost
 
 #endif

@@ -14,6 +14,7 @@
 #include <list>
 #include <vector>
 
+namespace boost {
 namespace beast {
 
 class handler_alloc_test : public beast::unit_test::suite
@@ -63,4 +64,4 @@ public:
 BOOST_BEAST_DEFINE_TESTSUITE(handler_alloc,core,beast);
 
 } // beast
-
+} // boost

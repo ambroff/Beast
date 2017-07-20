@@ -19,6 +19,7 @@
 #include <string>
 #include <type_traits>
 
+namespace boost {
 namespace beast {
 namespace test {
 
@@ -116,5 +117,6 @@ size_rev_post(ConstBufferSequence const& buffers)
 
 } // test
 } // beast
+} // boost
 
 #endif

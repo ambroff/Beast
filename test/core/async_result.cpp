@@ -14,6 +14,7 @@
 #include <beast/core/type_traits.hpp>
 #include <cstdlib>
 
+namespace boost {
 namespace beast {
 namespace {
 
@@ -38,3 +39,4 @@ static_assert(std::is_constructible<
 
 } // (anon-ns)
 } // beast
+} // boost

@@ -17,6 +17,7 @@
 
 #include <boost/asio/streambuf.hpp>
 
+namespace boost {
 namespace beast {
 
 class read_size_test : public beast::unit_test::suite
@@ -44,3 +45,4 @@ public:
 BOOST_BEAST_DEFINE_TESTSUITE(read_size,core,beast);
 
 } // beast
+} // boost

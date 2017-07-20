@@ -15,6 +15,7 @@
 #include <beast/core/type_traits.hpp>
 #include <beast/unit_test/suite.hpp>
 
+namespace boost {
 namespace beast {
 
 BOOST_STATIC_ASSERT(! std::is_copy_constructible<file_stdio>::value);
@@ -33,3 +34,4 @@ public:
 BOOST_BEAST_DEFINE_TESTSUITE(file_stdio,core,beast);
 
 } // beast
+} // boost

@@ -13,6 +13,7 @@
 #include <beast/http/empty_body.hpp>
 #include <string>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -32,3 +33,4 @@ BOOST_STATIC_ASSERT(! is_fields<not_fields>::value);
 
 } // http
 } // beast
+} // boost

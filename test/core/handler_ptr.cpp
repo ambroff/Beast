@@ -14,6 +14,7 @@
 #include <exception>
 #include <utility>
 
+namespace boost {
 namespace beast {
 
 class handler_ptr_test : public beast::unit_test::suite
@@ -79,4 +80,4 @@ public:
 BOOST_BEAST_DEFINE_TESTSUITE(handler_ptr,core,beast);
 
 } // beast
-
+} // boost

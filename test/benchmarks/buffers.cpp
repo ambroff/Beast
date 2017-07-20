@@ -20,6 +20,7 @@
 #include <utility>
 #include <vector>
 
+namespace boost {
 namespace beast {
 
 class buffers_test : public beast::unit_test::suite
@@ -238,3 +239,4 @@ public:
 BOOST_BEAST_DEFINE_TESTSUITE(buffers,benchmarks,beast);
 
 } // beast
+} // boost

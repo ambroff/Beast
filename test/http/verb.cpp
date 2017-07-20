@@ -12,6 +12,7 @@
 
 #include <beast/unit_test/suite.hpp>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -127,4 +128,4 @@ BOOST_BEAST_DEFINE_TESTSUITE(verb,http,beast);
 
 } // http
 } // beast
-
+} // boost

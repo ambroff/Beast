@@ -84,7 +84,7 @@ main(
     char const* av[])
 {
     using namespace framework;
-    using namespace beast::http;
+    using namespace boost::beast::http;
 
     // Helper for reporting failures
     //

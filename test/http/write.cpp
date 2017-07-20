@@ -28,6 +28,7 @@
 #include <sstream>
 #include <string>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -838,3 +839,4 @@ BOOST_BEAST_DEFINE_TESTSUITE(write,http,beast);
 
 } // http
 } // beast
+} // boost

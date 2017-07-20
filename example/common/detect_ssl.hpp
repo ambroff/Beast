@@ -52,7 +52,7 @@ is_ssl_handshake(ConstBufferSequence const& buffers);
 
 //]
 
-using namespace beast;
+using namespace boost::beast;
 
 //[example_core_detect_ssl_2
 

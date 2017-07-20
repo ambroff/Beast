@@ -15,6 +15,7 @@
 #include <boost/asio/detail/consuming_buffers.hpp>
 #include <memory>
 
+namespace boost {
 namespace beast {
 
 namespace detail {
@@ -162,3 +163,4 @@ BOOST_STATIC_ASSERT(! is_sync_write_stream<not_a_stream>::value);
 } // (anonymous)
 
 } // beast
+} // boost

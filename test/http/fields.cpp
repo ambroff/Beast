@@ -17,6 +17,7 @@
 #include <beast/unit_test/suite.hpp>
 #include <boost/lexical_cast.hpp>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -921,3 +922,4 @@ BOOST_BEAST_DEFINE_TESTSUITE(fields,http,beast);
 
 } // http
 } // beast
+} // boost

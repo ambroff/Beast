@@ -18,6 +18,7 @@
 #include <type_traits>
 #include <vector>
 
+namespace boost {
 namespace beast {
 
 class buffer_cat_test : public unit_test::suite
@@ -266,3 +267,4 @@ public:
 BOOST_BEAST_DEFINE_TESTSUITE(buffer_cat,core,beast);
 
 } // beast
+} // boost

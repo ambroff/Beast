@@ -16,6 +16,7 @@
 #include <boost/asio/buffer.hpp>
 #include <string>
 
+namespace boost {
 namespace beast {
 
 BOOST_STATIC_ASSERT(
@@ -188,3 +189,4 @@ public:
 BOOST_BEAST_DEFINE_TESTSUITE(buffer_prefix,core,beast);
 
 } // beast
+} // boost

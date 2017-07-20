@@ -19,6 +19,7 @@
 #include <boost/optional.hpp>
 #include <random>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -307,4 +308,4 @@ BOOST_BEAST_DEFINE_TESTSUITE(chunk_encode,http,beast);
 
 } // http
 } // beast
-
+} // boost

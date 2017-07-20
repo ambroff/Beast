@@ -14,6 +14,7 @@
 #include <beast/core/string.hpp>
 #include <random>
 
+namespace boost {
 namespace beast {
 namespace test {
 
@@ -99,5 +100,6 @@ fuzz(
 
 } // test
 } // beast
+} // boost
 
 #endif

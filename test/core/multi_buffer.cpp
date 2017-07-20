@@ -23,6 +23,7 @@
 #include <memory>
 #include <string>
 
+namespace boost {
 namespace beast {
 
 BOOST_STATIC_ASSERT(is_dynamic_buffer<multi_buffer>::value);
@@ -592,3 +593,4 @@ public:
 BOOST_BEAST_DEFINE_TESTSUITE(multi_buffer,core,beast);
 
 } // beast
+} // boost

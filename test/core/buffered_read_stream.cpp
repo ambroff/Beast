@@ -17,6 +17,7 @@
 #include <beast/unit_test/suite.hpp>
 #include <boost/asio.hpp>
 
+namespace boost {
 namespace beast {
 
 class buffered_read_stream_test
@@ -142,4 +143,4 @@ public:
 BOOST_BEAST_DEFINE_TESTSUITE(buffered_read_stream,core,beast);
 
 } // beast
-
+} // boost

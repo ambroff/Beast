@@ -12,6 +12,7 @@
 
 #include <beast/unit_test/suite_list.hpp>
 
+namespace boost {
 namespace beast {
 namespace unit_test {
 
@@ -49,5 +50,6 @@ global_suites()
 
 } // unit_test
 } // beast
+} // boost
 
 #endif

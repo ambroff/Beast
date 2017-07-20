@@ -12,6 +12,7 @@
 
 #include <beast/unit_test/suite.hpp>
 
+namespace boost {
 namespace beast {
 namespace detail {
 
@@ -56,4 +57,4 @@ BOOST_BEAST_DEFINE_TESTSUITE(base64,core,beast);
 
 } // detail
 } // beast
-
+} // boost

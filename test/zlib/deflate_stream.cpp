@@ -11,8 +11,10 @@
 #include <beast/zlib/deflate_stream.hpp>
 
 #include "ztest.hpp"
+
 #include <beast/unit_test/suite.hpp>
 
+namespace boost {
 namespace beast {
 namespace zlib {
 
@@ -341,3 +343,4 @@ BOOST_BEAST_DEFINE_TESTSUITE(deflate_stream,core,beast);
 
 } // zlib
 } // beast
+} // boost

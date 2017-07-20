@@ -18,10 +18,10 @@
 
 //[ws_snippet_1
 #include <beast/websocket.hpp>
-using namespace beast::websocket;
+using namespace boost::beast::websocket;
 //]
 
-using namespace beast;
+using namespace boost::beast;
 
 namespace doc_ws_snippets {
 

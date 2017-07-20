@@ -18,6 +18,7 @@
 #include <sstream>
 #include <string>
 
+namespace boost {
 namespace beast {
 namespace unit_test {
 
@@ -620,6 +621,7 @@ run(runner& r)
 
 } // unit_test
 } // beast
+} // boost
 
 //------------------------------------------------------------------------------
 

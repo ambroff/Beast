@@ -17,6 +17,7 @@
 #include <beast/unit_test/suite.hpp>
 #include <type_traits>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -376,3 +377,4 @@ BOOST_BEAST_DEFINE_TESTSUITE(message,http,beast);
 
 } // http
 } // beast
+} // boost

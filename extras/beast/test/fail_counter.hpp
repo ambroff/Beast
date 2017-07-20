@@ -13,6 +13,7 @@
 #include <beast/core/error.hpp>
 #include <boost/throw_exception.hpp>
 
+namespace boost {
 namespace beast {
 namespace test {
 
@@ -158,6 +159,7 @@ public:
 
 } // test
 } // beast
+} // boost
 
 namespace boost {
 namespace system {

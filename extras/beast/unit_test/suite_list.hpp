@@ -17,6 +17,7 @@
 #include <set>
 #include <unordered_set>
 
+namespace boost {
 namespace beast {
 namespace unit_test {
 
@@ -74,6 +75,7 @@ suite_list::insert(
 
 } // unit_test
 } // beast
+} // boost
 
 #endif
 

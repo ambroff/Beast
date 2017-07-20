@@ -13,6 +13,7 @@
 #include <chrono>
 #include <random>
 
+namespace boost {
 namespace beast {
 
 class utf8_checker_test : public beast::unit_test::suite
@@ -141,4 +142,5 @@ public:
 BOOST_BEAST_DEFINE_TESTSUITE(utf8_checker,benchmarks,beast);
 
 } // beast
+} // boost
 

@@ -10,6 +10,7 @@
 // Test that header file is self-contained.
 #include <beast/http/vector_body.hpp>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -19,3 +20,4 @@ BOOST_STATIC_ASSERT(is_body_writer<vector_body<char>>::value);
 
 } // http
 } // beast
+} // boost

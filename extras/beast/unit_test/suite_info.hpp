@@ -15,6 +15,7 @@
 #include <string>
 #include <utility>
 
+namespace boost {
 namespace beast {
 namespace unit_test {
 
@@ -120,5 +121,6 @@ make_suite_info(
 
 } // unit_test
 } // beast
+} // boost
 
 #endif

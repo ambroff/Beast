@@ -29,6 +29,7 @@
 # endif
 #endif
 
+namespace boost {
 namespace beast {
 namespace unit_test {
 
@@ -73,6 +74,7 @@ print(std::ostream& os)
 
 } // unit_test
 } // beast
+} // boost
 
 // Simple main used to produce stand
 // alone executables that run unit tests.

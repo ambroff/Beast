@@ -22,6 +22,7 @@
 //#include <boost/detail/winapi/debugapi.hpp>
 #endif
 
+namespace boost {
 namespace beast {
 namespace unit_test {
 
@@ -124,5 +125,6 @@ using dwstream = std::wostream&;
 
 } // unit_test
 } // beast
+} // boost
 
 #endif

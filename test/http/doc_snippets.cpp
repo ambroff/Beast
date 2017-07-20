@@ -13,12 +13,12 @@
 #include <iostream>
 #include <thread>
 
-using namespace beast;
+using namespace boost::beast;
 
 //[http_snippet_1
 
 #include <beast/http.hpp>
-using namespace beast::http;
+using namespace boost::beast::http;
 
 //]
 

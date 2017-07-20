@@ -14,6 +14,7 @@
 #include <beast/unit_test/suite.hpp>
 #include <string>
 
+namespace boost {
 namespace beast {
 
 class bind_handler_test : public unit_test::suite
@@ -69,3 +70,4 @@ public:
 BOOST_BEAST_DEFINE_TESTSUITE(bind_handler,core,beast);
 
 } // beast
+} // boost

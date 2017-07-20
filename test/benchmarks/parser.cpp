@@ -21,6 +21,7 @@
 #include <iostream>
 #include <vector>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -297,4 +298,5 @@ BOOST_BEAST_DEFINE_TESTSUITE(parser,benchmarks,beast);
 
 } // http
 } // beast
+} // boost
 

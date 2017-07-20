@@ -13,6 +13,7 @@
 #include <beast/unit_test/suite_info.hpp>
 #include <string>
 
+namespace boost {
 namespace beast {
 namespace unit_test {
 
@@ -171,5 +172,6 @@ match_library(std::string const& name)
 
 } // unit_test
 } // beast
+} // boost
 
 #endif

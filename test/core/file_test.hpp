@@ -16,6 +16,7 @@
 #include <boost/filesystem.hpp>
 #include <string>
 
+namespace boost {
 namespace beast {
 
 template<class File>
@@ -120,5 +121,6 @@ doTestFile(beast::unit_test::suite& test)
 }
 
 } // beast
+} // boost
 
 #endif

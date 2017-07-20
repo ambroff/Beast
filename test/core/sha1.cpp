@@ -11,6 +11,7 @@
 #include <beast/unit_test/suite.hpp>
 #include <array>
 
+namespace boost {
 namespace beast {
 namespace detail {
 
@@ -79,4 +80,4 @@ BOOST_BEAST_DEFINE_TESTSUITE(sha1,core,beast);
 
 } // test
 } // beast
-
+} // boost

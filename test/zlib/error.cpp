@@ -13,6 +13,7 @@
 #include <beast/unit_test/suite.hpp>
 #include <memory>
 
+namespace boost {
 namespace beast {
 namespace zlib {
 
@@ -61,3 +62,4 @@ BOOST_BEAST_DEFINE_TESTSUITE(error,zlib,beast);
 
 } // zlib
 } // beast
+} // boost

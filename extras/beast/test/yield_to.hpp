@@ -19,6 +19,7 @@
 #include <thread>
 #include <vector>
 
+namespace boost {
 namespace beast {
 namespace test {
 
@@ -132,5 +133,6 @@ spawn(F0&& f, FN&&... fn)
 
 } // test
 } // beast
+} // boost
 
 #endif

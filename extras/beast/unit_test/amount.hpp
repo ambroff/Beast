@@ -14,6 +14,7 @@
 #include <ostream>
 #include <string>
 
+namespace boost {
 namespace beast {
 namespace unit_test {
 
@@ -53,5 +54,6 @@ operator<<(std::ostream& s, amount const& t)
 
 } // unit_test
 } // beast
+} // boost
 
 #endif

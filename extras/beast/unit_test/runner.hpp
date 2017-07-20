@@ -16,6 +16,7 @@
 #include <ostream>
 #include <string>
 
+namespace boost {
 namespace beast {
 namespace unit_test {
 
@@ -286,5 +287,6 @@ runner::log(std::string const& s)
 
 } // unit_test
 } // beast
+} // boost
 
 #endif

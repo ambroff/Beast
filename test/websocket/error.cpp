@@ -13,6 +13,7 @@
 #include <beast/unit_test/suite.hpp>
 #include <memory>
 
+namespace boost {
 namespace beast {
 namespace websocket {
 
@@ -47,3 +48,4 @@ BOOST_BEAST_DEFINE_TESTSUITE(error,websocket,beast);
 
 } // websocket
 } // beast
+} // boost

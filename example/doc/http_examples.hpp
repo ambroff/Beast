@@ -17,7 +17,8 @@
     building a network application.
 */
 
-// The documentation assumes the beast::http namespace
+// The documentation assumes the boost::beast::http namespace
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -1236,3 +1237,4 @@ print_chunked_body(
 
 } // http
 } // beast
+} // boost

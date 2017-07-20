@@ -16,7 +16,7 @@
 
 //]
 
-using namespace beast;
+using namespace boost::beast;
 
 namespace doc_core_snippets {
 
@@ -25,7 +25,7 @@ void fxx()
 
 //[snippet_core_1b
 //
-using namespace beast;
+using namespace boost::beast;
 
 boost::asio::io_service ios;
 boost::asio::io_service::work work{ios};

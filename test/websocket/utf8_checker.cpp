@@ -15,6 +15,7 @@
 #include <beast/unit_test/suite.hpp>
 #include <array>
 
+namespace boost {
 namespace beast {
 namespace websocket {
 namespace detail {
@@ -412,3 +413,4 @@ BOOST_BEAST_DEFINE_TESTSUITE(utf8_checker,websocket,beast);
 } // detail
 } // websocket
 } // beast
+} // boost

@@ -13,6 +13,7 @@
 #include <beast/core/type_traits.hpp>
 #include <beast/unit_test/suite.hpp>
 
+namespace boost {
 namespace beast {
 
 static_assert(is_dynamic_buffer<drain_buffer>::value,
@@ -51,3 +52,4 @@ public:
 BOOST_BEAST_DEFINE_TESTSUITE(drain_buffer,core,beast);
 
 } // beast
+} // boost

@@ -15,6 +15,7 @@
 #include <string>
 #include <vector>
 
+namespace boost {
 namespace beast {
 namespace unit_test {
 
@@ -240,5 +241,6 @@ public:
 
 } // unit_test
 } // beast
+} // boost
 
 #endif

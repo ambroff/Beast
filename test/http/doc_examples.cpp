@@ -28,6 +28,7 @@
 #include <list>
 #include <vector>
 
+namespace boost {
 namespace beast {
 namespace http {
 
@@ -431,3 +432,4 @@ BOOST_BEAST_DEFINE_TESTSUITE(doc_examples,http,beast);
 
 } // http
 } // beast
+} // boost

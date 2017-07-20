@@ -13,6 +13,7 @@
 #include <beast/unit_test/suite.hpp>
 #include <climits>
 
+namespace boost {
 namespace beast {
 namespace detail {
 
@@ -36,4 +37,4 @@ BOOST_BEAST_DEFINE_TESTSUITE(clamp,core,beast);
 
 } // detail
 } // beast
-
+} // boost

@@ -23,6 +23,7 @@
 #include <string>
 #include <utility>
 
+namespace boost {
 namespace beast {
 namespace unit_test {
 
@@ -293,5 +294,6 @@ using reporter = detail::reporter<>;
 
 } // unit_test
 } // beast
+} // boost
 
 #endif

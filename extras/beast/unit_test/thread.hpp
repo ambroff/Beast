@@ -15,6 +15,7 @@
 #include <thread>
 #include <utility>
 
+namespace boost {
 namespace beast {
 namespace unit_test {
 
@@ -122,5 +123,6 @@ private:
 
 } // unit_test
 } // beast
+} // boost
 
 #endif
