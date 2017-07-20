@@ -10,8 +10,8 @@
 #ifndef BOOST_BEAST_IMPL_STRING_PARAM_IPP
 #define BOOST_BEAST_IMPL_STRING_PARAM_IPP
 
-namespace beast {
 namespace boost {
+namespace beast {
 
 template<class T>
 typename std::enable_if<

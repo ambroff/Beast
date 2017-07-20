@@ -22,6 +22,7 @@
 #include <string>
 #include <type_traits>
 
+namespace boost {
 namespace beast {
 
 /** A modifiable string with a fixed-size storage area.
@@ -76,7 +77,7 @@ public:
 
     /// The type of `string_view` returned by the interface
     using string_view_type =
-        beast::basic_string_view<CharT, Traits>;
+        basic_string_view<CharT, Traits>;
 
     //
     // Constants

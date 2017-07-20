@@ -178,7 +178,7 @@ public:
 namespace std {
 template<class Handler, class... Args>
 void
-bind(beast::detail::bound_handler<
+bind(boost::beast::detail::bound_handler<
     Handler, Args...>, ...) = delete;
 } // std
 

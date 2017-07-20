@@ -17,6 +17,7 @@
 #include <beast/core/detail/type_traits.hpp>
 #include <boost/optional.hpp>
 
+namespace boost {
 namespace beast {
 
 /** A function parameter which efficiently converts to string.

@@ -632,5 +632,6 @@ struct is_file<T, detail::void_t<decltype(
 #endif
 
 } // beast
+} // boost
 
 #endif

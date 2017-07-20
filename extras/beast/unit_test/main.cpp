@@ -81,7 +81,7 @@ print(std::ostream& os)
 int main(int ac, char const* av[])
 {
     using namespace std;
-    using namespace beast::unit_test;
+    using namespace boost::beast::unit_test;
 
 #if BOOST_MSVC
     {

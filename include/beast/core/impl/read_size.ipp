@@ -10,8 +10,8 @@
 #ifndef BOOST_BEAST_IMPL_READ_SIZE_IPP
 #define BOOST_BEAST_IMPL_READ_SIZE_IPP
 
-namespace beast {
 namespace boost {
+namespace beast {
 
 namespace detail {
 
