@@ -7,8 +7,8 @@
 # Official repository: https://github.com/boostorg/beast
 #
 
-GroupSources(extras/beast extras)
-GroupSources(include/beast beast)
+GroupSources(extras/boost/beast extras)
+GroupSources(include/boost/beast beast)
 
 GroupSources(test/websocket "/")
 
@@ -17,7 +17,7 @@ GroupSources(test/websocket "/")
 add_executable (websocket-tests
     ${BOOST_BEAST_INCLUDES}
     ${EXTRAS_INCLUDES}
-    ../../extras/beast/unit_test/main.cpp
+    ../../extras/boost/beast/unit_test/main.cpp
     websocket_async_echo_server.hpp
     websocket_sync_echo_server.hpp
     doc_snippets.cpp

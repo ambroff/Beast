@@ -8,11 +8,11 @@
 //
 
 // Test that header file is self-contained.
-#include <beast/websocket/detail/utf8_checker.hpp>
+#include <boost/beast/websocket/detail/utf8_checker.hpp>
 
-#include <beast/core/consuming_buffers.hpp>
-#include <beast/core/multi_buffer.hpp>
-#include <beast/unit_test/suite.hpp>
+#include <boost/beast/core/consuming_buffers.hpp>
+#include <boost/beast/core/multi_buffer.hpp>
+#include <boost/beast/unit_test/suite.hpp>
 #include <array>
 
 namespace boost {

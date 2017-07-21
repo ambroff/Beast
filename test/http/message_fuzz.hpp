@@ -10,8 +10,8 @@
 #ifndef BOOST_BEAST_HTTP_TEST_MESSAGE_FUZZ_HPP
 #define BOOST_BEAST_HTTP_TEST_MESSAGE_FUZZ_HPP
 
-#include <beast/core/ostream.hpp>
-#include <beast/http/detail/rfc7230.hpp>
+#include <boost/beast/core/ostream.hpp>
+#include <boost/beast/http/detail/rfc7230.hpp>
 #include <cstdint>
 #include <random>
 #include <string>

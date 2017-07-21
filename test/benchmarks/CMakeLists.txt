@@ -7,8 +7,8 @@
 # Official repository: https://github.com/boostorg/beast
 #
 
-GroupSources(extras/beast extras)
-GroupSources(include/beast beast)
+GroupSources(extras/boost/beast extras)
+GroupSources(include/boost/beast beast)
 
 GroupSources(test/benchmarks "/")
 GroupSources(test/http "/")
@@ -16,7 +16,7 @@ GroupSources(test/http "/")
 add_executable (benchmarks
     ${BOOST_BEAST_INCLUDES}
     ${EXTRAS_INCLUDES}
-    ../../extras/beast/unit_test/main.cpp
+    ../../extras/boost/beast/unit_test/main.cpp
     ../http/message_fuzz.hpp
     nodejs_parser.hpp
     buffers.cpp

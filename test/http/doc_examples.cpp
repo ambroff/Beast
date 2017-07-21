@@ -9,19 +9,19 @@
 
 #include "example/doc/http_examples.hpp"
 
-#include <beast/core/flat_buffer.hpp>
-#include <beast/core/read_size.hpp>
-#include <beast/core/ostream.hpp>
-#include <beast/core/detail/clamp.hpp>
-#include <beast/http/chunk_encode.hpp>
-#include <beast/http/parser.hpp>
-#include <beast/http/read.hpp>
-#include <beast/http/write.hpp>
-#include <beast/test/pipe_stream.hpp>
-#include <beast/test/string_istream.hpp>
-#include <beast/test/string_ostream.hpp>
-#include <beast/test/yield_to.hpp>
-#include <beast/unit_test/suite.hpp>
+#include <boost/beast/core/flat_buffer.hpp>
+#include <boost/beast/core/read_size.hpp>
+#include <boost/beast/core/ostream.hpp>
+#include <boost/beast/core/detail/clamp.hpp>
+#include <boost/beast/http/chunk_encode.hpp>
+#include <boost/beast/http/parser.hpp>
+#include <boost/beast/http/read.hpp>
+#include <boost/beast/http/write.hpp>
+#include <boost/beast/test/pipe_stream.hpp>
+#include <boost/beast/test/string_istream.hpp>
+#include <boost/beast/test/string_ostream.hpp>
+#include <boost/beast/test/yield_to.hpp>
+#include <boost/beast/unit_test/suite.hpp>
 #include <sstream>
 #include <array>
 #include <limits>

@@ -8,7 +8,7 @@
 //
 
 // Test that header file is self-contained.
-#include <beast/core/type_traits.hpp>
+#include <boost/beast/core/type_traits.hpp>
 
 #include <boost/asio/ip/tcp.hpp>
 #include <boost/asio/streambuf.hpp>

@@ -9,8 +9,8 @@
 
 //[example_websocket_client
 
-#include <beast/core.hpp>
-#include <beast/websocket.hpp>
+#include <boost/beast/core.hpp>
+#include <boost/beast/websocket.hpp>
 #include <boost/asio.hpp>
 #include <cstdlib>
 #include <iostream>

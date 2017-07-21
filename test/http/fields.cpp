@@ -8,13 +8,13 @@
 //
 
 // Test that header file is self-contained.
-#include <beast/http/fields.hpp>
+#include <boost/beast/http/fields.hpp>
 
-#include <beast/http/empty_body.hpp>
-#include <beast/http/message.hpp>
-#include <beast/http/type_traits.hpp>
-#include <beast/test/test_allocator.hpp>
-#include <beast/unit_test/suite.hpp>
+#include <boost/beast/http/empty_body.hpp>
+#include <boost/beast/http/message.hpp>
+#include <boost/beast/http/type_traits.hpp>
+#include <boost/beast/test/test_allocator.hpp>
+#include <boost/beast/unit_test/suite.hpp>
 #include <boost/lexical_cast.hpp>
 
 namespace boost {

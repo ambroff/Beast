@@ -7,11 +7,11 @@
 // Official repository: https://github.com/boostorg/beast
 //
 
-#include <beast/core/flat_buffer.hpp>
-#include <beast/core/multi_buffer.hpp>
-#include <beast/core/read_size.hpp>
-#include <beast/core/string.hpp>
-#include <beast/unit_test/suite.hpp>
+#include <boost/beast/core/flat_buffer.hpp>
+#include <boost/beast/core/multi_buffer.hpp>
+#include <boost/beast/core/read_size.hpp>
+#include <boost/beast/core/string.hpp>
+#include <boost/beast/unit_test/suite.hpp>
 #include <boost/asio/streambuf.hpp>
 #include <algorithm>
 #include <chrono>

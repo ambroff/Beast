@@ -7,7 +7,7 @@
 // Official repository: https://github.com/boostorg/beast
 //
 
-#include <beast/core.hpp>
+#include <boost/beast/core.hpp>
 #include <boost/asio.hpp>
 #include <boost/asio/spawn.hpp>
 #include <boost/asio/use_future.hpp>
@@ -17,7 +17,7 @@
 #include <thread>
 
 //[ws_snippet_1
-#include <beast/websocket.hpp>
+#include <boost/beast/websocket.hpp>
 using namespace boost::beast::websocket;
 //]
 
@@ -238,7 +238,7 @@ void echo(stream<boost::asio::ip::tcp::socket>& ws,
 #if BOOST_BEAST_USE_OPENSSL
 
 //[wss_snippet_1
-#include <beast/websocket/ssl.hpp>
+#include <boost/beast/websocket/ssl.hpp>
 #include <boost/asio/ssl.hpp>
 //]
 

@@ -8,9 +8,9 @@
 //
 
 // Test that header file is self-contained.
-#include <beast/http/type_traits.hpp>
+#include <boost/beast/http/type_traits.hpp>
 
-#include <beast/http/empty_body.hpp>
+#include <boost/beast/http/empty_body.hpp>
 #include <string>
 
 namespace boost {

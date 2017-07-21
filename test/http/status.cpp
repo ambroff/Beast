@@ -8,9 +8,9 @@
 //
 
 // Test that header file is self-contained.
-#include <beast/http/status.hpp>
+#include <boost/beast/http/status.hpp>
 
-#include <beast/unit_test/suite.hpp>
+#include <boost/beast/unit_test/suite.hpp>
 
 namespace boost {
 namespace beast {

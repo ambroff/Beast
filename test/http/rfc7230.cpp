@@ -8,14 +8,14 @@
 //
 
 // Test that header file is self-contained.
-#include <beast/http/rfc7230.hpp>
+#include <boost/beast/http/rfc7230.hpp>
 
-#include <beast/http/detail/rfc7230.hpp>
-#include <beast/unit_test/suite.hpp>
+#include <boost/beast/http/detail/rfc7230.hpp>
+#include <boost/beast/unit_test/suite.hpp>
 #include <string>
 #include <vector>
 
-#include <beast/core/detail/empty_base_optimization.hpp>
+#include <boost/beast/core/detail/empty_base_optimization.hpp>
 
 namespace boost {
 namespace beast {

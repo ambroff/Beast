@@ -8,14 +8,14 @@
 //
 
 // Test that header file is self-contained.
-#include <beast/http/chunk_encode.hpp>
+#include <boost/beast/http/chunk_encode.hpp>
 
 #include "message_fuzz.hpp"
 
-#include <beast/core/static_string.hpp>
-#include <beast/http/fields.hpp>
-#include <beast/test/fuzz.hpp>
-#include <beast/unit_test/suite.hpp>
+#include <boost/beast/core/static_string.hpp>
+#include <boost/beast/http/fields.hpp>
+#include <boost/beast/test/fuzz.hpp>
+#include <boost/beast/unit_test/suite.hpp>
 #include <boost/optional.hpp>
 #include <random>
 

@@ -12,8 +12,8 @@
 
 #include "framework.hpp"
 
-#include <beast/http/message.hpp>
-#include <beast/websocket/rfc6455.hpp>
+#include <boost/beast/http/message.hpp>
+#include <boost/beast/websocket/rfc6455.hpp>
 #include <memory>
 
 namespace framework {

@@ -7,8 +7,8 @@
 // Official repository: https://github.com/boostorg/beast
 //
 
-#include <beast/core/detail/sha1.hpp>
-#include <beast/unit_test/suite.hpp>
+#include <boost/beast/core/detail/sha1.hpp>
+#include <boost/beast/unit_test/suite.hpp>
 #include <array>
 
 namespace boost {

@@ -17,7 +17,7 @@
 
 #include "../common/detect_ssl.hpp"
 
-#include <beast/core.hpp>
+#include <boost/beast/core.hpp>
 
 #include <boost/function.hpp>
 

@@ -10,10 +10,10 @@
 #ifndef BOOST_BEAST_EXAMPLE_SERVER_HTTP_BASE_HPP
 #define BOOST_BEAST_EXAMPLE_SERVER_HTTP_BASE_HPP
 
-#include <beast/core/string.hpp>
-#include <beast/http/empty_body.hpp>
-#include <beast/http/message.hpp>
-#include <beast/http/string_body.hpp>
+#include <boost/beast/core/string.hpp>
+#include <boost/beast/http/empty_body.hpp>
+#include <boost/beast/http/message.hpp>
+#include <boost/beast/http/string_body.hpp>
 #include <memory>
 #include <utility>
 #include <ostream>

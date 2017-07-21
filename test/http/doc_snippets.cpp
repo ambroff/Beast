@@ -7,7 +7,7 @@
 // Official repository: https://github.com/boostorg/beast
 //
 
-#include <beast/core.hpp>
+#include <boost/beast/core.hpp>
 #include <boost/asio.hpp>
 #include <boost/config.hpp>
 #include <iostream>
@@ -17,7 +17,7 @@ using namespace boost::beast;
 
 //[http_snippet_1
 
-#include <beast/http.hpp>
+#include <boost/beast/http.hpp>
 using namespace boost::beast::http;
 
 //]

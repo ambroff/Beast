@@ -11,9 +11,9 @@
 
 #include "../common/mime_types.hpp"
 
-#include <beast/core.hpp>
-#include <beast/http.hpp>
-#include <beast/version.hpp>
+#include <boost/beast/core.hpp>
+#include <boost/beast/http.hpp>
+#include <boost/beast/version.hpp>
 #include <boost/asio.hpp>
 #include <boost/filesystem.hpp>
 #include <chrono>

@@ -12,7 +12,7 @@
 
 #include "framework.hpp"
 
-#include <beast/http/message.hpp>
+#include <boost/beast/http/message.hpp>
 #include <boost/optional.hpp>
 #include <utility>
 

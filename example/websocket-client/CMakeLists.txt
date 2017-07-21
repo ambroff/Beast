@@ -7,13 +7,12 @@
 # Official repository: https://github.com/boostorg/beast
 #
 
-GroupSources(include/beast beast)
+GroupSources(include/boost/beast beast)
 
 GroupSources(example/websocket-client "/")
 
 add_executable (websocket-client
     ${BOOST_BEAST_INCLUDES}
-    ${EXTRAS_INCLUDES}
     websocket_client.cpp
 )
 

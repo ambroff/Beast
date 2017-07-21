@@ -8,13 +8,13 @@
 //
 
 // Test that header file is self-contained.
-#include <beast/core/static_buffer.hpp>
+#include <boost/beast/core/static_buffer.hpp>
 
 #include "buffer_test.hpp"
 
-#include <beast/core/ostream.hpp>
-#include <beast/core/string.hpp>
-#include <beast/unit_test/suite.hpp>
+#include <boost/beast/core/ostream.hpp>
+#include <boost/beast/core/string.hpp>
+#include <boost/beast/unit_test/suite.hpp>
 #include <string>
 
 namespace boost {

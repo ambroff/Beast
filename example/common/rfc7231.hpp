@@ -10,8 +10,8 @@
 #ifndef BOOST_BEAST_EXAMPLE_COMMON_RFC7231_HPP
 #define BOOST_BEAST_EXAMPLE_COMMON_RFC7231_HPP
 
-#include <beast/core/string.hpp>
-#include <beast/http/message.hpp>
+#include <boost/beast/core/string.hpp>
+#include <boost/beast/http/message.hpp>
 
 namespace rfc7231 {
 

@@ -10,8 +10,8 @@
 #ifndef BOOST_BEAST_HTTP_TEST_PARSER_HPP
 #define BOOST_BEAST_HTTP_TEST_PARSER_HPP
 
-#include <beast/http/basic_parser.hpp>
-#include <beast/test/fail_counter.hpp>
+#include <boost/beast/http/basic_parser.hpp>
+#include <boost/beast/test/fail_counter.hpp>
 #include <string>
 #include <unordered_map>
 

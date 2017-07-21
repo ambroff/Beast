@@ -7,8 +7,8 @@
 // Official repository: https://github.com/boostorg/beast
 //
 
-#include <beast/websocket/detail/utf8_checker.hpp>
-#include <beast/unit_test/suite.hpp>
+#include <boost/beast/websocket/detail/utf8_checker.hpp>
+#include <boost/beast/unit_test/suite.hpp>
 #include <boost/locale.hpp>
 #include <chrono>
 #include <random>

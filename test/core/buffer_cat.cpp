@@ -8,9 +8,9 @@
 //
 
 // Test that header file is self-contained.
-#include <beast/core/buffer_cat.hpp>
+#include <boost/beast/core/buffer_cat.hpp>
 
-#include <beast/unit_test/suite.hpp>
+#include <boost/beast/unit_test/suite.hpp>
 #include <boost/asio/buffer.hpp>
 #include <boost/asio/streambuf.hpp>
 #include <iterator>

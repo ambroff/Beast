@@ -7,13 +7,12 @@
 # Official repository: https://github.com/boostorg/beast
 #
 
-GroupSources(include/beast beast)
+GroupSources(include/boost/beast beast)
 
 GroupSources(example/http-crawl "/")
 
 add_executable (http-crawl
     ${BOOST_BEAST_INCLUDES}
-    ${EXTRAS_INCLUDES}
     urls_large_data.hpp
     urls_large_data.cpp
     http_crawl.cpp

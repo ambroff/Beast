@@ -8,19 +8,19 @@
 //
 
 // Test that header file is self-contained.
-#include <beast/websocket/stream.hpp>
+#include <boost/beast/websocket/stream.hpp>
 
 #include "websocket_async_echo_server.hpp"
 #include "websocket_sync_echo_server.hpp"
 
-#include <beast/core/ostream.hpp>
-#include <beast/core/multi_buffer.hpp>
-#include <beast/test/fail_stream.hpp>
-#include <beast/test/string_istream.hpp>
-#include <beast/test/string_iostream.hpp>
-#include <beast/test/string_ostream.hpp>
-#include <beast/test/yield_to.hpp>
-#include <beast/unit_test/suite.hpp>
+#include <boost/beast/core/ostream.hpp>
+#include <boost/beast/core/multi_buffer.hpp>
+#include <boost/beast/test/fail_stream.hpp>
+#include <boost/beast/test/string_istream.hpp>
+#include <boost/beast/test/string_iostream.hpp>
+#include <boost/beast/test/string_ostream.hpp>
+#include <boost/beast/test/yield_to.hpp>
+#include <boost/beast/unit_test/suite.hpp>
 #include <boost/asio.hpp>
 #include <boost/asio/spawn.hpp>
 #include <boost/optional.hpp>

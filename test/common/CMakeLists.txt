@@ -8,8 +8,8 @@
 #
 
 GroupSources(example/common common)
-GroupSources(extras/beast extras)
-GroupSources(include/beast beast)
+GroupSources(extras/boost/beast extras)
+GroupSources(include/boost/beast beast)
 GroupSources(test/common "/")
 
 add_executable (common-test

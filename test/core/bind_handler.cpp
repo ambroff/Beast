@@ -8,10 +8,10 @@
 //
 
 // Test that header file is self-contained.
-#include <beast/core/bind_handler.hpp>
+#include <boost/beast/core/bind_handler.hpp>
 
-#include <beast/core/detail/type_traits.hpp>
-#include <beast/unit_test/suite.hpp>
+#include <boost/beast/core/detail/type_traits.hpp>
+#include <boost/beast/unit_test/suite.hpp>
 #include <string>
 
 namespace boost {

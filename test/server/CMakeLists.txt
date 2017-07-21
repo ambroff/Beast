@@ -9,8 +9,8 @@
 
 GroupSources(example/server-framework framework)
 GroupSources(example/common common)
-GroupSources(extras/beast extras)
-GroupSources(include/beast beast)
+GroupSources(extras/boost/beast extras)
+GroupSources(include/boost/beast beast)
 
 GroupSources(test/server "/")
 
@@ -18,7 +18,7 @@ add_executable (server-test
     ${BOOST_BEAST_INCLUDES}
     ${COMMON_INCLUDES}
     ${SERVER_INCLUDES}
-    ../../extras/beast/unit_test/main.cpp
+    ../../extras/boost/beast/unit_test/main.cpp
     file_service.cpp
     framework.cpp
     http_async_port.cpp

@@ -10,10 +10,10 @@
 #ifndef BOOST_BEAST_TEST_BUFFER_TEST_HPP
 #define BOOST_BEAST_TEST_BUFFER_TEST_HPP
 
-#include <beast/core/string.hpp>
-#include <beast/core/read_size.hpp>
-#include <beast/core/type_traits.hpp>
-#include <beast/core/detail/type_traits.hpp>
+#include <boost/beast/core/string.hpp>
+#include <boost/beast/core/read_size.hpp>
+#include <boost/beast/core/type_traits.hpp>
+#include <boost/beast/core/detail/type_traits.hpp>
 #include <boost/asio/buffer.hpp>
 #include <algorithm>
 #include <string>

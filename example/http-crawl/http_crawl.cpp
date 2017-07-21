@@ -9,9 +9,9 @@
 
 #include "urls_large_data.hpp"
 
-#include <beast/core/multi_buffer.hpp>
-#include <beast/http.hpp>
-#include <beast/version.hpp>
+#include <boost/beast/core/multi_buffer.hpp>
+#include <boost/beast/http.hpp>
+#include <boost/beast/version.hpp>
 #include <boost/asio.hpp>
 #include <cstdlib>
 #include <iostream>

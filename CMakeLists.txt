@@ -164,7 +164,7 @@ target_include_directories(${PROJECT_NAME} SYSTEM INTERFACE ${Boost_INCLUDE_DIRS
 # Tests and examples
 #
 
-include_directories (.)
+#include_directories (.)
 include_directories (extras)
 include_directories (include)
 
@@ -173,8 +173,8 @@ if (OPENSSL_FOUND)
 endif()
 
 file(GLOB_RECURSE BOOST_BEAST_INCLUDES
-    ${PROJECT_SOURCE_DIR}/include/beast/*.hpp
-    ${PROJECT_SOURCE_DIR}/include/beast/*.ipp
+    ${PROJECT_SOURCE_DIR}/include/boost/beast/*.hpp
+    ${PROJECT_SOURCE_DIR}/include/boost/beast/*.ipp
 )
 
 file(GLOB_RECURSE COMMON_INCLUDES
@@ -186,8 +186,8 @@ file(GLOB_RECURSE EXAMPLE_INCLUDES
   )
 
 file(GLOB_RECURSE EXTRAS_INCLUDES
-    ${PROJECT_SOURCE_DIR}/extras/beast/*.hpp
-    ${PROJECT_SOURCE_DIR}/extras/beast/*.ipp
+    ${PROJECT_SOURCE_DIR}/extras/boost/beast/*.hpp
+    ${PROJECT_SOURCE_DIR}/extras/boost/beast/*.ipp
 )
 
 if (Beast_BUILD_TESTS)

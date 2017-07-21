@@ -12,8 +12,8 @@
 
 #include "server.hpp"
 
-#include <beast/core/multi_buffer.hpp>
-#include <beast/websocket/stream.hpp>
+#include <boost/beast/core/multi_buffer.hpp>
+#include <boost/beast/websocket/stream.hpp>
 #include <boost/function.hpp>
 #include <memory>
 #include <ostream>

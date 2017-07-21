@@ -7,7 +7,7 @@
 // Official repository: https://github.com/boostorg/beast
 //
 
-#include <beast.hpp>
+#include <boost/beast.hpp>
 #include <iostream>
 
 /*  This file contains the functions and classes found in the documentation

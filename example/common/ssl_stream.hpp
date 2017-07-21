@@ -11,7 +11,7 @@
 #define BOOST_BEAST_EXAMPLE_COMMON_SSL_STREAM_HPP
 
 // This include is necessary to work with `ssl::stream` and `boost::beast::websocket::stream`
-#include <beast/websocket/ssl.hpp>
+#include <boost/beast/websocket/ssl.hpp>
 
 #include <boost/asio/ip/tcp.hpp>
 #include <boost/asio/ssl/stream.hpp>

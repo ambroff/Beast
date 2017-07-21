@@ -6,9 +6,9 @@
 //
 
 // Test that header file is self-contained.
-#include <beast/core/detail/varint.hpp>
+#include <boost/beast/core/detail/varint.hpp>
 
-#include <beast/unit_test/suite.hpp>
+#include <boost/beast/unit_test/suite.hpp>
 
 namespace boost {
 namespace beast {

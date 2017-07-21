@@ -18,13 +18,13 @@
 #include "../common/rfc7231.hpp"
 #include "../common/write_msg.hpp"
 
-#include <beast/core/flat_buffer.hpp>
-#include <beast/core/handler_ptr.hpp>
-#include <beast/http/dynamic_body.hpp>
-#include <beast/http/parser.hpp>
-#include <beast/http/read.hpp>
-#include <beast/http/string_body.hpp>
-#include <beast/http/write.hpp>
+#include <boost/beast/core/flat_buffer.hpp>
+#include <boost/beast/core/handler_ptr.hpp>
+#include <boost/beast/http/dynamic_body.hpp>
+#include <boost/beast/http/parser.hpp>
+#include <boost/beast/http/read.hpp>
+#include <boost/beast/http/string_body.hpp>
+#include <boost/beast/http/write.hpp>
 #include <memory>
 #include <utility>
 #include <ostream>

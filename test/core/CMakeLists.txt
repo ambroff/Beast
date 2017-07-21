@@ -8,8 +8,8 @@
 #
 
 GroupSources(example example)
-GroupSources(extras/beast extras)
-GroupSources(include/beast beast)
+GroupSources(extras/boost/beast extras)
+GroupSources(include/boost/beast beast)
 
 GroupSources(test/core "/")
 
@@ -17,7 +17,7 @@ add_executable (core-tests
     ${BOOST_BEAST_INCLUDES}
     ${EXAMPLE_INCLUDES}
     ${EXTRAS_INCLUDES}
-    ../../extras/beast/unit_test/main.cpp
+    ../../extras/boost/beast/unit_test/main.cpp
     buffer_test.hpp
     file_test.hpp
     async_result.cpp

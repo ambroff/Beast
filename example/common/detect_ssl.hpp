@@ -21,7 +21,7 @@
 
 //[example_core_detect_ssl_1
 
-#include <beast.hpp>
+#include <boost/beast.hpp>
 #include <boost/logic/tribool.hpp>
 
 /** Return `true` if a buffer contains a TLS/SSL client handshake.

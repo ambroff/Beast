@@ -8,9 +8,9 @@
 //
 
 // Test that header file is self-contained.
-#include <beast/core/detail/clamp.hpp>
+#include <boost/beast/core/detail/clamp.hpp>
 
-#include <beast/unit_test/suite.hpp>
+#include <boost/beast/unit_test/suite.hpp>
 #include <climits>
 
 namespace boost {

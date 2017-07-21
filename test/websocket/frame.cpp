@@ -7,11 +7,11 @@
 // Official repository: https://github.com/boostorg/beast
 //
 
-#include <beast/websocket/stream.hpp>
-#include <beast/websocket/detail/frame.hpp>
-#include <beast/unit_test/suite.hpp>
-#include <beast/test/pipe_stream.hpp>
-#include <beast/test/yield_to.hpp>
+#include <boost/beast/websocket/stream.hpp>
+#include <boost/beast/websocket/detail/frame.hpp>
+#include <boost/beast/unit_test/suite.hpp>
+#include <boost/beast/test/pipe_stream.hpp>
+#include <boost/beast/test/yield_to.hpp>
 #include <initializer_list>
 #include <climits>
 

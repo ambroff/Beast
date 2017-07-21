@@ -10,8 +10,8 @@
 #ifndef BOOST_BEAST_WEBSOCKET_SYNC_ECHO_SERVER_HPP
 #define BOOST_BEAST_WEBSOCKET_SYNC_ECHO_SERVER_HPP
 
-#include <beast/core/multi_buffer.hpp>
-#include <beast/websocket.hpp>
+#include <boost/beast/core/multi_buffer.hpp>
+#include <boost/beast/websocket.hpp>
 #include <boost/lexical_cast.hpp>
 #include <boost/optional.hpp>
 #include <atomic>

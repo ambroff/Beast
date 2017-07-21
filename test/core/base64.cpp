@@ -8,9 +8,9 @@
 //
 
 // Test that header file is self-contained.
-#include <beast/core/detail/base64.hpp>
+#include <boost/beast/core/detail/base64.hpp>
 
-#include <beast/unit_test/suite.hpp>
+#include <boost/beast/unit_test/suite.hpp>
 
 namespace boost {
 namespace beast {

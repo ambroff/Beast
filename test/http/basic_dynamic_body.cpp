@@ -8,4 +8,4 @@
 //
 
 // Test that header file is self-contained.
-#include <beast/http/basic_dynamic_body.hpp>
+#include <boost/beast/http/basic_dynamic_body.hpp>

@@ -8,9 +8,9 @@
 //
 
 // Test that header file is self-contained.
-#include <beast/core/handler_alloc.hpp>
+#include <boost/beast/core/handler_alloc.hpp>
 
-#include <beast/unit_test/suite.hpp>
+#include <boost/beast/unit_test/suite.hpp>
 #include <list>
 #include <vector>
 

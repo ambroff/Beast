@@ -8,10 +8,10 @@
 //
 
 // Test that header file is self-contained.
-#include <beast/http/span_body.hpp>
+#include <boost/beast/http/span_body.hpp>
 
-#include <beast/http/message.hpp>
-#include <beast/unit_test/suite.hpp>
+#include <boost/beast/http/message.hpp>
+#include <boost/beast/unit_test/suite.hpp>
 
 namespace boost {
 namespace beast {

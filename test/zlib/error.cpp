@@ -8,9 +8,9 @@
 //
 
 // Test that header file is self-contained.
-#include <beast/zlib/error.hpp>
+#include <boost/beast/zlib/error.hpp>
 
-#include <beast/unit_test/suite.hpp>
+#include <boost/beast/unit_test/suite.hpp>
 #include <memory>
 
 namespace boost {

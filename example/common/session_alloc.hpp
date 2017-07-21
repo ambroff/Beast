@@ -20,7 +20,7 @@
 #include <utility>
 
 #if 1
-#include "extras/beast/unit_test/dstream.hpp"
+#include "extras/boost/beast/unit_test/dstream.hpp"
 #endif
 
 template<class Context>

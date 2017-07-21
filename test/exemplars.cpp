@@ -7,10 +7,10 @@
 // Official repository: https://github.com/boostorg/beast
 //
 
-#include <beast/core/error.hpp>
-#include <beast/core/file_base.hpp>
-#include <beast/http/message.hpp>
-#include <beast/http/type_traits.hpp>
+#include <boost/beast/core/error.hpp>
+#include <boost/beast/core/file_base.hpp>
+#include <boost/beast/http/message.hpp>
+#include <boost/beast/http/type_traits.hpp>
 #include <boost/optional.hpp>
 #include <cstdint>
 #include <utility>

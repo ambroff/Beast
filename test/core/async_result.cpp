@@ -8,10 +8,10 @@
 //
 
 // Test that header file is self-contained.
-#include <beast/core/async_result.hpp>
+#include <boost/beast/core/async_result.hpp>
 
-#include <beast/core/error.hpp>
-#include <beast/core/type_traits.hpp>
+#include <boost/beast/core/error.hpp>
+#include <boost/beast/core/type_traits.hpp>
 #include <cstdlib>
 
 namespace boost {

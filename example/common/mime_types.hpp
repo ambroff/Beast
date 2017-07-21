@@ -10,7 +10,7 @@
 #ifndef BOOST_BEAST_EXAMPLE_COMMON_MIME_TYPES_HPP
 #define BOOST_BEAST_EXAMPLE_COMMON_MIME_TYPES_HPP
 
-#include <beast/core/string.hpp>
+#include <boost/beast/core/string.hpp>
 #include <boost/filesystem/path.hpp>
 
 // Return a reasonable mime type based on the extension of a file.

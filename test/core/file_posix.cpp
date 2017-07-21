@@ -8,14 +8,14 @@
 //
 
 // Test that header file is self-contained.
-#include <beast/core/file_posix.hpp>
+#include <boost/beast/core/file_posix.hpp>
 
 #if BOOST_BEAST_USE_POSIX_FILE
 
 #include "file_test.hpp"
 
-#include <beast/core/type_traits.hpp>
-#include <beast/unit_test/suite.hpp>
+#include <boost/beast/core/type_traits.hpp>
+#include <boost/beast/unit_test/suite.hpp>
 
 namespace boost {
 namespace beast {

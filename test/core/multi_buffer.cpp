@@ -8,15 +8,15 @@
 //
 
 // Test that header file is self-contained.
-#include <beast/core/multi_buffer.hpp>
+#include <boost/beast/core/multi_buffer.hpp>
 
 #include "buffer_test.hpp"
 
-#include <beast/core/ostream.hpp>
-#include <beast/core/string.hpp>
-#include <beast/core/type_traits.hpp>
-#include <beast/test/test_allocator.hpp>
-#include <beast/unit_test/suite.hpp>
+#include <boost/beast/core/ostream.hpp>
+#include <boost/beast/core/string.hpp>
+#include <boost/beast/core/type_traits.hpp>
+#include <boost/beast/test/test_allocator.hpp>
+#include <boost/beast/unit_test/suite.hpp>
 #include <boost/asio/buffer.hpp>
 #include <algorithm>
 #include <atomic>

@@ -10,12 +10,12 @@
 #ifndef BOOST_BEAST_EXAMPLE_COMMON_WRITE_MSG_HPP
 #define BOOST_BEAST_EXAMPLE_COMMON_WRITE_MSG_HPP
 
-#include <beast/core/async_result.hpp>
-#include <beast/core/handler_ptr.hpp>
-#include <beast/core/type_traits.hpp>
-#include <beast/http/message.hpp>
-#include <beast/http/write.hpp>
-#include <beast/http/type_traits.hpp>
+#include <boost/beast/core/async_result.hpp>
+#include <boost/beast/core/handler_ptr.hpp>
+#include <boost/beast/core/type_traits.hpp>
+#include <boost/beast/http/message.hpp>
+#include <boost/beast/http/write.hpp>
+#include <boost/beast/http/type_traits.hpp>
 #include <boost/asio/handler_alloc_hook.hpp>
 #include <boost/asio/handler_continuation_hook.hpp>
 #include <boost/asio/handler_invoke_hook.hpp>

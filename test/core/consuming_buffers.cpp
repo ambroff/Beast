@@ -8,13 +8,13 @@
 //
 
 // Test that header file is self-contained.
-#include <beast/core/consuming_buffers.hpp>
+#include <boost/beast/core/consuming_buffers.hpp>
 
 #include "buffer_test.hpp"
 
-#include <beast/core/buffer_cat.hpp>
-#include <beast/core/ostream.hpp>
-#include <beast/unit_test/suite.hpp>
+#include <boost/beast/core/buffer_cat.hpp>
+#include <boost/beast/core/ostream.hpp>
+#include <boost/beast/unit_test/suite.hpp>
 #include <boost/asio/buffer.hpp>
 #include <string>
 

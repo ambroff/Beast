@@ -13,11 +13,11 @@
 #include "framework.hpp"
 #include "../common/mime_types.hpp"
 
-#include <beast/core/string.hpp>
-#include <beast/http/empty_body.hpp>
-#include <beast/http/file_body.hpp>
-#include <beast/http/message.hpp>
-#include <beast/http/string_body.hpp>
+#include <boost/beast/core/string.hpp>
+#include <boost/beast/http/empty_body.hpp>
+#include <boost/beast/http/file_body.hpp>
+#include <boost/beast/http/message.hpp>
+#include <boost/beast/http/string_body.hpp>
 
 #include <boost/filesystem/path.hpp>
 

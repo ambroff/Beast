@@ -9,9 +9,9 @@
 
 #include "../common/root_certificates.hpp"
 
-#include <beast/core.hpp>
-#include <beast/websocket.hpp>
-#include <beast/websocket/ssl.hpp>
+#include <boost/beast/core.hpp>
+#include <boost/beast/websocket.hpp>
+#include <boost/beast/websocket/ssl.hpp>
 #include <boost/asio.hpp>
 #include <boost/asio/ssl.hpp>
 #include <cstdlib>
@@ -20,7 +20,7 @@
 
 using tcp = boost::asio::ip::tcp; // from <boost/asio.hpp>
 namespace ssl = boost::asio::ssl; // from <boost/asio/ssl.hpp>
-namespace websocket = boost::beast::websocket; // from <beast/websocket.hpp>
+namespace websocket = boost::beast::websocket; // from <boost/beast/websocket.hpp>
 
 int main()
 {

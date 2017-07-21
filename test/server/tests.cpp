@@ -20,10 +20,10 @@
 # include "example/server-framework/wss_ports.hpp"
 #endif
 
-#include <beast/core/drain_buffer.hpp>
-#include <beast/websocket.hpp>
-#include <beast/test/yield_to.hpp>
-#include <beast/unit_test/suite.hpp>
+#include <boost/beast/core/drain_buffer.hpp>
+#include <boost/beast/websocket.hpp>
+#include <boost/beast/test/yield_to.hpp>
+#include <boost/beast/unit_test/suite.hpp>
 
 namespace boost {
 namespace beast {

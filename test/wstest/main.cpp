@@ -10,9 +10,9 @@
 #include <example/common/helpers.hpp>
 #include <example/common/session_alloc.hpp>
 
-#include <beast/core.hpp>
-#include <beast/websocket.hpp>
-#include <beast/unit_test/dstream.hpp>
+#include <boost/beast/core.hpp>
+#include <boost/beast/websocket.hpp>
+#include <boost/beast/unit_test/dstream.hpp>
 #include <boost/asio.hpp>
 #include <boost/lexical_cast.hpp>
 #include <atomic>

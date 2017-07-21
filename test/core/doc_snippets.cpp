@@ -9,7 +9,7 @@
 
 //[snippet_core_1a
 
-#include <beast/core.hpp>
+#include <boost/beast/core.hpp>
 #include <boost/asio.hpp>
 #include <iostream>
 #include <thread>

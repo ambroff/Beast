@@ -7,7 +7,7 @@
 // Official repository: https://github.com/boostorg/beast
 //
 
-#include <beast/core.hpp>
+#include <boost/beast/core.hpp>
 #include <boost/asio.hpp>
 #include <cstddef>
 #include <iostream>

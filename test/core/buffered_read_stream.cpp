@@ -8,13 +8,13 @@
 //
 
 // Test that header file is self-contained.
-#include <beast/core/buffered_read_stream.hpp>
+#include <boost/beast/core/buffered_read_stream.hpp>
 
-#include <beast/core/multi_buffer.hpp>
-#include <beast/test/fail_stream.hpp>
-#include <beast/test/string_istream.hpp>
-#include <beast/test/yield_to.hpp>
-#include <beast/unit_test/suite.hpp>
+#include <boost/beast/core/multi_buffer.hpp>
+#include <boost/beast/test/fail_stream.hpp>
+#include <boost/beast/test/string_istream.hpp>
+#include <boost/beast/test/yield_to.hpp>
+#include <boost/beast/unit_test/suite.hpp>
 #include <boost/asio.hpp>
 
 namespace boost {

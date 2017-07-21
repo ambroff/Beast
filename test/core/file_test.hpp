@@ -10,8 +10,8 @@
 #ifndef BOOST_BEAST_TEST_CORE_FILE_TEST_HPP
 #define BOOST_BEAST_TEST_CORE_FILE_TEST_HPP
 
-#include <beast/core/type_traits.hpp>
-#include <beast/unit_test/suite.hpp>
+#include <boost/beast/core/type_traits.hpp>
+#include <boost/beast/unit_test/suite.hpp>
 #include <boost/config.hpp>
 #include <boost/filesystem.hpp>
 #include <string>

@@ -7,7 +7,7 @@
 # Official repository: https://github.com/boostorg/beast
 #
 
-GroupSources(include/beast beast)
+GroupSources(include/boost/beast beast)
 GroupSources(example/common common)
 GroupSources(example/http-server-fast "/")
 

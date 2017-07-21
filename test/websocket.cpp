@@ -8,4 +8,4 @@
 //
 
 // Test that header file is self-contained.
-#include <beast/websocket.hpp>
+#include <boost/beast/websocket.hpp>

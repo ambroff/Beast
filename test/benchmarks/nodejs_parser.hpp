@@ -12,10 +12,10 @@
 
 #include "nodejs-parser/http_parser.h"
 
-#include <beast/http/message.hpp>
-#include <beast/http/rfc7230.hpp>
-#include <beast/core/error.hpp>
-#include <beast/core/type_traits.hpp>
+#include <boost/beast/http/message.hpp>
+#include <boost/beast/http/rfc7230.hpp>
+#include <boost/beast/core/error.hpp>
+#include <boost/beast/core/type_traits.hpp>
 #include <boost/asio/buffer.hpp>
 #include <boost/system/error_code.hpp>
 #include <boost/throw_exception.hpp>

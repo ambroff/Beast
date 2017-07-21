@@ -9,11 +9,11 @@
 
 #include "example/common/detect_ssl.hpp"
 
-#include <beast/core/flat_buffer.hpp>
-#include <beast/core/ostream.hpp>
-#include <beast/test/pipe_stream.hpp>
-#include <beast/test/yield_to.hpp>
-#include <beast/unit_test/suite.hpp>
+#include <boost/beast/core/flat_buffer.hpp>
+#include <boost/beast/core/ostream.hpp>
+#include <boost/beast/test/pipe_stream.hpp>
+#include <boost/beast/test/yield_to.hpp>
+#include <boost/beast/unit_test/suite.hpp>
 
 namespace boost {
 namespace beast {

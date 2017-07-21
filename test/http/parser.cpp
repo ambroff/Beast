@@ -8,20 +8,20 @@
 //
 
 // Test that header file is self-contained.
-#include <beast/http/parser.hpp>
+#include <boost/beast/http/parser.hpp>
 
 #include "test_parser.hpp"
 
-#include <beast/unit_test/suite.hpp>
-#include <beast/test/string_istream.hpp>
-#include <beast/test/string_ostream.hpp>
-#include <beast/test/yield_to.hpp>
-#include <beast/core/consuming_buffers.hpp>
-#include <beast/core/flat_buffer.hpp>
-#include <beast/core/multi_buffer.hpp>
-#include <beast/core/ostream.hpp>
-#include <beast/http/read.hpp>
-#include <beast/http/string_body.hpp>
+#include <boost/beast/unit_test/suite.hpp>
+#include <boost/beast/test/string_istream.hpp>
+#include <boost/beast/test/string_ostream.hpp>
+#include <boost/beast/test/yield_to.hpp>
+#include <boost/beast/core/consuming_buffers.hpp>
+#include <boost/beast/core/flat_buffer.hpp>
+#include <boost/beast/core/multi_buffer.hpp>
+#include <boost/beast/core/ostream.hpp>
+#include <boost/beast/http/read.hpp>
+#include <boost/beast/http/string_body.hpp>
 #include <boost/system/system_error.hpp>
 
 namespace boost {

@@ -10,8 +10,8 @@
 #ifndef BOOST_BEAST_WEBSOCKET_ASYNC_ECHO_SERVER_HPP
 #define BOOST_BEAST_WEBSOCKET_ASYNC_ECHO_SERVER_HPP
 
-#include <beast/core/multi_buffer.hpp>
-#include <beast/websocket/stream.hpp>
+#include <boost/beast/core/multi_buffer.hpp>
+#include <boost/beast/websocket/stream.hpp>
 #include <boost/asio.hpp>
 #include <boost/lexical_cast.hpp>
 #include <boost/optional.hpp>

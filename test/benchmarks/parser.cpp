@@ -10,12 +10,12 @@
 #include "nodejs_parser.hpp"
 #include "../http/message_fuzz.hpp"
 
-#include <beast/http.hpp>
-#include <beast/core/consuming_buffers.hpp>
-#include <beast/core/ostream.hpp>
-#include <beast/core/flat_buffer.hpp>
-#include <beast/core/multi_buffer.hpp>
-#include <beast/unit_test/suite.hpp>
+#include <boost/beast/http.hpp>
+#include <boost/beast/core/consuming_buffers.hpp>
+#include <boost/beast/core/ostream.hpp>
+#include <boost/beast/core/flat_buffer.hpp>
+#include <boost/beast/core/multi_buffer.hpp>
+#include <boost/beast/unit_test/suite.hpp>
 #include <boost/lexical_cast.hpp>
 #include <chrono>
 #include <iostream>

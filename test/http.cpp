@@ -8,4 +8,4 @@
 //
 
 // Test that header file is self-contained.
-#include <beast/http.hpp>
+#include <boost/beast/http.hpp>
