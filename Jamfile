@@ -110,8 +110,4 @@ project beast
     <os>NT,<toolset>gcc-cygwin:<define>__USE_W32_SOCKETS
   : usage-requirements
   :
-    build-dir bin
   ;
-
-build-project test ;
-build-project example ;
