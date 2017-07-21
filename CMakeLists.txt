@@ -192,3 +192,11 @@ if (Beast_BUILD_EXAMPLES AND
     (NOT "${VARIANT}" STREQUAL "ubasan"))
     add_subdirectory (example)
 endif()
+
+install(DIRECTORY include/ DESTINATION include)
+install(TARGETS Beast EXPORT Beast-targets
+  RUNTIME DESTINATION bin
+  LIBRARY DESTINATION lib
+  ARCHIVE DESTINATION lib
+  INCLUDES DESTINATION include
+)
