@@ -23,7 +23,7 @@
 #include <boost/variant.hpp>
 
 #ifndef BOOST_BEAST_NO_BIG_VARIANTS
-# if defined(BOOST_GCC) && BOOST_GCC < 50000 && BOOST_VERSION < 106400
+# if defined(BOOST_GCC) && BOOST_GCC < 50000 && BOOST_VERSION < 106600
 #  define BOOST_BEAST_NO_BIG_VARIANTS
 # endif
 #endif
