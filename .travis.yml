@@ -100,7 +100,7 @@ matrix:
     - compiler: clang
       env:
         - TOOLSET=clang
-        - COMPILER=clan++
+        - COMPILER=clang++
         - CXXSTD=c++11
         - GCC_VER=5
         - VARIANT=ubasan
