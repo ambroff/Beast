@@ -8,7 +8,7 @@
 #
 
 unit-test websocket-tests :
-    ../../extras/beast/unit_test/main.cpp
+    ../../extras/boost/beast/unit_test/main.cpp
     doc_snippets.cpp
     error.cpp
     option.cpp

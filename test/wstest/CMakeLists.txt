@@ -16,6 +16,7 @@ add_executable (wstest
     ${BOOST_BEAST_INCLUDES}
     ${COMMON_INCLUDES}
     ${EXTRAS_INCLUDES}
+    Jamfile
     main.cpp
     )
 

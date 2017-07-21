@@ -20,6 +20,7 @@ add_executable (server-framework
     ${BOOST_BEAST_INCLUDES}
     ${COMMON_INCLUDES}
     ${SERVER_INCLUDES}
+    Jamfile
     main.cpp
 )
 

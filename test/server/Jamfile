@@ -8,7 +8,7 @@
 #
 
 unit-test server-test :
-    ../../extras/beast/unit_test/main.cpp
+    ../../extras/boost/beast/unit_test/main.cpp
     file_service.cpp
     framework.cpp
     http_async_port.cpp

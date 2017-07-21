@@ -14,6 +14,7 @@ GroupSources(example/http-server-fast "/")
 add_executable (http-server-fast
     ${BOOST_BEAST_INCLUDES}
     ${COMMON_INCLUDES}
+    Jamfile
     fields_alloc.hpp
     http_server_fast.cpp
 )

@@ -13,6 +13,7 @@ GroupSources(example/http-crawl "/")
 
 add_executable (http-crawl
     ${BOOST_BEAST_INCLUDES}
+    Jamfile
     urls_large_data.hpp
     urls_large_data.cpp
     http_crawl.cpp

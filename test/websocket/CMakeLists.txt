@@ -17,6 +17,7 @@ GroupSources(test/websocket "/")
 add_executable (websocket-tests
     ${BOOST_BEAST_INCLUDES}
     ${EXTRAS_INCLUDES}
+    Jamfile
     ../../extras/boost/beast/unit_test/main.cpp
     websocket_async_echo_server.hpp
     websocket_sync_echo_server.hpp

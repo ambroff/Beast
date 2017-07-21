@@ -8,7 +8,7 @@
 #
 
 unit-test zlib-tests :
-    ../../extras/beast/unit_test/main.cpp
+    ../../extras/boost/beast/unit_test/main.cpp
     zlib-1.2.11/adler32.c
     zlib-1.2.11/compress.c
     zlib-1.2.11/crc32.c

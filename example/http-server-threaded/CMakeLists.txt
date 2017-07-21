@@ -14,6 +14,7 @@ GroupSources(example/http-server-threaded "/")
 add_executable (http-server-threaded
     ${BOOST_BEAST_INCLUDES}
     ${COMMON_INCLUDES}
+    Jamfile
     http_server_threaded.cpp
 )
 

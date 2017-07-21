@@ -164,7 +164,7 @@ target_include_directories(${PROJECT_NAME} SYSTEM INTERFACE ${Boost_INCLUDE_DIRS
 # Tests and examples
 #
 
-#include_directories (.)
+include_directories (.)
 include_directories (extras)
 include_directories (include)
 

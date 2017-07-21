@@ -17,6 +17,7 @@ add_executable (http-tests
     ${BOOST_BEAST_INCLUDES}
     ${EXAMPLE_INCLUDES}
     ${EXTRAS_INCLUDES}
+    Jamfile
     message_fuzz.hpp
     test_parser.hpp
     ../../extras/boost/beast/unit_test/main.cpp

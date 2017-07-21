@@ -14,6 +14,7 @@ GroupSources(example/http-client-ssl "/")
 add_executable (http-client-ssl
     ${BOOST_BEAST_INCLUDES}
     ${COMMON_INCLUDES}
+    Jamfile
     http_client_ssl.cpp
 )
 

@@ -28,6 +28,7 @@ if ((NOT "${VARIANT}" STREQUAL "coverage") AND
     add_executable (lib-tests
         ${BOOST_BEAST_INCLUDES}
         ${EXTRAS_INCLUDES}
+        Jamfile
         ../extras/boost/beast/unit_test/main.cpp
         config.cpp
         core.cpp

@@ -13,6 +13,7 @@ GroupSources(example/http-client "/")
 
 add_executable (http-client
     ${BOOST_BEAST_INCLUDES}
+    Jamfile
     http_client.cpp
 )
 

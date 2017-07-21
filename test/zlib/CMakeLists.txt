@@ -43,6 +43,7 @@ add_executable (zlib-tests
     ${BOOST_BEAST_INCLUDES}
     ${EXTRAS_INCLUDES}
     ${ZLIB_SOURCES}
+    Jamfile
     ../../extras/boost/beast/unit_test/main.cpp
     ztest.hpp
     deflate_stream.cpp

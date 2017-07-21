@@ -18,6 +18,7 @@ add_executable (server-test
     ${BOOST_BEAST_INCLUDES}
     ${COMMON_INCLUDES}
     ${SERVER_INCLUDES}
+    Jamfile
     ../../extras/boost/beast/unit_test/main.cpp
     file_service.cpp
     framework.cpp

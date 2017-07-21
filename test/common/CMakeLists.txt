@@ -15,6 +15,7 @@ GroupSources(test/common "/")
 add_executable (common-test
     ${BOOST_BEAST_INCLUDES}
     ${COMMON_INCLUDES}
+    Jamfile
     detect_ssl.cpp
     mime_types.cpp
     rfc7231.cpp

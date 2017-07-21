@@ -17,6 +17,7 @@ add_executable (core-tests
     ${BOOST_BEAST_INCLUDES}
     ${EXAMPLE_INCLUDES}
     ${EXTRAS_INCLUDES}
+    Jamfile
     ../../extras/boost/beast/unit_test/main.cpp
     buffer_test.hpp
     file_test.hpp

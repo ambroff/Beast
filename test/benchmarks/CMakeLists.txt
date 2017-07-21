@@ -16,6 +16,7 @@ GroupSources(test/http "/")
 add_executable (benchmarks
     ${BOOST_BEAST_INCLUDES}
     ${EXTRAS_INCLUDES}
+    Jamfile
     ../../extras/boost/beast/unit_test/main.cpp
     ../http/message_fuzz.hpp
     nodejs_parser.hpp

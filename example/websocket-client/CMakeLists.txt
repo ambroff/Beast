@@ -13,6 +13,7 @@ GroupSources(example/websocket-client "/")
 
 add_executable (websocket-client
     ${BOOST_BEAST_INCLUDES}
+    Jamfile
     websocket_client.cpp
 )
 

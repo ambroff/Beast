@@ -14,6 +14,7 @@ GroupSources(example/websocket-server-async "/")
 add_executable (websocket-server-async
     ${BOOST_BEAST_INCLUDES}
     ${COMMON_INCLUDES}
+    Jamfile
     websocket_server_async.cpp
 )
 
