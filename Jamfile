@@ -85,6 +85,10 @@ project beast
     <threading>multi
     <runtime-link>shared
     <debug-symbols>on
+    <define>BOOST_ASIO_DISABLE_BOOST_ARRAY=1
+    <define>BOOST_ASIO_DISABLE_BOOST_BIND=1
+    <define>BOOST_ASIO_DISABLE_BOOST_DATE_TIME=1
+    <define>BOOST_ASIO_DISABLE_BOOST_REGEX=1
     <toolset>gcc:<cxxflags>-std=c++11
     <toolset>gcc:<cxxflags>-Wno-unused-parameter
     <toolset>gcc:<cxxflags>-Wno-unused-variable # Temporary until we can figure out -isystem

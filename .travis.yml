@@ -145,12 +145,12 @@ install:
   - git submodule update --init libs/algorithm
   - git submodule update --init libs/array
   - git submodule update --init libs/assert
-#  - git submodule update --init libs/atomic
+  - git submodule update --init libs/atomic
   - git submodule update --init libs/bind
   - git submodule update --init libs/chrono
   - git submodule update --init libs/concept_check
   - git submodule update --init libs/config
-#  - git submodule update --init libs/container
+  - git submodule update --init libs/container
   - git submodule update --init libs/context
   - git submodule update --init libs/conversion
   - git submodule update --init libs/core
@@ -165,19 +165,19 @@ install:
   - git submodule update --init libs/function_types
   - git submodule update --init libs/functional
   - git submodule update --init libs/fusion
-#  - git submodule update --init libs/integer
+  - git submodule update --init libs/integer
   - git submodule update --init libs/intrusive
   - git submodule update --init libs/io
   - git submodule update --init libs/iostreams
   - git submodule update --init libs/iterator
-#  - git submodule update --init libs/lambda
+  - git submodule update --init libs/lambda
   - git submodule update --init libs/lexical_cast
   - git submodule update --init libs/locale
   - git submodule update --init libs/logic
-#  - git submodule update --init libs/math
+  - git submodule update --init libs/math
   - git submodule update --init libs/move
-#  - git submodule update --init libs/mpl
-#  - git submodule update --init libs/numeric/conversion
+  - git submodule update --init libs/mpl
+  - git submodule update --init libs/numeric/conversion
   - git submodule update --init libs/optional
 #  - git submodule update --init libs/phoenix
   - git submodule update --init libs/pool
@@ -199,7 +199,7 @@ install:
   - git submodule update --init libs/throw_exception
   - git submodule update --init libs/tokenizer
   - git submodule update --init libs/tti
-#  - git submodule update --init libs/tuple
+  - git submodule update --init libs/tuple
   - git submodule update --init libs/type_index
   - git submodule update --init libs/type_traits
   - git submodule update --init libs/typeof

@@ -60,6 +60,11 @@ endif()
 
 option (Boost_USE_STATIC_LIBS "Use static libraries for boost" ON)
 
+add_definitions (-DBOOST_ASIO_DISABLE_BOOST_ARRAY=1)
+add_definitions (-DBOOST_ASIO_DISABLE_BOOST_BIND=1)
+add_definitions (-DBOOST_ASIO_DISABLE_BOOST_DATE_TIME=1)
+add_definitions (-DBOOST_ASIO_DISABLE_BOOST_REGEX=1)
+
 set(BOOST_COMPONENTS system)
 if (Beast_BUILD_EXAMPLES OR Beast_BUILD_TESTS)
     list(APPEND BOOST_COMPONENTS coroutine context filesystem program_options thread)
