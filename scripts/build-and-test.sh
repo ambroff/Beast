@@ -50,7 +50,7 @@ elif [[ $(uname -s) == "Linux" ]]; then
   #fi
 fi
 
-echo "using toolset: $CC"
+echo "using toolset: $TOOLSET"
 echo "using variant: $VARIANT"
 echo "using address-model: $ADDRESS_MODEL"
 echo "using PATH: $PATH"
@@ -83,14 +83,12 @@ function run_tests_with_valgrind {
   done
 }
 
-function build_beast {
-  $BOOST_ROOT/bjam toolset=$CC \
-               variant=$VARIANT \
-               address-model=$ADDRESS_MODEL \
-               -j${num_jobs}
+function build_bjam {
+  bjam test toolset=$TOOLSET variant=$VARIANT address-model=$ADDRESS_MODEL -j${num_jobs}
+  bjam example toolset=$TOOLSET variant=$VARIANT address-model=$ADDRESS_MODEL -j${num_jobs}
 }
 
-function build_beast_cmake {
+function build_cmake {
     mkdir -p build
     pushd build > /dev/null
     cmake -DVARIANT=${VARIANT} ..
@@ -128,9 +126,9 @@ function run_autobahn_test_suite {
 ##################################### BUILD ####################################
 
 if [[ ${BUILD_SYSTEM:-} == cmake ]]; then
-    build_beast_cmake
+    build_cmake
 else
-    build_beast
+    build_bjam
 fi
 
 ##################################### TESTS ####################################
